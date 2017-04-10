@@ -1,0 +1,52 @@
+/* Reset */
+p{
+	margin: 0;
+}
+/* Header */
+header{
+	padding: 15px 0;
+	background-color: #555b7a;
+}
+header .list-inline li{ 
+	vertical-align: top;
+}
+header a, header li, header h4{
+	color: #fff;
+}
+header a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+.login-wrap{
+	text-align: right;
+}
+.login-wrap .btn-primary{
+	background: #c6c7e2;
+	border-color: #c6c7e2; 
+	color: #555b7a; 
+	padding: 2px 15px;
+	border-radius: 0;
+}
+
+
+/* Register */
+.register-wrap .btn-primary{
+	background: #555b7a;
+	border-color: #555b7a; 
+}
+
+/* Reset */
+.reset-wrap{
+	text-align: center;
+}
+.reset-wrap input, .reset-wrap button{
+	width:  100%;
+	line-height: 32px;
+}
+.reset-wrap input{
+	padding: 0 10px;
+}
+.reset-wrap .btn-primary{
+	background: #555b7a;
+	border-color: #555b7a; 
+}
