@@ -20,9 +20,9 @@
 <body>
 <header>
 	<div class="container clearfix">
-		<ul class="list-inline">
-			<li class="logo-wrap col-md-3"><h4><a href="#">Kimo</a></h4></li><!--
-		 --><li class="login-wrap col-md-9">
+		<ul class="list-inline hidden">
+			<li class="logo-wrap col-md-3 col-xs-3"><h4><a href="#">Kimo</a></h4></li><!--
+		 --><li class="login-wrap col-md-9 col-xs-9">
 				<form>
 					<ul class="list-inline">
 						<li>	
@@ -44,6 +44,21 @@
 					</ul>
 				</form>
 			</li>
+		</ul>
+		<ul class="list-inline logged-in clearfix">
+			<li class="logo-wrap col-md-3 col-xs-3"><h4><a href="#">Kimo</a></h4></li><!--
+		 --><li class="logo-wrap col-md-9 col-xs-9">
+		 		<form>
+					<ul class="list-inline">
+						<li>	
+							<a href="#">Petrica</a>
+						</li>
+						<li>
+							<a href="#">Petrica</a>
+						</li>
+					</ul>
+				</form>
+		 	</li>
 		</ul>
 	</div>
 </header>
