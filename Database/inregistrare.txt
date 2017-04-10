@@ -1,0 +1,15 @@
+
+create or replace PROCEDURE inregistrare(nume varchar2,prenume varchar2,usrn varchar2,parola varchar2,eml varchar2,mesaj out varchar2) as
+v_user_id users.id_user%type;
+v_count integer;
+BEGIN
+    select count(email) into v_count from users where email=eml;
+    if(v_count!=0)
+      then
+        mesaj:='Email folosit';
+    else
+    select max(id_user) into v_user_id from users;
+    insert into users values(v_user_id+1,nume || ' ' || prenume,usrn,parola,eml,0);
+    mesaj:='Inregistrare efectuata';
+    end if;
+END;
