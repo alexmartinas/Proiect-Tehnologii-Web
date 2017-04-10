@@ -20,8 +20,8 @@
 <body>
 <header>
 	<div class="container clearfix">
-		<ul class="list-inline hidden">
-			<li class="logo-wrap col-md-3 col-xs-3"><h4><a href="#">Kimo</a></h4></li><!--
+		<ul class="list-inline unlogged-in hidden">
+			<li class="logo-wrap col-md-3 col-xs-3"><h4><a href="index.php">Kimo</a></h4></li><!--
 		 --><li class="login-wrap col-md-9 col-xs-9">
 				<form>
 					<ul class="list-inline">
@@ -35,7 +35,7 @@
 							<div class="form-group">
 								<label>Password</label>
 								<input type="password" name="password">
-								<p><a href="#">Forgot password?</a></p>
+								<p><a href="reset-password.php">Forgot password?</a></p>
 							</div>
 						</li>
 						<li>
@@ -46,12 +46,12 @@
 			</li>
 		</ul>
 		<ul class="list-inline logged-in clearfix">
-			<li class="logo-wrap col-md-3 col-xs-3"><h4><a href="#">Kimo</a></h4></li><!--
+			<li class="logo-wrap col-md-3 col-xs-3"><h4><a href="index.php">Kimo</a></h4></li><!--
 		 --><li class="logo-wrap col-md-9 col-xs-9">
 		 		<form>
 					<ul class="list-inline">
 						<li>	
-							<a href="#">Petrica</a>
+							<a href="add-child.php">Add child</a>
 						</li>
 						<li>
 							<a href="#">Petrica</a>
@@ -62,3 +62,5 @@
 		</ul>
 	</div>
 </header>
+<div class="alert alert-warning" role="alert">Child 1 is few feets outside of the area.</div>
+<div class="alert alert-danger" role="alert">Child 2 is over than 50 feets outside of the area.</div>

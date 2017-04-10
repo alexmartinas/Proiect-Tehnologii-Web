@@ -15,6 +15,10 @@ html,body{
 .page-wrap{
 	height: 100%;
 }
+.alert{
+	margin-bottom: 0;
+	border-radius: 0;
+}
 /* Header */
 header{
 	padding: 15px 0;
@@ -54,17 +58,17 @@ header a:hover{
 }
 
 /* Reset */
-.reset-wrap{
+.form-wrap{
 	text-align: center;
 }
-.reset-wrap input, .reset-wrap button{
+.form-wrap input[type="text"],.form-wrap input[type="number"], .form-wrap input[type="email"], .form-wrap button{
 	width:  100%;
 	line-height: 32px;
 }
-.reset-wrap input{
+.form-wrap input{
 	padding: 0 10px;
 }
-.reset-wrap .btn-primary{
+.form-wrap .btn-primary{
 	background: #555b7a;
 	border-color: #555b7a; 
 }
@@ -90,4 +94,25 @@ header a:hover{
 	right: 0;
 	height: 100%;
 	width: 100%;
+}
+
+/* Add child */
+.page-wrap-child label{
+	width: 100%;
+	text-align: left;
+}
+.form-group-gender{
+	text-align: left;
+}
+.form-group-gender .form-group {
+	margin-bottom: 0;
+}
+.form-group-gender .form-group input{
+	cursor: pointer;
+}
+.form-group-gender .form-group label{
+	width: auto;
+	padding-left: 5px;
+	font-weight: 400;
+	cursor: pointer;
 }

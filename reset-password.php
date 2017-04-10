@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
-				<div class="reset-wrap">
+				<div class="form-wrap">
 					<h2>Reset password</h2>
 					<form>
 						<div class="form-group">
