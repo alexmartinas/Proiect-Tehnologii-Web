@@ -17,26 +17,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
 </head>
-
 <body>
 <header>
 	<div class="container clearfix">
 		<ul class="list-inline logged-in">
-			<li class="logo-wrap col-md-3 col-xs-3">
-			<h4>
-				<a>Welcome</a>
-				<a>
-				<?php
-  					session_start();
- 						 echo $_SESSION['username'];
-				?> 
-				</a>
-			</h4>
-			</li>
-
-				<!--
+			<li class="logo-wrap col-md-3 col-xs-3"><h4><a href="index.php">Kimo</a></h4></li><!--
 		 --><li class="logo-wrap col-md-9 col-xs-9">
-
 		 		<form>
 					<ul class="list-inline">
 						<li>	
@@ -46,7 +32,7 @@
 							<a href="add-child.php">Add child</a>
 						</li>
 						<li>	
-							<a href="notification.php">Notification</a>
+							<a>Notification</a>
 						</li>
 						<li>
 							<a href="my-profile.php">My Profile</a>
@@ -63,4 +49,3 @@
 		</ul>
 	</div>
 </header>
-
