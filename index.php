@@ -1,4 +1,5 @@
 <?php include 'header.php' ?>
+
 <div class="page-wrap page-wrap-home">
 	<aside class="col-md-4">
 		<h2>Titlu</h2>

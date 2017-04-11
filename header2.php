@@ -23,7 +23,7 @@
 		<ul class="list-inline unlogged-in">
 			<li class="logo-wrap col-md-3 col-xs-3"><h4><a href="index.php">Kimo</a></h4></li><!--
 		 --><li class="login-wrap col-md-9 col-xs-9">
-				<form>
+				<form action="loginP.php" method="post">
 					<ul class="list-inline">
 						<li>	
 							<div class="form-group">
