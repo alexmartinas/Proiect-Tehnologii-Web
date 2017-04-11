@@ -1,0 +1,19 @@
+create or replace FUNCTION LOG_IN(usrn varchar2 ,parola varchar2)
+  RETURN varchar2 AS
+v_username varchar2(40);
+v_password varchar2(40);
+v_count integer:=0;
+BEGIN
+  select count(users.username) into v_count from users where users.username=usrn;
+  if(v_count!=1)
+    then
+      return 'Utilizator inexistent ';
+    else
+      select users.password into v_password from users where users.username=usrn;
+      if(v_password!=parola)
+          then
+            return 'Parola gresita';
+      end if;
+  end if;
+return 'Logare cu succes';
+END;

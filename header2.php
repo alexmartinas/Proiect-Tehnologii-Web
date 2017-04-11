@@ -20,32 +20,30 @@
 <body>
 <header>
 	<div class="container clearfix">
-		<ul class="list-inline logged-in">
+		<ul class="list-inline unlogged-in">
 			<li class="logo-wrap col-md-3 col-xs-3"><h4><a href="index.php">Kimo</a></h4></li><!--
-		 --><li class="logo-wrap col-md-9 col-xs-9">
-		 		<form>
+		 --><li class="login-wrap col-md-9 col-xs-9">
+				<form>
 					<ul class="list-inline">
 						<li>	
-							<a href="index.php">Home</a>
-						</li>
-						<li>	
-							<a href="add-child.php">Add child</a>
-						</li>
-						<li>	
-							<a href="notification.php">Notification</a>
+							<div class="form-group">
+								<label>Username</label>
+								<input type="text" name="username" style="color:black;">
+							</div>
 						</li>
 						<li>
-							<a href="my-profile.php">My Profile</a>
+							<div class="form-group">
+								<label>Password</label>
+								<input type="password" name="password" style="color:black;">
+								<p><a href="reset-password.php">Forgot password?</a></p>
+							</div>
 						</li>
 						<li>
-							<a href="contact.php">Contact</a>
-						</li>
-						<li>
-							<a href="register.php">Logout</a>
+							<button type="submit" class="btn btn-primary">Login</button>
 						</li>
 					</ul>
 				</form>
-		 	</li>
+			</li>
 		</ul>
 	</div>
 </header>
