@@ -11,13 +11,15 @@
 				?> 
 				</a>
 		</h2>
-		<h3>Subtitlu</h3>
 		<br>
 		<ul>
-			<li><a href="#">Copil 1</a></li>
-			<li><a href="#">Copil 2</a></li>
-			<li><a href="#">Copil 3</a></li>
-			<li><a href="#">Copil 4</a></li>
+			<li>
+			<a> Copii: </a>
+			 <a> 
+			 <br>
+			<?php include('kidsP.php'); ?>
+			</a>
+			</li>
 		</ul>
 		<br>
 		<br>

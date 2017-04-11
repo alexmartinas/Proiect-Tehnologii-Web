@@ -5,7 +5,11 @@
 			<div class="col-md-6 col-md-offset-3">
 				<div class="form-wrap">
 					<h2>Add new child</h2>
-					<form>
+					<form action="addcopilP.php" method="post">
+						<div class="form-group">
+							<label>Id Device</label>
+							<input type="number" name="Iddevice">
+						</div>
 						<div class="form-group">
 							<label>Name</label>
 							<input type="text" name="Name">
@@ -28,10 +32,21 @@
 							</div>
 						</div>
 						<button type="submit" class="btn btn-primary">Add</button>
+						<?php
+								if (isset($_GET["msg"]) && $_GET["msg"] == 'haveit') {
+								echo "Deja monitorizati acest copil!";
+								}
+						?>
+						<?php
+								if (isset($_GET["msg"]) && $_GET["msg"] == 'done') {
+								echo "Copil nou adaugat!";
+								}
+						?>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<?php include 'footer.php' ?> 
+<?php include 'footer.php' ?>     
+
