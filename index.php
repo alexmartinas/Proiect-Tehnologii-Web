@@ -1,7 +1,16 @@
 <?php include 'header.php' ?>
+
 <div class="page-wrap page-wrap-home">
 	<aside class="col-md-4">
-		<h2>Titlu</h2>
+		<h2>
+		<a>Welcome</a>
+				<a>
+				<?php
+  					session_start();
+ 						 echo $_SESSION['username'];
+				?> 
+				</a>
+		</h2>
 		<h3>Subtitlu</h3>
 		<br>
 		<ul>

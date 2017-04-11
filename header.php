@@ -32,7 +32,7 @@
 							<a href="add-child.php">Add child</a>
 						</li>
 						<li>	
-							<a href="notification.php">Notification</a>
+							<a>Notification</a>
 						</li>
 						<li>
 							<a href="my-profile.php">My Profile</a>
@@ -49,4 +49,3 @@
 		</ul>
 	</div>
 </header>
-
