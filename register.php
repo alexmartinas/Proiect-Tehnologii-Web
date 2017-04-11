@@ -6,8 +6,7 @@
 			<div class="col-md-6">
 				<div class="register-wrap">
 					<h2>Register</h2>	
-					<h4>Blabga asda we</h4>
-					<form>
+					<form action="signupP.php" method="post">
 						<div class="form-group row">
 							<label class="col-md-4">Name</label>
 							<input type="text" name="Name" class="col-md-8">
@@ -29,6 +28,16 @@
 							<input type="password" name="Password" class="col-md-8">
 						</div>
 						<button type="submit" onClick="location.href='index.php'" class="btn btn-primary">Register</button>
+						<?php
+							if (isset($_GET["msg"]) && $_GET["msg"] == 'usedemail') {
+							echo "Used email";
+							}
+						?>
+						<?php
+							if (isset($_GET["msg"]) && $_GET["msg"] == 'done') {
+							echo "Registration succesful";
+							}
+						?>
 					</form>
 				</div>
 			</div>

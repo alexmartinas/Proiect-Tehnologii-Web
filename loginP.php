@@ -5,13 +5,13 @@
 	$password=$_REQUEST["password"];
 
 	$contOracle = 'vlad';
-	$contOracle = 'VLAD';
+	$parolaOracle = 'VLAD';
 
 	$connection_string = 'localhost/xe';
 
 	$connection = oci_connect(
 	$contOracle,
-	$contOracle,
+	$parolaOracle,
 	$connection_string
 	);
 
@@ -38,7 +38,10 @@
 		$_SESSION['username'] = $username;
 		header("Location: index.php");
 	}
-	else echo "Invalid account";
+	else 
+	{
+		header("Location: register.php?msg=failed");
+	}
 
 	oci_free_statement($stid);
 

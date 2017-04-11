@@ -21,7 +21,7 @@
 <header>
 	<div class="container clearfix">
 		<ul class="list-inline unlogged-in">
-			<li class="logo-wrap col-md-3 col-xs-3"><h4><a href="index.php">Kimo</a></h4></li><!--
+			<li class="logo-wrap col-md-3 col-xs-3"><h4><a href="register.php">Kimo</a></h4></li><!--
 		 --><li class="login-wrap col-md-9 col-xs-9">
 				<form action="loginP.php" method="post">
 					<ul class="list-inline">
@@ -42,6 +42,12 @@
 							<button type="submit" class="btn btn-primary">Login</button>
 						</li>
 					</ul>
+						<?php
+						if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') {
+						echo "Wrong Username / Password";
+						}
+						?>
+
 				</form>
 			</li>
 		</ul>
