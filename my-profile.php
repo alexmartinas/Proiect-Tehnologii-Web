@@ -1,12 +1,12 @@
-<?php include 'header2.php' ?>
+<?php include 'header.php' ?>
 <div class="page-wrap">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6"></div>
 			<div class="col-md-6">
 				<div class="register-wrap">
-					<h2>Register</h2>	
-					<h4>Blabga asda we</h4>
+					<h2>Your profile</h2>	
+					<h4>Update your profile</h4>
 					<form>
 						<div class="form-group row">
 							<label class="col-md-4">Name</label>
@@ -25,10 +25,18 @@
 							<input type="text" name="Username" class="col-md-8">
 						</div>
 						<div class="form-group row">
-							<label class="col-md-4">Password</label>
+							<label class="col-md-4">Old password</label>
 							<input type="password" name="Password" class="col-md-8">
 						</div>
-						<button type="submit" onClick="location.href='index.php'" class="btn btn-primary">Register</button>
+						<div class="form-group row">
+							<label class="col-md-4">New password</label>
+							<input type="password" name="new-Password" class="col-md-8">
+						</div>
+						<div class="form-group row">
+							<label class="col-md-4">Confirm new password</label>
+							<input type="password" name="conf-Password" class="col-md-8">
+						</div>
+						<button type="submit" onClick="location.href='my-profile.php'" class="btn btn-primary">Update</button>
 					</form>
 				</div>
 			</div>
