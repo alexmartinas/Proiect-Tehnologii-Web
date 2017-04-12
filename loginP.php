@@ -22,7 +22,6 @@
 	{
 
 	$stid = oci_parse($connection, 'select pachetul_meu.LOG_IN(:v_username,:v_password) from dual');
-
 	oci_bind_by_name($stid, ":v_username", $username);
 	oci_bind_by_name($stid, ":v_password", $password);
 	oci_execute($stid);

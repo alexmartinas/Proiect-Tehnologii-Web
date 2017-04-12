@@ -27,7 +27,7 @@
 							<label class="col-md-4">Password</label>
 							<input type="password" name="Password" class="col-md-8">
 						</div>
-						<button type="submit" onClick="location.href='index.php'" class="btn btn-primary">Register</button>
+						<button type="submit" class="btn btn-primary">Register</button>
 						<?php
 							if (isset($_GET["msg"]) && $_GET["msg"] == 'usedemail') {
 							echo "Used email";
@@ -37,8 +37,15 @@
 							if (isset($_GET["msg"]) && $_GET["msg"] == 'done') {
 							echo "Registration succesful";
 							}
-							if (isset($_GET["msg"]) && $_GET["msg"] == 'wrongemail') {
-							echo "Wrong email";
+						?>
+						<?php
+							if (isset($_GET["msg"]) && $_GET["msg"] == 'invalidedmail') {
+							echo "Invalid email";
+							}
+						?>
+						<?php
+							if (isset($_GET["msg"]) && $_GET["msg"] == 'userexists') {
+							echo "User already exists!";
 							}
 						?>
 					</form>

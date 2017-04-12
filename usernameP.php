@@ -20,6 +20,10 @@
  	$user_session=$_SESSION['username'];
 
 	$stid = oci_parse($connection, 'select username from users where username like :v_user_session');
+	if (!$stid) {
+    $e = oci_error($conn);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
 	oci_bind_by_name($stid, ":v_user_session", $user_session);
 	oci_execute($stid);
 	while ($row = oci_fetch_array ($stid,OCI_NUM)) {
