@@ -32,7 +32,7 @@ else
 {
 
 $mesaj = 'VAKSNFASKLFNASFASFLASFASLKFASNLKFASNLFKASF';
-$stid = oci_parse($connection, 'call update_user(:v_nume,:v_prenume,:v_uservechi,:v_usernou,:v_parolaveche,:v_parolanoua,:v_email,:v_mesaj)');
+$stid = oci_parse($connection, 'call pachetul_meu.update_user(:v_nume,:v_prenume,:v_uservechi,:v_usernou,:v_parolaveche,:v_parolanoua,:v_email,:v_mesaj)');
 oci_bind_by_name($stid, ":v_nume", $nume);
 oci_bind_by_name($stid, ":v_prenume", $prenume);
 oci_bind_by_name($stid, ":v_uservechi", $usernameold);

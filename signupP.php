@@ -32,7 +32,7 @@ else
 {
 
 $mesaj = 'VAKSNFASKLFNASFASFLASFASLKFASNLKFASNLFKASF';
-$stid = oci_parse($connection, 'call inregistrare(:v_nume,:v_prenume,:v_username2,:v_password2,:v_email,:v_mesaj)');
+$stid = oci_parse($connection, 'call pachetul_meu.inregistrare(:v_nume,:v_prenume,:v_username2,:v_password2,:v_email,:v_mesaj)');
 oci_bind_by_name($stid, ":v_nume", $nume);
 oci_bind_by_name($stid, ":v_prenume", $prenume);
 oci_bind_by_name($stid, ":v_username2", $username);
@@ -64,9 +64,9 @@ oci_close($connection);
 
 }
  else {
-  echo("$email is not a valid email address");
+  header("Location: register.php?msg=wrongemail");
 }
-
+ header("Location: register.php?msg=wrongemail");
 
 
 ?>

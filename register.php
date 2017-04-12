@@ -37,6 +37,9 @@
 							if (isset($_GET["msg"]) && $_GET["msg"] == 'done') {
 							echo "Registration succesful";
 							}
+							if (isset($_GET["msg"]) && $_GET["msg"] == 'wrongemail') {
+							echo "Wrong email";
+							}
 						?>
 					</form>
 				</div>
