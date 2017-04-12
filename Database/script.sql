@@ -9,7 +9,7 @@ drop table notifications;
 CREATE TABLE Users
 (
     Id_user INTEGER NOT NULL,
-    username VARCHAR(50),
+    username VARCHAR(50) unique,
     password VARCHAR(50),
     Name VARCHAR(50),
     Email VARCHAR(50) unique,
@@ -77,9 +77,10 @@ CREATE TABLE Monitoring
 );
 
 --inseram useri
+INSERT INTO USERS VALUES (0,'admin','admin','admin','admin@yahoo.com',0);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aalexoaiei Adela', 1);
+VALUES ('alexoaiei Adela', 1);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexoaiei Adelaida', 2);
@@ -160,7 +161,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexoaiei Anca', 27);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexoaiei Ancuaa', 28);
+VALUES ('Alexoaiei Ancua', 28);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexoaiei Anda', 29);
@@ -202,7 +203,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexoaiei Antonela', 41);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexoaiei Anuaa', 42);
+VALUES ('Alexoaiei Anua', 42);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexoaiei Ariadna', 43);
@@ -214,7 +215,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexoaiei Arina', 45);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexoaiei Aristiaa', 46);
+VALUES ('Alexoaiei Aristia', 46);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexoaiei Artemisa', 47);
@@ -262,7 +263,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexoaiei Bogdana', 61);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexoaiei Brânduaa', 62);
+VALUES ('Alexoaiei Brândua', 62);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexoaiei Camelia', 63);
@@ -337,13 +338,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexoaiei Codrina', 86);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexoaiei Codruaa', 87);
+VALUES ('Alexoaiei Codrua', 87);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexoaiei Constantina', 88);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexoaiei Constanaa', 89);
+VALUES ('Alexoaiei Constana', 89);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexoaiei Consuela', 90);
@@ -361,7 +362,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexoaiei Cosmina', 94);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexoaiei Crenguaa', 95);
+VALUES ('Alexoaiei Crengua', 95);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexoaiei Crina', 96);
@@ -607,7 +608,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboaie Anca', 176);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboaie Ancuaa', 177);
+VALUES ('Alboaie Ancua', 177);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboaie Anda', 178);
@@ -649,7 +650,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboaie Antonela', 190);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboaie Anuaa', 191);
+VALUES ('Alboaie Anua', 191);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboaie Ariadna', 192);
@@ -661,7 +662,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboaie Arina', 194);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboaie Aristiaa', 195);
+VALUES ('Alboaie Aristia', 195);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboaie Artemisa', 196);
@@ -709,7 +710,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboaie Bogdana', 210);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboaie Brânduaa', 211);
+VALUES ('Alboaie Brândua', 211);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboaie Camelia', 212);
@@ -784,13 +785,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboaie Codrina', 235);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboaie Codruaa', 236);
+VALUES ('Alboaie Codrua', 236);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboaie Constantina', 237);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboaie Constanaa', 238);
+VALUES ('Alboaie Constana', 238);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboaie Consuela', 239);
@@ -808,7 +809,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboaie Cosmina', 243);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboaie Crenguaa', 244);
+VALUES ('Alboaie Crengua', 244);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboaie Crina', 245);
@@ -1054,7 +1055,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboanu Anca', 325);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboanu Ancuaa', 326);
+VALUES ('Alboanu Ancua', 326);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboanu Anda', 327);
@@ -1096,7 +1097,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboanu Antonela', 339);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboanu Anuaa', 340);
+VALUES ('Alboanu Anua', 340);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboanu Ariadna', 341);
@@ -1108,7 +1109,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboanu Arina', 343);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboanu Aristiaa', 344);
+VALUES ('Alboanu Aristia', 344);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboanu Artemisa', 345);
@@ -1156,7 +1157,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboanu Bogdana', 359);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboanu Brânduaa', 360);
+VALUES ('Alboanu Brândua', 360);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboanu Camelia', 361);
@@ -1231,13 +1232,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboanu Codrina', 384);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboanu Codruaa', 385);
+VALUES ('Alboanu Codrua', 385);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboanu Constantina', 386);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboanu Constanaa', 387);
+VALUES ('Alboanu Constana', 387);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboanu Consuela', 388);
@@ -1255,7 +1256,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboanu Cosmina', 392);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboanu Crenguaa', 393);
+VALUES ('Alboanu Crengua', 393);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboanu Crina', 394);
@@ -1501,7 +1502,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboi Anca', 474);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboi Ancuaa', 475);
+VALUES ('Alboi Ancua', 475);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboi Anda', 476);
@@ -1543,7 +1544,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboi Antonela', 488);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboi Anuaa', 489);
+VALUES ('Alboi Anua', 489);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboi Ariadna', 490);
@@ -1555,7 +1556,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboi Arina', 492);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboi Aristiaa', 493);
+VALUES ('Alboi Aristia', 493);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboi Artemisa', 494);
@@ -1603,7 +1604,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboi Bogdana', 508);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboi Brânduaa', 509);
+VALUES ('Alboi Brândua', 509);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboi Camelia', 510);
@@ -1678,13 +1679,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboi Codrina', 533);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboi Codruaa', 534);
+VALUES ('Alboi Codrua', 534);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboi Constantina', 535);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboi Constanaa', 536);
+VALUES ('Alboi Constana', 536);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboi Consuela', 537);
@@ -1702,7 +1703,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboi Cosmina', 541);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboi Crenguaa', 542);
+VALUES ('Alboi Crengua', 542);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboi Crina', 543);
@@ -1948,7 +1949,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboiu Anca', 623);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboiu Ancuaa', 624);
+VALUES ('Alboiu Ancua', 624);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboiu Anda', 625);
@@ -1990,7 +1991,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboiu Antonela', 637);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboiu Anuaa', 638);
+VALUES ('Alboiu Anua', 638);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboiu Ariadna', 639);
@@ -2002,7 +2003,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboiu Arina', 641);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboiu Aristiaa', 642);
+VALUES ('Alboiu Aristia', 642);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboiu Artemisa', 643);
@@ -2050,7 +2051,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboiu Bogdana', 657);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboiu Brânduaa', 658);
+VALUES ('Alboiu Brândua', 658);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboiu Camelia', 659);
@@ -2125,13 +2126,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboiu Codrina', 682);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboiu Codruaa', 683);
+VALUES ('Alboiu Codrua', 683);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboiu Constantina', 684);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboiu Constanaa', 685);
+VALUES ('Alboiu Constana', 685);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboiu Consuela', 686);
@@ -2149,7 +2150,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alboiu Cosmina', 690);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alboiu Crenguaa', 691);
+VALUES ('Alboiu Crengua', 691);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alboiu Crina', 692);
@@ -2395,7 +2396,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albot Anca', 772);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albot Ancuaa', 773);
+VALUES ('Albot Ancua', 773);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albot Anda', 774);
@@ -2437,7 +2438,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albot Antonela', 786);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albot Anuaa', 787);
+VALUES ('Albot Anua', 787);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albot Ariadna', 788);
@@ -2449,7 +2450,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albot Arina', 790);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albot Aristiaa', 791);
+VALUES ('Albot Aristia', 791);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albot Artemisa', 792);
@@ -2497,7 +2498,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albot Bogdana', 806);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albot Brânduaa', 807);
+VALUES ('Albot Brândua', 807);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albot Camelia', 808);
@@ -2572,13 +2573,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albot Codrina', 831);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albot Codruaa', 832);
+VALUES ('Albot Codrua', 832);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albot Constantina', 833);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albot Constanaa', 834);
+VALUES ('Albot Constana', 834);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albot Consuela', 835);
@@ -2596,7 +2597,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albot Cosmina', 839);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albot Crenguaa', 840);
+VALUES ('Albot Crengua', 840);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albot Crina', 841);
@@ -2842,7 +2843,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albota Anca', 921);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albota Ancuaa', 922);
+VALUES ('Albota Ancua', 922);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albota Anda', 923);
@@ -2884,7 +2885,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albota Antonela', 935);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albota Anuaa', 936);
+VALUES ('Albota Anua', 936);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albota Ariadna', 937);
@@ -2896,7 +2897,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albota Arina', 939);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albota Aristiaa', 940);
+VALUES ('Albota Aristia', 940);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albota Artemisa', 941);
@@ -2944,7 +2945,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albota Bogdana', 955);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albota Brânduaa', 956);
+VALUES ('Albota Brândua', 956);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albota Camelia', 957);
@@ -3019,13 +3020,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albota Codrina', 980);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albota Codruaa', 981);
+VALUES ('Albota Codrua', 981);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albota Constantina', 982);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albota Constanaa', 983);
+VALUES ('Albota Constana', 983);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albota Consuela', 984);
@@ -3043,7 +3044,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albota Cosmina', 988);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albota Crenguaa', 989);
+VALUES ('Albota Crengua', 989);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albota Crina', 990);
@@ -3289,7 +3290,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albotoaei Anca', 1070);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albotoaei Ancuaa', 1071);
+VALUES ('Albotoaei Ancua', 1071);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albotoaei Anda', 1072);
@@ -3331,7 +3332,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albotoaei Antonela', 1084);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albotoaei Anuaa', 1085);
+VALUES ('Albotoaei Anua', 1085);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albotoaei Ariadna', 1086);
@@ -3343,7 +3344,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albotoaei Arina', 1088);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albotoaei Aristiaa', 1089);
+VALUES ('Albotoaei Aristia', 1089);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albotoaei Artemisa', 1090);
@@ -3391,7 +3392,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albotoaei Bogdana', 1104);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albotoaei Brânduaa', 1105);
+VALUES ('Albotoaei Brândua', 1105);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albotoaei Camelia', 1106);
@@ -3466,13 +3467,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albotoaei Codrina', 1129);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albotoaei Codruaa', 1130);
+VALUES ('Albotoaei Codrua', 1130);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albotoaei Constantina', 1131);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albotoaei Constanaa', 1132);
+VALUES ('Albotoaei Constana', 1132);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albotoaei Consuela', 1133);
@@ -3490,7 +3491,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albotoaei Cosmina', 1137);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albotoaei Crenguaa', 1138);
+VALUES ('Albotoaei Crengua', 1138);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albotoaei Crina', 1139);
@@ -3736,7 +3737,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albu Anca', 1219);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albu Ancuaa', 1220);
+VALUES ('Albu Ancua', 1220);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albu Anda', 1221);
@@ -3778,7 +3779,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albu Antonela', 1233);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albu Anuaa', 1234);
+VALUES ('Albu Anua', 1234);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albu Ariadna', 1235);
@@ -3790,7 +3791,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albu Arina', 1237);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albu Aristiaa', 1238);
+VALUES ('Albu Aristia', 1238);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albu Artemisa', 1239);
@@ -3838,7 +3839,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albu Bogdana', 1253);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albu Brânduaa', 1254);
+VALUES ('Albu Brândua', 1254);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albu Camelia', 1255);
@@ -3913,13 +3914,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albu Codrina', 1278);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albu Codruaa', 1279);
+VALUES ('Albu Codrua', 1279);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albu Constantina', 1280);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albu Constanaa', 1281);
+VALUES ('Albu Constana', 1281);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albu Consuela', 1282);
@@ -3937,7 +3938,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albu Cosmina', 1286);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albu Crenguaa', 1287);
+VALUES ('Albu Crengua', 1287);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albu Crina', 1288);
@@ -4183,7 +4184,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuica Anca', 1368);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuica Ancuaa', 1369);
+VALUES ('Albuica Ancua', 1369);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuica Anda', 1370);
@@ -4225,7 +4226,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuica Antonela', 1382);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuica Anuaa', 1383);
+VALUES ('Albuica Anua', 1383);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuica Ariadna', 1384);
@@ -4237,7 +4238,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuica Arina', 1386);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuica Aristiaa', 1387);
+VALUES ('Albuica Aristia', 1387);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuica Artemisa', 1388);
@@ -4285,7 +4286,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuica Bogdana', 1402);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuica Brânduaa', 1403);
+VALUES ('Albuica Brândua', 1403);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuica Camelia', 1404);
@@ -4360,13 +4361,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuica Codrina', 1427);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuica Codruaa', 1428);
+VALUES ('Albuica Codrua', 1428);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuica Constantina', 1429);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuica Constanaa', 1430);
+VALUES ('Albuica Constana', 1430);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuica Consuela', 1431);
@@ -4384,7 +4385,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuica Cosmina', 1435);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuica Crenguaa', 1436);
+VALUES ('Albuica Crengua', 1436);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuica Crina', 1437);
@@ -4630,7 +4631,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuleanu Anca', 1517);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleanu Ancuaa', 1518);
+VALUES ('Albuleanu Ancua', 1518);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleanu Anda', 1519);
@@ -4672,7 +4673,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuleanu Antonela', 1531);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleanu Anuaa', 1532);
+VALUES ('Albuleanu Anua', 1532);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleanu Ariadna', 1533);
@@ -4684,7 +4685,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuleanu Arina', 1535);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleanu Aristiaa', 1536);
+VALUES ('Albuleanu Aristia', 1536);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleanu Artemisa', 1537);
@@ -4732,7 +4733,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuleanu Bogdana', 1551);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleanu Brânduaa', 1552);
+VALUES ('Albuleanu Brândua', 1552);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleanu Camelia', 1553);
@@ -4807,13 +4808,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuleanu Codrina', 1576);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleanu Codruaa', 1577);
+VALUES ('Albuleanu Codrua', 1577);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleanu Constantina', 1578);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleanu Constanaa', 1579);
+VALUES ('Albuleanu Constana', 1579);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleanu Consuela', 1580);
@@ -4831,7 +4832,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuleanu Cosmina', 1584);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleanu Crenguaa', 1585);
+VALUES ('Albuleanu Crengua', 1585);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleanu Crina', 1586);
@@ -5077,7 +5078,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulescu Anca', 1666);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulescu Ancuaa', 1667);
+VALUES ('Albulescu Ancua', 1667);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulescu Anda', 1668);
@@ -5119,7 +5120,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulescu Antonela', 1680);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulescu Anuaa', 1681);
+VALUES ('Albulescu Anua', 1681);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulescu Ariadna', 1682);
@@ -5131,7 +5132,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulescu Arina', 1684);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulescu Aristiaa', 1685);
+VALUES ('Albulescu Aristia', 1685);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulescu Artemisa', 1686);
@@ -5179,7 +5180,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulescu Bogdana', 1700);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulescu Brânduaa', 1701);
+VALUES ('Albulescu Brândua', 1701);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulescu Camelia', 1702);
@@ -5254,13 +5255,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulescu Codrina', 1725);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulescu Codruaa', 1726);
+VALUES ('Albulescu Codrua', 1726);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulescu Constantina', 1727);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulescu Constanaa', 1728);
+VALUES ('Albulescu Constana', 1728);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulescu Consuela', 1729);
@@ -5278,7 +5279,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulescu Cosmina', 1733);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulescu Crenguaa', 1734);
+VALUES ('Albulescu Crengua', 1734);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulescu Crina', 1735);
@@ -5524,7 +5525,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulea Anca', 1815);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulea Ancuaa', 1816);
+VALUES ('Albulea Ancua', 1816);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulea Anda', 1817);
@@ -5566,7 +5567,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulea Antonela', 1829);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulea Anuaa', 1830);
+VALUES ('Albulea Anua', 1830);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulea Ariadna', 1831);
@@ -5578,7 +5579,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulea Arina', 1833);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulea Aristiaa', 1834);
+VALUES ('Albulea Aristia', 1834);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulea Artemisa', 1835);
@@ -5626,7 +5627,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulea Bogdana', 1849);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulea Brânduaa', 1850);
+VALUES ('Albulea Brândua', 1850);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulea Camelia', 1851);
@@ -5701,13 +5702,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulea Codrina', 1874);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulea Codruaa', 1875);
+VALUES ('Albulea Codrua', 1875);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulea Constantina', 1876);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulea Constanaa', 1877);
+VALUES ('Albulea Constana', 1877);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulea Consuela', 1878);
@@ -5725,7 +5726,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulea Cosmina', 1882);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulea Crenguaa', 1883);
+VALUES ('Albulea Crengua', 1883);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulea Crina', 1884);
@@ -5971,7 +5972,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulete Anca', 1964);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulete Ancuaa', 1965);
+VALUES ('Albulete Ancua', 1965);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulete Anda', 1966);
@@ -6013,7 +6014,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulete Antonela', 1978);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulete Anuaa', 1979);
+VALUES ('Albulete Anua', 1979);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulete Ariadna', 1980);
@@ -6025,7 +6026,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulete Arina', 1982);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulete Aristiaa', 1983);
+VALUES ('Albulete Aristia', 1983);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulete Artemisa', 1984);
@@ -6073,7 +6074,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulete Bogdana', 1998);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulete Brânduaa', 1999);
+VALUES ('Albulete Brândua', 1999);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulete Camelia', 2000);
@@ -6148,13 +6149,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulete Codrina', 2023);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulete Codruaa', 2024);
+VALUES ('Albulete Codrua', 2024);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulete Constantina', 2025);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulete Constanaa', 2026);
+VALUES ('Albulete Constana', 2026);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulete Consuela', 2027);
@@ -6172,7 +6173,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albulete Cosmina', 2031);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albulete Crenguaa', 2032);
+VALUES ('Albulete Crengua', 2032);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albulete Crina', 2033);
@@ -6418,7 +6419,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuleau Anca', 2113);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleau Ancuaa', 2114);
+VALUES ('Albuleau Ancua', 2114);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleau Anda', 2115);
@@ -6460,7 +6461,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuleau Antonela', 2127);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleau Anuaa', 2128);
+VALUES ('Albuleau Anua', 2128);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleau Ariadna', 2129);
@@ -6472,7 +6473,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuleau Arina', 2131);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleau Aristiaa', 2132);
+VALUES ('Albuleau Aristia', 2132);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleau Artemisa', 2133);
@@ -6520,7 +6521,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuleau Bogdana', 2147);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleau Brânduaa', 2148);
+VALUES ('Albuleau Brândua', 2148);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleau Camelia', 2149);
@@ -6595,13 +6596,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuleau Codrina', 2172);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleau Codruaa', 2173);
+VALUES ('Albuleau Codrua', 2173);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleau Constantina', 2174);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleau Constanaa', 2175);
+VALUES ('Albuleau Constana', 2175);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleau Consuela', 2176);
@@ -6619,7 +6620,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuleau Cosmina', 2180);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuleau Crenguaa', 2181);
+VALUES ('Albuleau Crengua', 2181);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuleau Crina', 2182);
@@ -6865,7 +6866,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albureanu Anca', 2262);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albureanu Ancuaa', 2263);
+VALUES ('Albureanu Ancua', 2263);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albureanu Anda', 2264);
@@ -6907,7 +6908,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albureanu Antonela', 2276);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albureanu Anuaa', 2277);
+VALUES ('Albureanu Anua', 2277);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albureanu Ariadna', 2278);
@@ -6919,7 +6920,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albureanu Arina', 2280);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albureanu Aristiaa', 2281);
+VALUES ('Albureanu Aristia', 2281);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albureanu Artemisa', 2282);
@@ -6967,7 +6968,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albureanu Bogdana', 2296);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albureanu Brânduaa', 2297);
+VALUES ('Albureanu Brândua', 2297);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albureanu Camelia', 2298);
@@ -7042,13 +7043,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albureanu Codrina', 2321);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albureanu Codruaa', 2322);
+VALUES ('Albureanu Codrua', 2322);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albureanu Constantina', 2323);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albureanu Constanaa', 2324);
+VALUES ('Albureanu Constana', 2324);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albureanu Consuela', 2325);
@@ -7066,7 +7067,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albureanu Cosmina', 2329);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albureanu Crenguaa', 2330);
+VALUES ('Albureanu Crengua', 2330);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albureanu Crina', 2331);
@@ -7312,7 +7313,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albua Anca', 2411);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Ancuaa', 2412);
+VALUES ('Albua Ancua', 2412);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Anda', 2413);
@@ -7354,7 +7355,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albua Antonela', 2425);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Anuaa', 2426);
+VALUES ('Albua Anua', 2426);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Ariadna', 2427);
@@ -7366,7 +7367,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albua Arina', 2429);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Aristiaa', 2430);
+VALUES ('Albua Aristia', 2430);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Artemisa', 2431);
@@ -7414,7 +7415,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albua Bogdana', 2445);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Brânduaa', 2446);
+VALUES ('Albua Brândua', 2446);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Camelia', 2447);
@@ -7489,13 +7490,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albua Codrina', 2470);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Codruaa', 2471);
+VALUES ('Albua Codrua', 2471);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Constantina', 2472);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Constanaa', 2473);
+VALUES ('Albua Constana', 2473);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Consuela', 2474);
@@ -7513,7 +7514,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albua Cosmina', 2478);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Crenguaa', 2479);
+VALUES ('Albua Crengua', 2479);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Crina', 2480);
@@ -7759,7 +7760,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albua Anca', 2560);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Ancuaa', 2561);
+VALUES ('Albua Ancua', 2561);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Anda', 2562);
@@ -7801,7 +7802,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albua Antonela', 2574);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Anuaa', 2575);
+VALUES ('Albua Anua', 2575);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Ariadna', 2576);
@@ -7813,7 +7814,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albua Arina', 2578);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Aristiaa', 2579);
+VALUES ('Albua Aristia', 2579);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Artemisa', 2580);
@@ -7861,7 +7862,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albua Bogdana', 2594);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Brânduaa', 2595);
+VALUES ('Albua Brândua', 2595);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Camelia', 2596);
@@ -7936,13 +7937,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albua Codrina', 2619);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Codruaa', 2620);
+VALUES ('Albua Codrua', 2620);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Constantina', 2621);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Constanaa', 2622);
+VALUES ('Albua Constana', 2622);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Consuela', 2623);
@@ -7960,7 +7961,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albua Cosmina', 2627);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albua Crenguaa', 2628);
+VALUES ('Albua Crengua', 2628);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albua Crina', 2629);
@@ -8125,451 +8126,451 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albua Fiona', 2682);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Adela', 2683);
+VALUES ('Albua Adela', 2683);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Adelaida', 2684);
+VALUES ('Albua Adelaida', 2684);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Adelina', 2685);
+VALUES ('Albua Adelina', 2685);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Adina', 2686);
+VALUES ('Albua Adina', 2686);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Adriana', 2687);
+VALUES ('Albua Adriana', 2687);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Agata', 2688);
+VALUES ('Albua Agata', 2688);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Aglaia', 2689);
+VALUES ('Albua Aglaia', 2689);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Agripina', 2690);
+VALUES ('Albua Agripina', 2690);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Aida', 2691);
+VALUES ('Albua Aida', 2691);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Alberta', 2692);
+VALUES ('Albua Alberta', 2692);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Albertina', 2693);
+VALUES ('Albua Albertina', 2693);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Alexandra', 2694);
+VALUES ('Albua Alexandra', 2694);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Alexandrina', 2695);
+VALUES ('Albua Alexandrina', 2695);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Alida', 2696);
+VALUES ('Albua Alida', 2696);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Alina', 2697);
+VALUES ('Albua Alina', 2697);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Alice', 2698);
+VALUES ('Albua Alice', 2698);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Alis', 2699);
+VALUES ('Albua Alis', 2699);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Alma', 2700);
+VALUES ('Albua Alma', 2700);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Amalia', 2701);
+VALUES ('Albua Amalia', 2701);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Amelia', 2702);
+VALUES ('Albua Amelia', 2702);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Amanda', 2703);
+VALUES ('Albua Amanda', 2703);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Ana', 2704);
+VALUES ('Albua Ana', 2704);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Anabela', 2705);
+VALUES ('Albua Anabela', 2705);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Anaida', 2706);
+VALUES ('Albua Anaida', 2706);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Anamaria', 2707);
+VALUES ('Albua Anamaria', 2707);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Anastasia', 2708);
+VALUES ('Albua Anastasia', 2708);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Anca', 2709);
+VALUES ('Albua Anca', 2709);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Ancuaa', 2710);
+VALUES ('Albua Ancua', 2710);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Anda', 2711);
+VALUES ('Albua Anda', 2711);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Andra', 2712);
+VALUES ('Albua Andra', 2712);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Andrada', 2713);
+VALUES ('Albua Andrada', 2713);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Andreea', 2714);
+VALUES ('Albua Andreea', 2714);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Anemona', 2715);
+VALUES ('Albua Anemona', 2715);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Aneta', 2716);
+VALUES ('Albua Aneta', 2716);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Angela', 2717);
+VALUES ('Albua Angela', 2717);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Anghelina', 2718);
+VALUES ('Albua Anghelina', 2718);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Anica', 2719);
+VALUES ('Albua Anica', 2719);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Aniaoara', 2720);
+VALUES ('Albua Aniaoara', 2720);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Antoaneta', 2721);
+VALUES ('Albua Antoaneta', 2721);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Antonia', 2722);
+VALUES ('Albua Antonia', 2722);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Antonela', 2723);
+VALUES ('Albua Antonela', 2723);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Anuaa', 2724);
+VALUES ('Albua Anua', 2724);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Ariadna', 2725);
+VALUES ('Albua Ariadna', 2725);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Ariana', 2726);
+VALUES ('Albua Ariana', 2726);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Arina', 2727);
+VALUES ('Albua Arina', 2727);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Aristiaa', 2728);
+VALUES ('Albua Aristia', 2728);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Artemisa', 2729);
+VALUES ('Albua Artemisa', 2729);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Astrid', 2730);
+VALUES ('Albua Astrid', 2730);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Atena', 2731);
+VALUES ('Albua Atena', 2731);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Augustina', 2732);
+VALUES ('Albua Augustina', 2732);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Aura', 2733);
+VALUES ('Albua Aura', 2733);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Aurelia', 2734);
+VALUES ('Albua Aurelia', 2734);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Aureliana', 2735);
+VALUES ('Albua Aureliana', 2735);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Aurica', 2736);
+VALUES ('Albua Aurica', 2736);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Aurora', 2737);
+VALUES ('Albua Aurora', 2737);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Axenia', 2738);
+VALUES ('Albua Axenia', 2738);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Beatrice', 2739);
+VALUES ('Albua Beatrice', 2739);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Betina', 2740);
+VALUES ('Albua Betina', 2740);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Bianca', 2741);
+VALUES ('Albua Bianca', 2741);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Blanduzia', 2742);
+VALUES ('Albua Blanduzia', 2742);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Bogdana', 2743);
+VALUES ('Albua Bogdana', 2743);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Brânduaa', 2744);
+VALUES ('Albua Brândua', 2744);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Camelia', 2745);
+VALUES ('Albua Camelia', 2745);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Carina', 2746);
+VALUES ('Albua Carina', 2746);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Carla', 2747);
+VALUES ('Albua Carla', 2747);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Carmen', 2748);
+VALUES ('Albua Carmen', 2748);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Carmina', 2749);
+VALUES ('Albua Carmina', 2749);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Carolina', 2750);
+VALUES ('Albua Carolina', 2750);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Casandra', 2751);
+VALUES ('Albua Casandra', 2751);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Casiana', 2752);
+VALUES ('Albua Casiana', 2752);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Caterina', 2753);
+VALUES ('Albua Caterina', 2753);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Catinca', 2754);
+VALUES ('Albua Catinca', 2754);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Catrina', 2755);
+VALUES ('Albua Catrina', 2755);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Catrinel', 2756);
+VALUES ('Albua Catrinel', 2756);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Catalina', 2757);
+VALUES ('Albua Catalina', 2757);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Cecilia', 2758);
+VALUES ('Albua Cecilia', 2758);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Celia', 2759);
+VALUES ('Albua Celia', 2759);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Cerasela', 2760);
+VALUES ('Albua Cerasela', 2760);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Cezara', 2761);
+VALUES ('Albua Cezara', 2761);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Cipriana', 2762);
+VALUES ('Albua Cipriana', 2762);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Clara', 2763);
+VALUES ('Albua Clara', 2763);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Clarisa', 2764);
+VALUES ('Albua Clarisa', 2764);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Claudia', 2765);
+VALUES ('Albua Claudia', 2765);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Clementina', 2766);
+VALUES ('Albua Clementina', 2766);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Cleopatra', 2767);
+VALUES ('Albua Cleopatra', 2767);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Codrina', 2768);
+VALUES ('Albua Codrina', 2768);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Codruaa', 2769);
+VALUES ('Albua Codrua', 2769);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Constantina', 2770);
+VALUES ('Albua Constantina', 2770);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Constanaa', 2771);
+VALUES ('Albua Constana', 2771);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Consuela', 2772);
+VALUES ('Albua Consuela', 2772);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Coralia', 2773);
+VALUES ('Albua Coralia', 2773);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Corina', 2774);
+VALUES ('Albua Corina', 2774);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Cornelia', 2775);
+VALUES ('Albua Cornelia', 2775);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Cosmina', 2776);
+VALUES ('Albua Cosmina', 2776);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Crenguaa', 2777);
+VALUES ('Albua Crengua', 2777);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Crina', 2778);
+VALUES ('Albua Crina', 2778);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Cristina', 2779);
+VALUES ('Albua Cristina', 2779);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Daciana', 2780);
+VALUES ('Albua Daciana', 2780);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Dafina', 2781);
+VALUES ('Albua Dafina', 2781);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Daiana', 2782);
+VALUES ('Albua Daiana', 2782);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Dalia', 2783);
+VALUES ('Albua Dalia', 2783);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Dana', 2784);
+VALUES ('Albua Dana', 2784);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Daniela', 2785);
+VALUES ('Albua Daniela', 2785);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Daria', 2786);
+VALUES ('Albua Daria', 2786);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Dariana', 2787);
+VALUES ('Albua Dariana', 2787);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Delia', 2788);
+VALUES ('Albua Delia', 2788);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Demetra', 2789);
+VALUES ('Albua Demetra', 2789);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Denisa', 2790);
+VALUES ('Albua Denisa', 2790);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Despina', 2791);
+VALUES ('Albua Despina', 2791);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Diana', 2792);
+VALUES ('Albua Diana', 2792);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Dida', 2793);
+VALUES ('Albua Dida', 2793);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Didina', 2794);
+VALUES ('Albua Didina', 2794);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Dimitrina', 2795);
+VALUES ('Albua Dimitrina', 2795);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Dina', 2796);
+VALUES ('Albua Dina', 2796);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Dochia', 2797);
+VALUES ('Albua Dochia', 2797);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Doina', 2798);
+VALUES ('Albua Doina', 2798);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Domnica', 2799);
+VALUES ('Albua Domnica', 2799);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Dora', 2800);
+VALUES ('Albua Dora', 2800);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Doriana', 2801);
+VALUES ('Albua Doriana', 2801);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Dorina', 2802);
+VALUES ('Albua Dorina', 2802);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Dorli', 2803);
+VALUES ('Albua Dorli', 2803);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Draga', 2804);
+VALUES ('Albua Draga', 2804);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Dumitra', 2805);
+VALUES ('Albua Dumitra', 2805);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Dumitrana', 2806);
+VALUES ('Albua Dumitrana', 2806);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Ecaterina', 2807);
+VALUES ('Albua Ecaterina', 2807);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Eftimia', 2808);
+VALUES ('Albua Eftimia', 2808);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Elena', 2809);
+VALUES ('Albua Elena', 2809);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Eleonora', 2810);
+VALUES ('Albua Eleonora', 2810);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Eliana', 2811);
+VALUES ('Albua Eliana', 2811);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Elisabeta', 2812);
+VALUES ('Albua Elisabeta', 2812);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Elisaveta', 2813);
+VALUES ('Albua Elisaveta', 2813);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Eliza', 2814);
+VALUES ('Albua Eliza', 2814);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Elodia', 2815);
+VALUES ('Albua Elodia', 2815);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Elvira', 2816);
+VALUES ('Albua Elvira', 2816);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Emilia', 2817);
+VALUES ('Albua Emilia', 2817);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Emanuela', 2818);
+VALUES ('Albua Emanuela', 2818);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Erica', 2819);
+VALUES ('Albua Erica', 2819);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Estera', 2820);
+VALUES ('Albua Estera', 2820);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Eufrosina', 2821);
+VALUES ('Albua Eufrosina', 2821);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Eugenia', 2822);
+VALUES ('Albua Eugenia', 2822);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Eusebia', 2823);
+VALUES ('Albua Eusebia', 2823);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Eva', 2824);
+VALUES ('Albua Eva', 2824);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Evanghelina', 2825);
+VALUES ('Albua Evanghelina', 2825);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Evelina', 2826);
+VALUES ('Albua Evelina', 2826);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Fabia', 2827);
+VALUES ('Albua Fabia', 2827);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Fabiana', 2828);
+VALUES ('Albua Fabiana', 2828);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Felicia', 2829);
+VALUES ('Albua Felicia', 2829);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Filofteia', 2830);
+VALUES ('Albua Filofteia', 2830);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaa Fiona', 2831);
+VALUES ('Albua Fiona', 2831);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuaiu Adela', 2832);
@@ -8653,7 +8654,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuaiu Anca', 2858);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaiu Ancuaa', 2859);
+VALUES ('Albuaiu Ancua', 2859);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuaiu Anda', 2860);
@@ -8695,7 +8696,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuaiu Antonela', 2872);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaiu Anuaa', 2873);
+VALUES ('Albuaiu Anua', 2873);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuaiu Ariadna', 2874);
@@ -8707,7 +8708,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuaiu Arina', 2876);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaiu Aristiaa', 2877);
+VALUES ('Albuaiu Aristia', 2877);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuaiu Artemisa', 2878);
@@ -8755,7 +8756,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuaiu Bogdana', 2892);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaiu Brânduaa', 2893);
+VALUES ('Albuaiu Brândua', 2893);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuaiu Camelia', 2894);
@@ -8830,13 +8831,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuaiu Codrina', 2917);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaiu Codruaa', 2918);
+VALUES ('Albuaiu Codrua', 2918);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuaiu Constantina', 2919);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaiu Constanaa', 2920);
+VALUES ('Albuaiu Constana', 2920);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuaiu Consuela', 2921);
@@ -8854,7 +8855,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Albuaiu Cosmina', 2925);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Albuaiu Crenguaa', 2926);
+VALUES ('Albuaiu Crengua', 2926);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Albuaiu Crina', 2927);
@@ -9100,7 +9101,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alcaziu Anca', 3007);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcaziu Ancuaa', 3008);
+VALUES ('Alcaziu Ancua', 3008);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcaziu Anda', 3009);
@@ -9142,7 +9143,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alcaziu Antonela', 3021);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcaziu Anuaa', 3022);
+VALUES ('Alcaziu Anua', 3022);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcaziu Ariadna', 3023);
@@ -9154,7 +9155,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alcaziu Arina', 3025);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcaziu Aristiaa', 3026);
+VALUES ('Alcaziu Aristia', 3026);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcaziu Artemisa', 3027);
@@ -9202,7 +9203,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alcaziu Bogdana', 3041);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcaziu Brânduaa', 3042);
+VALUES ('Alcaziu Brândua', 3042);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcaziu Camelia', 3043);
@@ -9277,13 +9278,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alcaziu Codrina', 3066);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcaziu Codruaa', 3067);
+VALUES ('Alcaziu Codrua', 3067);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcaziu Constantina', 3068);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcaziu Constanaa', 3069);
+VALUES ('Alcaziu Constana', 3069);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcaziu Consuela', 3070);
@@ -9301,7 +9302,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alcaziu Cosmina', 3074);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcaziu Crenguaa', 3075);
+VALUES ('Alcaziu Crengua', 3075);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcaziu Crina', 3076);
@@ -9547,7 +9548,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alcea Anca', 3156);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcea Ancuaa', 3157);
+VALUES ('Alcea Ancua', 3157);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcea Anda', 3158);
@@ -9589,7 +9590,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alcea Antonela', 3170);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcea Anuaa', 3171);
+VALUES ('Alcea Anua', 3171);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcea Ariadna', 3172);
@@ -9601,7 +9602,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alcea Arina', 3174);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcea Aristiaa', 3175);
+VALUES ('Alcea Aristia', 3175);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcea Artemisa', 3176);
@@ -9649,7 +9650,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alcea Bogdana', 3190);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcea Brânduaa', 3191);
+VALUES ('Alcea Brândua', 3191);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcea Camelia', 3192);
@@ -9724,13 +9725,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alcea Codrina', 3215);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcea Codruaa', 3216);
+VALUES ('Alcea Codrua', 3216);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcea Constantina', 3217);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcea Constanaa', 3218);
+VALUES ('Alcea Constana', 3218);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcea Consuela', 3219);
@@ -9748,7 +9749,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alcea Cosmina', 3223);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alcea Crenguaa', 3224);
+VALUES ('Alcea Crengua', 3224);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alcea Crina', 3225);
@@ -9994,7 +9995,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alda Anca', 3305);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alda Ancuaa', 3306);
+VALUES ('Alda Ancua', 3306);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alda Anda', 3307);
@@ -10036,7 +10037,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alda Antonela', 3319);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alda Anuaa', 3320);
+VALUES ('Alda Anua', 3320);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alda Ariadna', 3321);
@@ -10048,7 +10049,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alda Arina', 3323);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alda Aristiaa', 3324);
+VALUES ('Alda Aristia', 3324);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alda Artemisa', 3325);
@@ -10096,7 +10097,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alda Bogdana', 3339);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alda Brânduaa', 3340);
+VALUES ('Alda Brândua', 3340);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alda Camelia', 3341);
@@ -10171,13 +10172,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alda Codrina', 3364);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alda Codruaa', 3365);
+VALUES ('Alda Codrua', 3365);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alda Constantina', 3366);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alda Constanaa', 3367);
+VALUES ('Alda Constana', 3367);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alda Consuela', 3368);
@@ -10195,7 +10196,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alda Cosmina', 3372);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alda Crenguaa', 3373);
+VALUES ('Alda Crengua', 3373);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alda Crina', 3374);
@@ -10441,7 +10442,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldea Anca', 3454);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldea Ancuaa', 3455);
+VALUES ('Aldea Ancua', 3455);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldea Anda', 3456);
@@ -10483,7 +10484,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldea Antonela', 3468);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldea Anuaa', 3469);
+VALUES ('Aldea Anua', 3469);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldea Ariadna', 3470);
@@ -10495,7 +10496,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldea Arina', 3472);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldea Aristiaa', 3473);
+VALUES ('Aldea Aristia', 3473);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldea Artemisa', 3474);
@@ -10543,7 +10544,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldea Bogdana', 3488);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldea Brânduaa', 3489);
+VALUES ('Aldea Brândua', 3489);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldea Camelia', 3490);
@@ -10618,13 +10619,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldea Codrina', 3513);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldea Codruaa', 3514);
+VALUES ('Aldea Codrua', 3514);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldea Constantina', 3515);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldea Constanaa', 3516);
+VALUES ('Aldea Constana', 3516);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldea Consuela', 3517);
@@ -10642,7 +10643,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldea Cosmina', 3521);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldea Crenguaa', 3522);
+VALUES ('Aldea Crengua', 3522);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldea Crina', 3523);
@@ -10888,7 +10889,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldecu Anca', 3603);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldecu Ancuaa', 3604);
+VALUES ('Aldecu Ancua', 3604);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldecu Anda', 3605);
@@ -10930,7 +10931,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldecu Antonela', 3617);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldecu Anuaa', 3618);
+VALUES ('Aldecu Anua', 3618);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldecu Ariadna', 3619);
@@ -10942,7 +10943,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldecu Arina', 3621);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldecu Aristiaa', 3622);
+VALUES ('Aldecu Aristia', 3622);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldecu Artemisa', 3623);
@@ -10990,7 +10991,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldecu Bogdana', 3637);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldecu Brânduaa', 3638);
+VALUES ('Aldecu Brândua', 3638);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldecu Camelia', 3639);
@@ -11065,13 +11066,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldecu Codrina', 3662);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldecu Codruaa', 3663);
+VALUES ('Aldecu Codrua', 3663);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldecu Constantina', 3664);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldecu Constanaa', 3665);
+VALUES ('Aldecu Constana', 3665);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldecu Consuela', 3666);
@@ -11089,7 +11090,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldecu Cosmina', 3670);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldecu Crenguaa', 3671);
+VALUES ('Aldecu Crengua', 3671);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldecu Crina', 3672);
@@ -11335,7 +11336,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldescu Anca', 3752);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldescu Ancuaa', 3753);
+VALUES ('Aldescu Ancua', 3753);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldescu Anda', 3754);
@@ -11377,7 +11378,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldescu Antonela', 3766);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldescu Anuaa', 3767);
+VALUES ('Aldescu Anua', 3767);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldescu Ariadna', 3768);
@@ -11389,7 +11390,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldescu Arina', 3770);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldescu Aristiaa', 3771);
+VALUES ('Aldescu Aristia', 3771);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldescu Artemisa', 3772);
@@ -11437,7 +11438,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldescu Bogdana', 3786);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldescu Brânduaa', 3787);
+VALUES ('Aldescu Brândua', 3787);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldescu Camelia', 3788);
@@ -11512,13 +11513,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldescu Codrina', 3811);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldescu Codruaa', 3812);
+VALUES ('Aldescu Codrua', 3812);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldescu Constantina', 3813);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldescu Constanaa', 3814);
+VALUES ('Aldescu Constana', 3814);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldescu Consuela', 3815);
@@ -11536,7 +11537,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldescu Cosmina', 3819);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldescu Crenguaa', 3820);
+VALUES ('Aldescu Crengua', 3820);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldescu Crina', 3821);
@@ -11782,7 +11783,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldica Anca', 3901);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldica Ancuaa', 3902);
+VALUES ('Aldica Ancua', 3902);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldica Anda', 3903);
@@ -11824,7 +11825,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldica Antonela', 3915);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldica Anuaa', 3916);
+VALUES ('Aldica Anua', 3916);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldica Ariadna', 3917);
@@ -11836,7 +11837,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldica Arina', 3919);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldica Aristiaa', 3920);
+VALUES ('Aldica Aristia', 3920);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldica Artemisa', 3921);
@@ -11884,7 +11885,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldica Bogdana', 3935);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldica Brânduaa', 3936);
+VALUES ('Aldica Brândua', 3936);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldica Camelia', 3937);
@@ -11959,13 +11960,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldica Codrina', 3960);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldica Codruaa', 3961);
+VALUES ('Aldica Codrua', 3961);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldica Constantina', 3962);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldica Constanaa', 3963);
+VALUES ('Aldica Constana', 3963);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldica Consuela', 3964);
@@ -11983,7 +11984,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldica Cosmina', 3968);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldica Crenguaa', 3969);
+VALUES ('Aldica Crengua', 3969);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldica Crina', 3970);
@@ -12229,7 +12230,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldia Anca', 4050);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldia Ancuaa', 4051);
+VALUES ('Aldia Ancua', 4051);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldia Anda', 4052);
@@ -12271,7 +12272,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldia Antonela', 4064);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldia Anuaa', 4065);
+VALUES ('Aldia Anua', 4065);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldia Ariadna', 4066);
@@ -12283,7 +12284,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldia Arina', 4068);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldia Aristiaa', 4069);
+VALUES ('Aldia Aristia', 4069);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldia Artemisa', 4070);
@@ -12331,7 +12332,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldia Bogdana', 4084);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldia Brânduaa', 4085);
+VALUES ('Aldia Brândua', 4085);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldia Camelia', 4086);
@@ -12406,13 +12407,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldia Codrina', 4109);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldia Codruaa', 4110);
+VALUES ('Aldia Codrua', 4110);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldia Constantina', 4111);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldia Constanaa', 4112);
+VALUES ('Aldia Constana', 4112);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldia Consuela', 4113);
@@ -12430,7 +12431,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldia Cosmina', 4117);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldia Crenguaa', 4118);
+VALUES ('Aldia Crengua', 4118);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldia Crina', 4119);
@@ -12676,7 +12677,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldoi Anca', 4199);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoi Ancuaa', 4200);
+VALUES ('Aldoi Ancua', 4200);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoi Anda', 4201);
@@ -12718,7 +12719,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldoi Antonela', 4213);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoi Anuaa', 4214);
+VALUES ('Aldoi Anua', 4214);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoi Ariadna', 4215);
@@ -12730,7 +12731,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldoi Arina', 4217);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoi Aristiaa', 4218);
+VALUES ('Aldoi Aristia', 4218);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoi Artemisa', 4219);
@@ -12778,7 +12779,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldoi Bogdana', 4233);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoi Brânduaa', 4234);
+VALUES ('Aldoi Brândua', 4234);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoi Camelia', 4235);
@@ -12853,13 +12854,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldoi Codrina', 4258);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoi Codruaa', 4259);
+VALUES ('Aldoi Codrua', 4259);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoi Constantina', 4260);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoi Constanaa', 4261);
+VALUES ('Aldoi Constana', 4261);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoi Consuela', 4262);
@@ -12877,7 +12878,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldoi Cosmina', 4266);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoi Crenguaa', 4267);
+VALUES ('Aldoi Crengua', 4267);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoi Crina', 4268);
@@ -13123,7 +13124,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldoiu Anca', 4348);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoiu Ancuaa', 4349);
+VALUES ('Aldoiu Ancua', 4349);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoiu Anda', 4350);
@@ -13165,7 +13166,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldoiu Antonela', 4362);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoiu Anuaa', 4363);
+VALUES ('Aldoiu Anua', 4363);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoiu Ariadna', 4364);
@@ -13177,7 +13178,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldoiu Arina', 4366);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoiu Aristiaa', 4367);
+VALUES ('Aldoiu Aristia', 4367);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoiu Artemisa', 4368);
@@ -13225,7 +13226,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldoiu Bogdana', 4382);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoiu Brânduaa', 4383);
+VALUES ('Aldoiu Brândua', 4383);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoiu Camelia', 4384);
@@ -13300,13 +13301,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldoiu Codrina', 4407);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoiu Codruaa', 4408);
+VALUES ('Aldoiu Codrua', 4408);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoiu Constantina', 4409);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoiu Constanaa', 4410);
+VALUES ('Aldoiu Constana', 4410);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoiu Consuela', 4411);
@@ -13324,7 +13325,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldoiu Cosmina', 4415);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldoiu Crenguaa', 4416);
+VALUES ('Aldoiu Crengua', 4416);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldoiu Crina', 4417);
@@ -13570,7 +13571,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldulea Anca', 4497);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulea Ancuaa', 4498);
+VALUES ('Aldulea Ancua', 4498);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulea Anda', 4499);
@@ -13612,7 +13613,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldulea Antonela', 4511);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulea Anuaa', 4512);
+VALUES ('Aldulea Anua', 4512);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulea Ariadna', 4513);
@@ -13624,7 +13625,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldulea Arina', 4515);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulea Aristiaa', 4516);
+VALUES ('Aldulea Aristia', 4516);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulea Artemisa', 4517);
@@ -13672,7 +13673,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldulea Bogdana', 4531);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulea Brânduaa', 4532);
+VALUES ('Aldulea Brândua', 4532);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulea Camelia', 4533);
@@ -13747,13 +13748,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldulea Codrina', 4556);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulea Codruaa', 4557);
+VALUES ('Aldulea Codrua', 4557);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulea Constantina', 4558);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulea Constanaa', 4559);
+VALUES ('Aldulea Constana', 4559);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulea Consuela', 4560);
@@ -13771,7 +13772,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldulea Cosmina', 4564);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulea Crenguaa', 4565);
+VALUES ('Aldulea Crengua', 4565);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulea Crina', 4566);
@@ -14017,7 +14018,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldulescu Anca', 4646);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulescu Ancuaa', 4647);
+VALUES ('Aldulescu Ancua', 4647);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulescu Anda', 4648);
@@ -14059,7 +14060,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldulescu Antonela', 4660);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulescu Anuaa', 4661);
+VALUES ('Aldulescu Anua', 4661);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulescu Ariadna', 4662);
@@ -14071,7 +14072,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldulescu Arina', 4664);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulescu Aristiaa', 4665);
+VALUES ('Aldulescu Aristia', 4665);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulescu Artemisa', 4666);
@@ -14119,7 +14120,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldulescu Bogdana', 4680);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulescu Brânduaa', 4681);
+VALUES ('Aldulescu Brândua', 4681);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulescu Camelia', 4682);
@@ -14194,13 +14195,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldulescu Codrina', 4705);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulescu Codruaa', 4706);
+VALUES ('Aldulescu Codrua', 4706);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulescu Constantina', 4707);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulescu Constanaa', 4708);
+VALUES ('Aldulescu Constana', 4708);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulescu Consuela', 4709);
@@ -14218,7 +14219,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aldulescu Cosmina', 4713);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aldulescu Crenguaa', 4714);
+VALUES ('Aldulescu Crengua', 4714);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aldulescu Crina', 4715);
@@ -14464,7 +14465,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleca Anca', 4795);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleca Ancuaa', 4796);
+VALUES ('Aleca Ancua', 4796);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleca Anda', 4797);
@@ -14506,7 +14507,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleca Antonela', 4809);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleca Anuaa', 4810);
+VALUES ('Aleca Anua', 4810);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleca Ariadna', 4811);
@@ -14518,7 +14519,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleca Arina', 4813);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleca Aristiaa', 4814);
+VALUES ('Aleca Aristia', 4814);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleca Artemisa', 4815);
@@ -14566,7 +14567,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleca Bogdana', 4829);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleca Brânduaa', 4830);
+VALUES ('Aleca Brândua', 4830);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleca Camelia', 4831);
@@ -14641,13 +14642,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleca Codrina', 4854);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleca Codruaa', 4855);
+VALUES ('Aleca Codrua', 4855);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleca Constantina', 4856);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleca Constanaa', 4857);
+VALUES ('Aleca Constana', 4857);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleca Consuela', 4858);
@@ -14665,7 +14666,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleca Cosmina', 4862);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleca Crenguaa', 4863);
+VALUES ('Aleca Crengua', 4863);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleca Crina', 4864);
@@ -14911,7 +14912,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsa Anca', 4944);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsa Ancuaa', 4945);
+VALUES ('Alecsa Ancua', 4945);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsa Anda', 4946);
@@ -14953,7 +14954,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsa Antonela', 4958);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsa Anuaa', 4959);
+VALUES ('Alecsa Anua', 4959);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsa Ariadna', 4960);
@@ -14965,7 +14966,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsa Arina', 4962);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsa Aristiaa', 4963);
+VALUES ('Alecsa Aristia', 4963);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsa Artemisa', 4964);
@@ -15013,7 +15014,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsa Bogdana', 4978);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsa Brânduaa', 4979);
+VALUES ('Alecsa Brândua', 4979);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsa Camelia', 4980);
@@ -15088,13 +15089,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsa Codrina', 5003);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsa Codruaa', 5004);
+VALUES ('Alecsa Codrua', 5004);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsa Constantina', 5005);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsa Constanaa', 5006);
+VALUES ('Alecsa Constana', 5006);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsa Consuela', 5007);
@@ -15112,7 +15113,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsa Cosmina', 5011);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsa Crenguaa', 5012);
+VALUES ('Alecsa Crengua', 5012);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsa Crina', 5013);
@@ -15358,7 +15359,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandrescu Anca', 5093);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Ancuaa', 5094);
+VALUES ('Alecsandrescu Ancua', 5094);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Anda', 5095);
@@ -15400,7 +15401,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandrescu Antonela', 5107);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Anuaa', 5108);
+VALUES ('Alecsandrescu Anua', 5108);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Ariadna', 5109);
@@ -15412,7 +15413,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandrescu Arina', 5111);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Aristiaa', 5112);
+VALUES ('Alecsandrescu Aristia', 5112);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Artemisa', 5113);
@@ -15460,7 +15461,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandrescu Bogdana', 5127);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Brânduaa', 5128);
+VALUES ('Alecsandrescu Brândua', 5128);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Camelia', 5129);
@@ -15535,13 +15536,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandrescu Codrina', 5152);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Codruaa', 5153);
+VALUES ('Alecsandrescu Codrua', 5153);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Constantina', 5154);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Constanaa', 5155);
+VALUES ('Alecsandrescu Constana', 5155);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Consuela', 5156);
@@ -15559,7 +15560,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandrescu Cosmina', 5160);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Crenguaa', 5161);
+VALUES ('Alecsandrescu Crengua', 5161);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Crina', 5162);
@@ -15805,7 +15806,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandrescu Anca', 5242);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Ancuaa', 5243);
+VALUES ('Alecsandrescu Ancua', 5243);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Anda', 5244);
@@ -15847,7 +15848,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandrescu Antonela', 5256);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Anuaa', 5257);
+VALUES ('Alecsandrescu Anua', 5257);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Ariadna', 5258);
@@ -15859,7 +15860,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandrescu Arina', 5260);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Aristiaa', 5261);
+VALUES ('Alecsandrescu Aristia', 5261);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Artemisa', 5262);
@@ -15907,7 +15908,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandrescu Bogdana', 5276);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Brânduaa', 5277);
+VALUES ('Alecsandrescu Brândua', 5277);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Camelia', 5278);
@@ -15982,13 +15983,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandrescu Codrina', 5301);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Codruaa', 5302);
+VALUES ('Alecsandrescu Codrua', 5302);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Constantina', 5303);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Constanaa', 5304);
+VALUES ('Alecsandrescu Constana', 5304);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Consuela', 5305);
@@ -16006,7 +16007,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandrescu Cosmina', 5309);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandrescu Crenguaa', 5310);
+VALUES ('Alecsandrescu Crengua', 5310);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandrescu Crina', 5311);
@@ -16252,7 +16253,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandri Anca', 5391);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandri Ancuaa', 5392);
+VALUES ('Alecsandri Ancua', 5392);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandri Anda', 5393);
@@ -16294,7 +16295,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandri Antonela', 5405);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandri Anuaa', 5406);
+VALUES ('Alecsandri Anua', 5406);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandri Ariadna', 5407);
@@ -16306,7 +16307,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandri Arina', 5409);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandri Aristiaa', 5410);
+VALUES ('Alecsandri Aristia', 5410);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandri Artemisa', 5411);
@@ -16354,7 +16355,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandri Bogdana', 5425);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandri Brânduaa', 5426);
+VALUES ('Alecsandri Brândua', 5426);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandri Camelia', 5427);
@@ -16429,13 +16430,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandri Codrina', 5450);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandri Codruaa', 5451);
+VALUES ('Alecsandri Codrua', 5451);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandri Constantina', 5452);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandri Constanaa', 5453);
+VALUES ('Alecsandri Constana', 5453);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandri Consuela', 5454);
@@ -16453,7 +16454,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandri Cosmina', 5458);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandri Crenguaa', 5459);
+VALUES ('Alecsandri Crengua', 5459);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandri Crina', 5460);
@@ -16699,7 +16700,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandriescu Anca', 5540);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandriescu Ancuaa', 5541);
+VALUES ('Alecsandriescu Ancua', 5541);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandriescu Anda', 5542);
@@ -16741,7 +16742,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandriescu Antonela', 5554);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandriescu Anuaa', 5555);
+VALUES ('Alecsandriescu Anua', 5555);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandriescu Ariadna', 5556);
@@ -16753,7 +16754,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandriescu Arina', 5558);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandriescu Aristiaa', 5559);
+VALUES ('Alecsandriescu Aristia', 5559);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandriescu Artemisa', 5560);
@@ -16801,7 +16802,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandriescu Bogdana', 5574);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandriescu Brânduaa', 5575);
+VALUES ('Alecsandriescu Brândua', 5575);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandriescu Camelia', 5576);
@@ -16876,13 +16877,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandriescu Codrina', 5599);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandriescu Codruaa', 5600);
+VALUES ('Alecsandriescu Codrua', 5600);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandriescu Constantina', 5601);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandriescu Constanaa', 5602);
+VALUES ('Alecsandriescu Constana', 5602);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandriescu Consuela', 5603);
@@ -16900,7 +16901,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandriescu Cosmina', 5607);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandriescu Crenguaa', 5608);
+VALUES ('Alecsandriescu Crengua', 5608);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandriescu Crina', 5609);
@@ -17146,7 +17147,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandroaie Anca', 5689);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandroaie Ancuaa', 5690);
+VALUES ('Alecsandroaie Ancua', 5690);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandroaie Anda', 5691);
@@ -17188,7 +17189,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandroaie Antonela', 5703);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandroaie Anuaa', 5704);
+VALUES ('Alecsandroaie Anua', 5704);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandroaie Ariadna', 5705);
@@ -17200,7 +17201,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandroaie Arina', 5707);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandroaie Aristiaa', 5708);
+VALUES ('Alecsandroaie Aristia', 5708);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandroaie Artemisa', 5709);
@@ -17248,7 +17249,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandroaie Bogdana', 5723);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandroaie Brânduaa', 5724);
+VALUES ('Alecsandroaie Brândua', 5724);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandroaie Camelia', 5725);
@@ -17323,13 +17324,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandroaie Codrina', 5748);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandroaie Codruaa', 5749);
+VALUES ('Alecsandroaie Codrua', 5749);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandroaie Constantina', 5750);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandroaie Constanaa', 5751);
+VALUES ('Alecsandroaie Constana', 5751);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandroaie Consuela', 5752);
@@ -17347,7 +17348,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandroaie Cosmina', 5756);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandroaie Crenguaa', 5757);
+VALUES ('Alecsandroaie Crengua', 5757);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandroaie Crina', 5758);
@@ -17593,7 +17594,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandru Anca', 5838);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandru Ancuaa', 5839);
+VALUES ('Alecsandru Ancua', 5839);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandru Anda', 5840);
@@ -17635,7 +17636,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandru Antonela', 5852);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandru Anuaa', 5853);
+VALUES ('Alecsandru Anua', 5853);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandru Ariadna', 5854);
@@ -17647,7 +17648,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandru Arina', 5856);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandru Aristiaa', 5857);
+VALUES ('Alecsandru Aristia', 5857);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandru Artemisa', 5858);
@@ -17695,7 +17696,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandru Bogdana', 5872);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandru Brânduaa', 5873);
+VALUES ('Alecsandru Brândua', 5873);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandru Camelia', 5874);
@@ -17770,13 +17771,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandru Codrina', 5897);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandru Codruaa', 5898);
+VALUES ('Alecsandru Codrua', 5898);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandru Constantina', 5899);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandru Constanaa', 5900);
+VALUES ('Alecsandru Constana', 5900);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandru Consuela', 5901);
@@ -17794,7 +17795,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsandru Cosmina', 5905);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsandru Crenguaa', 5906);
+VALUES ('Alecsandru Crengua', 5906);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsandru Crina', 5907);
@@ -18040,7 +18041,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecse Anca', 5987);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecse Ancuaa', 5988);
+VALUES ('Alecse Ancua', 5988);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecse Anda', 5989);
@@ -18082,7 +18083,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecse Antonela', 6001);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecse Anuaa', 6002);
+VALUES ('Alecse Anua', 6002);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecse Ariadna', 6003);
@@ -18094,7 +18095,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecse Arina', 6005);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecse Aristiaa', 6006);
+VALUES ('Alecse Aristia', 6006);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecse Artemisa', 6007);
@@ -18142,7 +18143,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecse Bogdana', 6021);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecse Brânduaa', 6022);
+VALUES ('Alecse Brândua', 6022);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecse Camelia', 6023);
@@ -18217,13 +18218,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecse Codrina', 6046);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecse Codruaa', 6047);
+VALUES ('Alecse Codrua', 6047);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecse Constantina', 6048);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecse Constanaa', 6049);
+VALUES ('Alecse Constana', 6049);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecse Consuela', 6050);
@@ -18241,7 +18242,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecse Cosmina', 6054);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecse Crenguaa', 6055);
+VALUES ('Alecse Crengua', 6055);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecse Crina', 6056);
@@ -18487,7 +18488,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecseiciuc Anca', 6136);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecseiciuc Ancuaa', 6137);
+VALUES ('Alecseiciuc Ancua', 6137);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecseiciuc Anda', 6138);
@@ -18529,7 +18530,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecseiciuc Antonela', 6150);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecseiciuc Anuaa', 6151);
+VALUES ('Alecseiciuc Anua', 6151);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecseiciuc Ariadna', 6152);
@@ -18541,7 +18542,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecseiciuc Arina', 6154);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecseiciuc Aristiaa', 6155);
+VALUES ('Alecseiciuc Aristia', 6155);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecseiciuc Artemisa', 6156);
@@ -18589,7 +18590,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecseiciuc Bogdana', 6170);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecseiciuc Brânduaa', 6171);
+VALUES ('Alecseiciuc Brândua', 6171);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecseiciuc Camelia', 6172);
@@ -18664,13 +18665,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecseiciuc Codrina', 6195);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecseiciuc Codruaa', 6196);
+VALUES ('Alecseiciuc Codrua', 6196);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecseiciuc Constantina', 6197);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecseiciuc Constanaa', 6198);
+VALUES ('Alecseiciuc Constana', 6198);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecseiciuc Consuela', 6199);
@@ -18688,7 +18689,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecseiciuc Cosmina', 6203);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecseiciuc Crenguaa', 6204);
+VALUES ('Alecseiciuc Crengua', 6204);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecseiciuc Crina', 6205);
@@ -18934,7 +18935,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoae Anca', 6285);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoae Ancuaa', 6286);
+VALUES ('Alecsoae Ancua', 6286);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoae Anda', 6287);
@@ -18976,7 +18977,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoae Antonela', 6299);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoae Anuaa', 6300);
+VALUES ('Alecsoae Anua', 6300);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoae Ariadna', 6301);
@@ -18988,7 +18989,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoae Arina', 6303);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoae Aristiaa', 6304);
+VALUES ('Alecsoae Aristia', 6304);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoae Artemisa', 6305);
@@ -19036,7 +19037,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoae Bogdana', 6319);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoae Brânduaa', 6320);
+VALUES ('Alecsoae Brândua', 6320);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoae Camelia', 6321);
@@ -19111,13 +19112,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoae Codrina', 6344);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoae Codruaa', 6345);
+VALUES ('Alecsoae Codrua', 6345);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoae Constantina', 6346);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoae Constanaa', 6347);
+VALUES ('Alecsoae Constana', 6347);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoae Consuela', 6348);
@@ -19135,7 +19136,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoae Cosmina', 6352);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoae Crenguaa', 6353);
+VALUES ('Alecsoae Crengua', 6353);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoae Crina', 6354);
@@ -19381,7 +19382,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaei Anca', 6434);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaei Ancuaa', 6435);
+VALUES ('Alecsoaei Ancua', 6435);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaei Anda', 6436);
@@ -19423,7 +19424,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaei Antonela', 6448);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaei Anuaa', 6449);
+VALUES ('Alecsoaei Anua', 6449);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaei Ariadna', 6450);
@@ -19435,7 +19436,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaei Arina', 6452);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaei Aristiaa', 6453);
+VALUES ('Alecsoaei Aristia', 6453);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaei Artemisa', 6454);
@@ -19483,7 +19484,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaei Bogdana', 6468);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaei Brânduaa', 6469);
+VALUES ('Alecsoaei Brândua', 6469);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaei Camelia', 6470);
@@ -19558,13 +19559,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaei Codrina', 6493);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaei Codruaa', 6494);
+VALUES ('Alecsoaei Codrua', 6494);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaei Constantina', 6495);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaei Constanaa', 6496);
+VALUES ('Alecsoaei Constana', 6496);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaei Consuela', 6497);
@@ -19582,7 +19583,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaei Cosmina', 6501);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaei Crenguaa', 6502);
+VALUES ('Alecsoaei Crengua', 6502);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaei Crina', 6503);
@@ -19828,7 +19829,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoai Anca', 6583);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoai Ancuaa', 6584);
+VALUES ('Alecsoai Ancua', 6584);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoai Anda', 6585);
@@ -19870,7 +19871,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoai Antonela', 6597);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoai Anuaa', 6598);
+VALUES ('Alecsoai Anua', 6598);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoai Ariadna', 6599);
@@ -19882,7 +19883,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoai Arina', 6601);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoai Aristiaa', 6602);
+VALUES ('Alecsoai Aristia', 6602);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoai Artemisa', 6603);
@@ -19930,7 +19931,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoai Bogdana', 6617);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoai Brânduaa', 6618);
+VALUES ('Alecsoai Brândua', 6618);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoai Camelia', 6619);
@@ -20005,13 +20006,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoai Codrina', 6642);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoai Codruaa', 6643);
+VALUES ('Alecsoai Codrua', 6643);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoai Constantina', 6644);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoai Constanaa', 6645);
+VALUES ('Alecsoai Constana', 6645);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoai Consuela', 6646);
@@ -20029,7 +20030,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoai Cosmina', 6650);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoai Crenguaa', 6651);
+VALUES ('Alecsoai Crengua', 6651);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoai Crina', 6652);
@@ -20275,7 +20276,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaia Anca', 6732);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaia Ancuaa', 6733);
+VALUES ('Alecsoaia Ancua', 6733);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaia Anda', 6734);
@@ -20317,7 +20318,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaia Antonela', 6746);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaia Anuaa', 6747);
+VALUES ('Alecsoaia Anua', 6747);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaia Ariadna', 6748);
@@ -20329,7 +20330,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaia Arina', 6750);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaia Aristiaa', 6751);
+VALUES ('Alecsoaia Aristia', 6751);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaia Artemisa', 6752);
@@ -20377,7 +20378,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaia Bogdana', 6766);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaia Brânduaa', 6767);
+VALUES ('Alecsoaia Brândua', 6767);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaia Camelia', 6768);
@@ -20452,13 +20453,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaia Codrina', 6791);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaia Codruaa', 6792);
+VALUES ('Alecsoaia Codrua', 6792);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaia Constantina', 6793);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaia Constanaa', 6794);
+VALUES ('Alecsoaia Constana', 6794);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaia Consuela', 6795);
@@ -20476,7 +20477,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaia Cosmina', 6799);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaia Crenguaa', 6800);
+VALUES ('Alecsoaia Crengua', 6800);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaia Crina', 6801);
@@ -20722,7 +20723,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaie Anca', 6881);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaie Ancuaa', 6882);
+VALUES ('Alecsoaie Ancua', 6882);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaie Anda', 6883);
@@ -20764,7 +20765,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaie Antonela', 6895);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaie Anuaa', 6896);
+VALUES ('Alecsoaie Anua', 6896);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaie Ariadna', 6897);
@@ -20776,7 +20777,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaie Arina', 6899);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaie Aristiaa', 6900);
+VALUES ('Alecsoaie Aristia', 6900);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaie Artemisa', 6901);
@@ -20824,7 +20825,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaie Bogdana', 6915);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaie Brânduaa', 6916);
+VALUES ('Alecsoaie Brândua', 6916);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaie Camelia', 6917);
@@ -20899,13 +20900,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaie Codrina', 6940);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaie Codruaa', 6941);
+VALUES ('Alecsoaie Codrua', 6941);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaie Constantina', 6942);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaie Constanaa', 6943);
+VALUES ('Alecsoaie Constana', 6943);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaie Consuela', 6944);
@@ -20923,7 +20924,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoaie Cosmina', 6948);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoaie Crenguaa', 6949);
+VALUES ('Alecsoaie Crengua', 6949);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoaie Crina', 6950);
@@ -21169,7 +21170,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoiu Anca', 7030);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoiu Ancuaa', 7031);
+VALUES ('Alecsoiu Ancua', 7031);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoiu Anda', 7032);
@@ -21211,7 +21212,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoiu Antonela', 7044);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoiu Anuaa', 7045);
+VALUES ('Alecsoiu Anua', 7045);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoiu Ariadna', 7046);
@@ -21223,7 +21224,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoiu Arina', 7048);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoiu Aristiaa', 7049);
+VALUES ('Alecsoiu Aristia', 7049);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoiu Artemisa', 7050);
@@ -21271,7 +21272,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoiu Bogdana', 7064);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoiu Brânduaa', 7065);
+VALUES ('Alecsoiu Brândua', 7065);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoiu Camelia', 7066);
@@ -21346,13 +21347,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoiu Codrina', 7089);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoiu Codruaa', 7090);
+VALUES ('Alecsoiu Codrua', 7090);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoiu Constantina', 7091);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoiu Constanaa', 7092);
+VALUES ('Alecsoiu Constana', 7092);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoiu Consuela', 7093);
@@ -21370,7 +21371,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsoiu Cosmina', 7097);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsoiu Crenguaa', 7098);
+VALUES ('Alecsoiu Crengua', 7098);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsoiu Crina', 7099);
@@ -21616,7 +21617,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsuc Anca', 7179);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuc Ancuaa', 7180);
+VALUES ('Alecsuc Ancua', 7180);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsuc Anda', 7181);
@@ -21658,7 +21659,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsuc Antonela', 7193);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuc Anuaa', 7194);
+VALUES ('Alecsuc Anua', 7194);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsuc Ariadna', 7195);
@@ -21670,7 +21671,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsuc Arina', 7197);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuc Aristiaa', 7198);
+VALUES ('Alecsuc Aristia', 7198);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsuc Artemisa', 7199);
@@ -21718,7 +21719,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsuc Bogdana', 7213);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuc Brânduaa', 7214);
+VALUES ('Alecsuc Brândua', 7214);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsuc Camelia', 7215);
@@ -21793,13 +21794,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsuc Codrina', 7238);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuc Codruaa', 7239);
+VALUES ('Alecsuc Codrua', 7239);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsuc Constantina', 7240);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuc Constanaa', 7241);
+VALUES ('Alecsuc Constana', 7241);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsuc Consuela', 7242);
@@ -21817,7 +21818,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsuc Cosmina', 7246);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuc Crenguaa', 7247);
+VALUES ('Alecsuc Crengua', 7247);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecsuc Crina', 7248);
@@ -21982,451 +21983,451 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecsuc Fiona', 7301);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Adela', 7302);
+VALUES ('Alecsua Adela', 7302);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Adelaida', 7303);
+VALUES ('Alecsua Adelaida', 7303);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Adelina', 7304);
+VALUES ('Alecsua Adelina', 7304);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Adina', 7305);
+VALUES ('Alecsua Adina', 7305);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Adriana', 7306);
+VALUES ('Alecsua Adriana', 7306);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Agata', 7307);
+VALUES ('Alecsua Agata', 7307);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Aglaia', 7308);
+VALUES ('Alecsua Aglaia', 7308);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Agripina', 7309);
+VALUES ('Alecsua Agripina', 7309);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Aida', 7310);
+VALUES ('Alecsua Aida', 7310);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Alberta', 7311);
+VALUES ('Alecsua Alberta', 7311);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Albertina', 7312);
+VALUES ('Alecsua Albertina', 7312);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Alexandra', 7313);
+VALUES ('Alecsua Alexandra', 7313);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Alexandrina', 7314);
+VALUES ('Alecsua Alexandrina', 7314);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Alida', 7315);
+VALUES ('Alecsua Alida', 7315);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Alina', 7316);
+VALUES ('Alecsua Alina', 7316);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Alice', 7317);
+VALUES ('Alecsua Alice', 7317);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Alis', 7318);
+VALUES ('Alecsua Alis', 7318);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Alma', 7319);
+VALUES ('Alecsua Alma', 7319);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Amalia', 7320);
+VALUES ('Alecsua Amalia', 7320);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Amelia', 7321);
+VALUES ('Alecsua Amelia', 7321);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Amanda', 7322);
+VALUES ('Alecsua Amanda', 7322);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Ana', 7323);
+VALUES ('Alecsua Ana', 7323);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Anabela', 7324);
+VALUES ('Alecsua Anabela', 7324);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Anaida', 7325);
+VALUES ('Alecsua Anaida', 7325);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Anamaria', 7326);
+VALUES ('Alecsua Anamaria', 7326);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Anastasia', 7327);
+VALUES ('Alecsua Anastasia', 7327);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Anca', 7328);
+VALUES ('Alecsua Anca', 7328);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Ancuaa', 7329);
+VALUES ('Alecsua Ancua', 7329);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Anda', 7330);
+VALUES ('Alecsua Anda', 7330);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Andra', 7331);
+VALUES ('Alecsua Andra', 7331);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Andrada', 7332);
+VALUES ('Alecsua Andrada', 7332);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Andreea', 7333);
+VALUES ('Alecsua Andreea', 7333);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Anemona', 7334);
+VALUES ('Alecsua Anemona', 7334);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Aneta', 7335);
+VALUES ('Alecsua Aneta', 7335);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Angela', 7336);
+VALUES ('Alecsua Angela', 7336);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Anghelina', 7337);
+VALUES ('Alecsua Anghelina', 7337);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Anica', 7338);
+VALUES ('Alecsua Anica', 7338);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Aniaoara', 7339);
+VALUES ('Alecsua Aniaoara', 7339);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Antoaneta', 7340);
+VALUES ('Alecsua Antoaneta', 7340);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Antonia', 7341);
+VALUES ('Alecsua Antonia', 7341);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Antonela', 7342);
+VALUES ('Alecsua Antonela', 7342);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Anuaa', 7343);
+VALUES ('Alecsua Anua', 7343);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Ariadna', 7344);
+VALUES ('Alecsua Ariadna', 7344);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Ariana', 7345);
+VALUES ('Alecsua Ariana', 7345);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Arina', 7346);
+VALUES ('Alecsua Arina', 7346);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Aristiaa', 7347);
+VALUES ('Alecsua Aristia', 7347);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Artemisa', 7348);
+VALUES ('Alecsua Artemisa', 7348);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Astrid', 7349);
+VALUES ('Alecsua Astrid', 7349);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Atena', 7350);
+VALUES ('Alecsua Atena', 7350);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Augustina', 7351);
+VALUES ('Alecsua Augustina', 7351);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Aura', 7352);
+VALUES ('Alecsua Aura', 7352);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Aurelia', 7353);
+VALUES ('Alecsua Aurelia', 7353);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Aureliana', 7354);
+VALUES ('Alecsua Aureliana', 7354);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Aurica', 7355);
+VALUES ('Alecsua Aurica', 7355);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Aurora', 7356);
+VALUES ('Alecsua Aurora', 7356);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Axenia', 7357);
+VALUES ('Alecsua Axenia', 7357);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Beatrice', 7358);
+VALUES ('Alecsua Beatrice', 7358);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Betina', 7359);
+VALUES ('Alecsua Betina', 7359);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Bianca', 7360);
+VALUES ('Alecsua Bianca', 7360);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Blanduzia', 7361);
+VALUES ('Alecsua Blanduzia', 7361);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Bogdana', 7362);
+VALUES ('Alecsua Bogdana', 7362);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Brânduaa', 7363);
+VALUES ('Alecsua Brândua', 7363);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Camelia', 7364);
+VALUES ('Alecsua Camelia', 7364);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Carina', 7365);
+VALUES ('Alecsua Carina', 7365);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Carla', 7366);
+VALUES ('Alecsua Carla', 7366);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Carmen', 7367);
+VALUES ('Alecsua Carmen', 7367);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Carmina', 7368);
+VALUES ('Alecsua Carmina', 7368);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Carolina', 7369);
+VALUES ('Alecsua Carolina', 7369);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Casandra', 7370);
+VALUES ('Alecsua Casandra', 7370);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Casiana', 7371);
+VALUES ('Alecsua Casiana', 7371);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Caterina', 7372);
+VALUES ('Alecsua Caterina', 7372);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Catinca', 7373);
+VALUES ('Alecsua Catinca', 7373);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Catrina', 7374);
+VALUES ('Alecsua Catrina', 7374);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Catrinel', 7375);
+VALUES ('Alecsua Catrinel', 7375);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Catalina', 7376);
+VALUES ('Alecsua Catalina', 7376);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Cecilia', 7377);
+VALUES ('Alecsua Cecilia', 7377);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Celia', 7378);
+VALUES ('Alecsua Celia', 7378);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Cerasela', 7379);
+VALUES ('Alecsua Cerasela', 7379);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Cezara', 7380);
+VALUES ('Alecsua Cezara', 7380);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Cipriana', 7381);
+VALUES ('Alecsua Cipriana', 7381);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Clara', 7382);
+VALUES ('Alecsua Clara', 7382);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Clarisa', 7383);
+VALUES ('Alecsua Clarisa', 7383);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Claudia', 7384);
+VALUES ('Alecsua Claudia', 7384);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Clementina', 7385);
+VALUES ('Alecsua Clementina', 7385);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Cleopatra', 7386);
+VALUES ('Alecsua Cleopatra', 7386);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Codrina', 7387);
+VALUES ('Alecsua Codrina', 7387);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Codruaa', 7388);
+VALUES ('Alecsua Codrua', 7388);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Constantina', 7389);
+VALUES ('Alecsua Constantina', 7389);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Constanaa', 7390);
+VALUES ('Alecsua Constana', 7390);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Consuela', 7391);
+VALUES ('Alecsua Consuela', 7391);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Coralia', 7392);
+VALUES ('Alecsua Coralia', 7392);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Corina', 7393);
+VALUES ('Alecsua Corina', 7393);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Cornelia', 7394);
+VALUES ('Alecsua Cornelia', 7394);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Cosmina', 7395);
+VALUES ('Alecsua Cosmina', 7395);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Crenguaa', 7396);
+VALUES ('Alecsua Crengua', 7396);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Crina', 7397);
+VALUES ('Alecsua Crina', 7397);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Cristina', 7398);
+VALUES ('Alecsua Cristina', 7398);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Daciana', 7399);
+VALUES ('Alecsua Daciana', 7399);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Dafina', 7400);
+VALUES ('Alecsua Dafina', 7400);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Daiana', 7401);
+VALUES ('Alecsua Daiana', 7401);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Dalia', 7402);
+VALUES ('Alecsua Dalia', 7402);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Dana', 7403);
+VALUES ('Alecsua Dana', 7403);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Daniela', 7404);
+VALUES ('Alecsua Daniela', 7404);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Daria', 7405);
+VALUES ('Alecsua Daria', 7405);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Dariana', 7406);
+VALUES ('Alecsua Dariana', 7406);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Delia', 7407);
+VALUES ('Alecsua Delia', 7407);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Demetra', 7408);
+VALUES ('Alecsua Demetra', 7408);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Denisa', 7409);
+VALUES ('Alecsua Denisa', 7409);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Despina', 7410);
+VALUES ('Alecsua Despina', 7410);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Diana', 7411);
+VALUES ('Alecsua Diana', 7411);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Dida', 7412);
+VALUES ('Alecsua Dida', 7412);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Didina', 7413);
+VALUES ('Alecsua Didina', 7413);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Dimitrina', 7414);
+VALUES ('Alecsua Dimitrina', 7414);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Dina', 7415);
+VALUES ('Alecsua Dina', 7415);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Dochia', 7416);
+VALUES ('Alecsua Dochia', 7416);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Doina', 7417);
+VALUES ('Alecsua Doina', 7417);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Domnica', 7418);
+VALUES ('Alecsua Domnica', 7418);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Dora', 7419);
+VALUES ('Alecsua Dora', 7419);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Doriana', 7420);
+VALUES ('Alecsua Doriana', 7420);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Dorina', 7421);
+VALUES ('Alecsua Dorina', 7421);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Dorli', 7422);
+VALUES ('Alecsua Dorli', 7422);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Draga', 7423);
+VALUES ('Alecsua Draga', 7423);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Dumitra', 7424);
+VALUES ('Alecsua Dumitra', 7424);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Dumitrana', 7425);
+VALUES ('Alecsua Dumitrana', 7425);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Ecaterina', 7426);
+VALUES ('Alecsua Ecaterina', 7426);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Eftimia', 7427);
+VALUES ('Alecsua Eftimia', 7427);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Elena', 7428);
+VALUES ('Alecsua Elena', 7428);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Eleonora', 7429);
+VALUES ('Alecsua Eleonora', 7429);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Eliana', 7430);
+VALUES ('Alecsua Eliana', 7430);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Elisabeta', 7431);
+VALUES ('Alecsua Elisabeta', 7431);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Elisaveta', 7432);
+VALUES ('Alecsua Elisaveta', 7432);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Eliza', 7433);
+VALUES ('Alecsua Eliza', 7433);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Elodia', 7434);
+VALUES ('Alecsua Elodia', 7434);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Elvira', 7435);
+VALUES ('Alecsua Elvira', 7435);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Emilia', 7436);
+VALUES ('Alecsua Emilia', 7436);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Emanuela', 7437);
+VALUES ('Alecsua Emanuela', 7437);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Erica', 7438);
+VALUES ('Alecsua Erica', 7438);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Estera', 7439);
+VALUES ('Alecsua Estera', 7439);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Eufrosina', 7440);
+VALUES ('Alecsua Eufrosina', 7440);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Eugenia', 7441);
+VALUES ('Alecsua Eugenia', 7441);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Eusebia', 7442);
+VALUES ('Alecsua Eusebia', 7442);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Eva', 7443);
+VALUES ('Alecsua Eva', 7443);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Evanghelina', 7444);
+VALUES ('Alecsua Evanghelina', 7444);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Evelina', 7445);
+VALUES ('Alecsua Evelina', 7445);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Fabia', 7446);
+VALUES ('Alecsua Fabia', 7446);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Fabiana', 7447);
+VALUES ('Alecsua Fabiana', 7447);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Felicia', 7448);
+VALUES ('Alecsua Felicia', 7448);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Filofteia', 7449);
+VALUES ('Alecsua Filofteia', 7449);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecsuaa Fiona', 7450);
+VALUES ('Alecsua Fiona', 7450);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecu Adela', 7451);
@@ -22510,7 +22511,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecu Anca', 7477);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecu Ancuaa', 7478);
+VALUES ('Alecu Ancua', 7478);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecu Anda', 7479);
@@ -22552,7 +22553,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecu Antonela', 7491);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecu Anuaa', 7492);
+VALUES ('Alecu Anua', 7492);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecu Ariadna', 7493);
@@ -22564,7 +22565,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecu Arina', 7495);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecu Aristiaa', 7496);
+VALUES ('Alecu Aristia', 7496);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecu Artemisa', 7497);
@@ -22612,7 +22613,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecu Bogdana', 7511);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecu Brânduaa', 7512);
+VALUES ('Alecu Brândua', 7512);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecu Camelia', 7513);
@@ -22687,13 +22688,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecu Codrina', 7536);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecu Codruaa', 7537);
+VALUES ('Alecu Codrua', 7537);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecu Constantina', 7538);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecu Constanaa', 7539);
+VALUES ('Alecu Constana', 7539);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecu Consuela', 7540);
@@ -22711,7 +22712,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alecu Cosmina', 7544);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alecu Crenguaa', 7545);
+VALUES ('Alecu Crengua', 7545);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alecu Crina', 7546);
@@ -22957,7 +22958,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleman Anca', 7626);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleman Ancuaa', 7627);
+VALUES ('Aleman Ancua', 7627);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleman Anda', 7628);
@@ -22999,7 +23000,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleman Antonela', 7640);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleman Anuaa', 7641);
+VALUES ('Aleman Anua', 7641);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleman Ariadna', 7642);
@@ -23011,7 +23012,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleman Arina', 7644);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleman Aristiaa', 7645);
+VALUES ('Aleman Aristia', 7645);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleman Artemisa', 7646);
@@ -23059,7 +23060,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleman Bogdana', 7660);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleman Brânduaa', 7661);
+VALUES ('Aleman Brândua', 7661);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleman Camelia', 7662);
@@ -23134,13 +23135,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleman Codrina', 7685);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleman Codruaa', 7686);
+VALUES ('Aleman Codrua', 7686);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleman Constantina', 7687);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleman Constanaa', 7688);
+VALUES ('Aleman Constana', 7688);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleman Consuela', 7689);
@@ -23158,7 +23159,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleman Cosmina', 7693);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleman Crenguaa', 7694);
+VALUES ('Aleman Crengua', 7694);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleman Crina', 7695);
@@ -23404,7 +23405,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alenei Anca', 7775);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alenei Ancuaa', 7776);
+VALUES ('Alenei Ancua', 7776);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alenei Anda', 7777);
@@ -23446,7 +23447,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alenei Antonela', 7789);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alenei Anuaa', 7790);
+VALUES ('Alenei Anua', 7790);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alenei Ariadna', 7791);
@@ -23458,7 +23459,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alenei Arina', 7793);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alenei Aristiaa', 7794);
+VALUES ('Alenei Aristia', 7794);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alenei Artemisa', 7795);
@@ -23506,7 +23507,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alenei Bogdana', 7809);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alenei Brânduaa', 7810);
+VALUES ('Alenei Brândua', 7810);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alenei Camelia', 7811);
@@ -23581,13 +23582,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alenei Codrina', 7834);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alenei Codruaa', 7835);
+VALUES ('Alenei Codrua', 7835);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alenei Constantina', 7836);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alenei Constanaa', 7837);
+VALUES ('Alenei Constana', 7837);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alenei Consuela', 7838);
@@ -23605,7 +23606,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alenei Cosmina', 7842);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alenei Crenguaa', 7843);
+VALUES ('Alenei Crengua', 7843);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alenei Crina', 7844);
@@ -23851,7 +23852,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleonte Anca', 7924);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleonte Ancuaa', 7925);
+VALUES ('Aleonte Ancua', 7925);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleonte Anda', 7926);
@@ -23893,7 +23894,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleonte Antonela', 7938);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleonte Anuaa', 7939);
+VALUES ('Aleonte Anua', 7939);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleonte Ariadna', 7940);
@@ -23905,7 +23906,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleonte Arina', 7942);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleonte Aristiaa', 7943);
+VALUES ('Aleonte Aristia', 7943);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleonte Artemisa', 7944);
@@ -23953,7 +23954,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleonte Bogdana', 7958);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleonte Brânduaa', 7959);
+VALUES ('Aleonte Brândua', 7959);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleonte Camelia', 7960);
@@ -24028,13 +24029,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleonte Codrina', 7983);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleonte Codruaa', 7984);
+VALUES ('Aleonte Codrua', 7984);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleonte Constantina', 7985);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleonte Constanaa', 7986);
+VALUES ('Aleonte Constana', 7986);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleonte Consuela', 7987);
@@ -24052,7 +24053,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Aleonte Cosmina', 7991);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Aleonte Crenguaa', 7992);
+VALUES ('Aleonte Crengua', 7992);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Aleonte Crina', 7993);
@@ -24298,7 +24299,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alesandru Anca', 8073);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesandru Ancuaa', 8074);
+VALUES ('Alesandru Ancua', 8074);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesandru Anda', 8075);
@@ -24340,7 +24341,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alesandru Antonela', 8087);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesandru Anuaa', 8088);
+VALUES ('Alesandru Anua', 8088);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesandru Ariadna', 8089);
@@ -24352,7 +24353,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alesandru Arina', 8091);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesandru Aristiaa', 8092);
+VALUES ('Alesandru Aristia', 8092);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesandru Artemisa', 8093);
@@ -24400,7 +24401,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alesandru Bogdana', 8107);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesandru Brânduaa', 8108);
+VALUES ('Alesandru Brândua', 8108);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesandru Camelia', 8109);
@@ -24475,13 +24476,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alesandru Codrina', 8132);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesandru Codruaa', 8133);
+VALUES ('Alesandru Codrua', 8133);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesandru Constantina', 8134);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesandru Constanaa', 8135);
+VALUES ('Alesandru Constana', 8135);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesandru Consuela', 8136);
@@ -24499,7 +24500,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alesandru Cosmina', 8140);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesandru Crenguaa', 8141);
+VALUES ('Alesandru Crengua', 8141);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesandru Crina', 8142);
@@ -24745,7 +24746,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alessandrescu Anca', 8222);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alessandrescu Ancuaa', 8223);
+VALUES ('Alessandrescu Ancua', 8223);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alessandrescu Anda', 8224);
@@ -24787,7 +24788,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alessandrescu Antonela', 8236);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alessandrescu Anuaa', 8237);
+VALUES ('Alessandrescu Anua', 8237);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alessandrescu Ariadna', 8238);
@@ -24799,7 +24800,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alessandrescu Arina', 8240);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alessandrescu Aristiaa', 8241);
+VALUES ('Alessandrescu Aristia', 8241);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alessandrescu Artemisa', 8242);
@@ -24847,7 +24848,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alessandrescu Bogdana', 8256);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alessandrescu Brânduaa', 8257);
+VALUES ('Alessandrescu Brândua', 8257);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alessandrescu Camelia', 8258);
@@ -24922,13 +24923,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alessandrescu Codrina', 8281);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alessandrescu Codruaa', 8282);
+VALUES ('Alessandrescu Codrua', 8282);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alessandrescu Constantina', 8283);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alessandrescu Constanaa', 8284);
+VALUES ('Alessandrescu Constana', 8284);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alessandrescu Consuela', 8285);
@@ -24946,7 +24947,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alessandrescu Cosmina', 8289);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alessandrescu Crenguaa', 8290);
+VALUES ('Alessandrescu Crengua', 8290);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alessandrescu Crina', 8291);
@@ -25192,7 +25193,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Teu Anca', 8371);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Teu Ancuaa', 8372);
+VALUES ('Teu Ancua', 8372);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Teu Anda', 8373);
@@ -25234,7 +25235,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Teu Antonela', 8385);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Teu Anuaa', 8386);
+VALUES ('Teu Anua', 8386);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Teu Ariadna', 8387);
@@ -25246,7 +25247,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Teu Arina', 8389);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Teu Aristiaa', 8390);
+VALUES ('Teu Aristia', 8390);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Teu Artemisa', 8391);
@@ -25294,7 +25295,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Teu Bogdana', 8405);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Teu Brânduaa', 8406);
+VALUES ('Teu Brândua', 8406);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Teu Camelia', 8407);
@@ -25369,13 +25370,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Teu Codrina', 8430);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Teu Codruaa', 8431);
+VALUES ('Teu Codrua', 8431);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Teu Constantina', 8432);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Teu Constanaa', 8433);
+VALUES ('Teu Constana', 8433);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Teu Consuela', 8434);
@@ -25393,7 +25394,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Teu Cosmina', 8438);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Teu Crenguaa', 8439);
+VALUES ('Teu Crengua', 8439);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Teu Crina', 8440);
@@ -25639,7 +25640,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alesu Anca', 8520);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesu Ancuaa', 8521);
+VALUES ('Alesu Ancua', 8521);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesu Anda', 8522);
@@ -25681,7 +25682,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alesu Antonela', 8534);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesu Anuaa', 8535);
+VALUES ('Alesu Anua', 8535);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesu Ariadna', 8536);
@@ -25693,7 +25694,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alesu Arina', 8538);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesu Aristiaa', 8539);
+VALUES ('Alesu Aristia', 8539);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesu Artemisa', 8540);
@@ -25741,7 +25742,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alesu Bogdana', 8554);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesu Brânduaa', 8555);
+VALUES ('Alesu Brândua', 8555);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesu Camelia', 8556);
@@ -25816,13 +25817,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alesu Codrina', 8579);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesu Codruaa', 8580);
+VALUES ('Alesu Codrua', 8580);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesu Constantina', 8581);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesu Constanaa', 8582);
+VALUES ('Alesu Constana', 8582);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesu Consuela', 8583);
@@ -25840,7 +25841,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alesu Cosmina', 8587);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alesu Crenguaa', 8588);
+VALUES ('Alesu Crengua', 8588);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alesu Crina', 8589);
@@ -26086,7 +26087,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexa Anca', 8669);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Ancuaa', 8670);
+VALUES ('Alexa Ancua', 8670);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Anda', 8671);
@@ -26128,7 +26129,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexa Antonela', 8683);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Anuaa', 8684);
+VALUES ('Alexa Anua', 8684);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Ariadna', 8685);
@@ -26140,7 +26141,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexa Arina', 8687);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Aristiaa', 8688);
+VALUES ('Alexa Aristia', 8688);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Artemisa', 8689);
@@ -26188,7 +26189,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexa Bogdana', 8703);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Brânduaa', 8704);
+VALUES ('Alexa Brândua', 8704);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Camelia', 8705);
@@ -26263,13 +26264,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexa Codrina', 8728);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Codruaa', 8729);
+VALUES ('Alexa Codrua', 8729);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Constantina', 8730);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Constanaa', 8731);
+VALUES ('Alexa Constana', 8731);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Consuela', 8732);
@@ -26287,7 +26288,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexa Cosmina', 8736);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Crenguaa', 8737);
+VALUES ('Alexa Crengua', 8737);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Crina', 8738);
@@ -26533,7 +26534,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexa Anca', 8818);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Ancuaa', 8819);
+VALUES ('Alexa Ancua', 8819);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Anda', 8820);
@@ -26575,7 +26576,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexa Antonela', 8832);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Anuaa', 8833);
+VALUES ('Alexa Anua', 8833);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Ariadna', 8834);
@@ -26587,7 +26588,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexa Arina', 8836);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Aristiaa', 8837);
+VALUES ('Alexa Aristia', 8837);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Artemisa', 8838);
@@ -26635,7 +26636,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexa Bogdana', 8852);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Brânduaa', 8853);
+VALUES ('Alexa Brândua', 8853);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Camelia', 8854);
@@ -26710,13 +26711,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexa Codrina', 8877);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Codruaa', 8878);
+VALUES ('Alexa Codrua', 8878);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Constantina', 8879);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Constanaa', 8880);
+VALUES ('Alexa Constana', 8880);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Consuela', 8881);
@@ -26734,7 +26735,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexa Cosmina', 8885);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexa Crenguaa', 8886);
+VALUES ('Alexa Crengua', 8886);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexa Crina', 8887);
@@ -26980,7 +26981,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexai Anca', 8967);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexai Ancuaa', 8968);
+VALUES ('Alexai Ancua', 8968);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexai Anda', 8969);
@@ -27022,7 +27023,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexai Antonela', 8981);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexai Anuaa', 8982);
+VALUES ('Alexai Anua', 8982);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexai Ariadna', 8983);
@@ -27034,7 +27035,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexai Arina', 8985);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexai Aristiaa', 8986);
+VALUES ('Alexai Aristia', 8986);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexai Artemisa', 8987);
@@ -27082,7 +27083,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexai Bogdana', 9001);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexai Brânduaa', 9002);
+VALUES ('Alexai Brândua', 9002);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexai Camelia', 9003);
@@ -27157,13 +27158,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexai Codrina', 9026);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexai Codruaa', 9027);
+VALUES ('Alexai Codrua', 9027);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexai Constantina', 9028);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexai Constanaa', 9029);
+VALUES ('Alexai Constana', 9029);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexai Consuela', 9030);
@@ -27181,7 +27182,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexai Cosmina', 9034);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexai Crenguaa', 9035);
+VALUES ('Alexai Crengua', 9035);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexai Crina', 9036);
@@ -27427,7 +27428,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexan Anca', 9116);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexan Ancuaa', 9117);
+VALUES ('Alexan Ancua', 9117);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexan Anda', 9118);
@@ -27469,7 +27470,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexan Antonela', 9130);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexan Anuaa', 9131);
+VALUES ('Alexan Anua', 9131);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexan Ariadna', 9132);
@@ -27481,7 +27482,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexan Arina', 9134);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexan Aristiaa', 9135);
+VALUES ('Alexan Aristia', 9135);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexan Artemisa', 9136);
@@ -27529,7 +27530,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexan Bogdana', 9150);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexan Brânduaa', 9151);
+VALUES ('Alexan Brândua', 9151);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexan Camelia', 9152);
@@ -27604,13 +27605,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexan Codrina', 9175);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexan Codruaa', 9176);
+VALUES ('Alexan Codrua', 9176);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexan Constantina', 9177);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexan Constanaa', 9178);
+VALUES ('Alexan Constana', 9178);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexan Consuela', 9179);
@@ -27628,7 +27629,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexan Cosmina', 9183);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexan Crenguaa', 9184);
+VALUES ('Alexan Crengua', 9184);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexan Crina', 9185);
@@ -27874,7 +27875,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexana Anca', 9265);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexana Ancuaa', 9266);
+VALUES ('Alexana Ancua', 9266);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexana Anda', 9267);
@@ -27916,7 +27917,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexana Antonela', 9279);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexana Anuaa', 9280);
+VALUES ('Alexana Anua', 9280);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexana Ariadna', 9281);
@@ -27928,7 +27929,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexana Arina', 9283);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexana Aristiaa', 9284);
+VALUES ('Alexana Aristia', 9284);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexana Artemisa', 9285);
@@ -27976,7 +27977,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexana Bogdana', 9299);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexana Brânduaa', 9300);
+VALUES ('Alexana Brândua', 9300);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexana Camelia', 9301);
@@ -28051,13 +28052,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexana Codrina', 9324);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexana Codruaa', 9325);
+VALUES ('Alexana Codrua', 9325);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexana Constantina', 9326);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexana Constanaa', 9327);
+VALUES ('Alexana Constana', 9327);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexana Consuela', 9328);
@@ -28075,7 +28076,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexana Cosmina', 9332);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexana Crenguaa', 9333);
+VALUES ('Alexana Crengua', 9333);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexana Crina', 9334);
@@ -28321,7 +28322,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandra Anca', 9414);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandra Ancuaa', 9415);
+VALUES ('Alexandra Ancua', 9415);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandra Anda', 9416);
@@ -28363,7 +28364,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandra Antonela', 9428);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandra Anuaa', 9429);
+VALUES ('Alexandra Anua', 9429);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandra Ariadna', 9430);
@@ -28375,7 +28376,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandra Arina', 9432);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandra Aristiaa', 9433);
+VALUES ('Alexandra Aristia', 9433);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandra Artemisa', 9434);
@@ -28423,7 +28424,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandra Bogdana', 9448);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandra Brânduaa', 9449);
+VALUES ('Alexandra Brândua', 9449);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandra Camelia', 9450);
@@ -28498,13 +28499,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandra Codrina', 9473);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandra Codruaa', 9474);
+VALUES ('Alexandra Codrua', 9474);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandra Constantina', 9475);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandra Constanaa', 9476);
+VALUES ('Alexandra Constana', 9476);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandra Consuela', 9477);
@@ -28522,7 +28523,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandra Cosmina', 9481);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandra Crenguaa', 9482);
+VALUES ('Alexandra Crengua', 9482);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandra Crina', 9483);
@@ -28768,7 +28769,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrache Anca', 9563);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrache Ancuaa', 9564);
+VALUES ('Alexandrache Ancua', 9564);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrache Anda', 9565);
@@ -28810,7 +28811,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrache Antonela', 9577);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrache Anuaa', 9578);
+VALUES ('Alexandrache Anua', 9578);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrache Ariadna', 9579);
@@ -28822,7 +28823,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrache Arina', 9581);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrache Aristiaa', 9582);
+VALUES ('Alexandrache Aristia', 9582);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrache Artemisa', 9583);
@@ -28870,7 +28871,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrache Bogdana', 9597);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrache Brânduaa', 9598);
+VALUES ('Alexandrache Brândua', 9598);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrache Camelia', 9599);
@@ -28945,13 +28946,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrache Codrina', 9622);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrache Codruaa', 9623);
+VALUES ('Alexandrache Codrua', 9623);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrache Constantina', 9624);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrache Constanaa', 9625);
+VALUES ('Alexandrache Constana', 9625);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrache Consuela', 9626);
@@ -28969,7 +28970,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrache Cosmina', 9630);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrache Crenguaa', 9631);
+VALUES ('Alexandrache Crengua', 9631);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrache Crina', 9632);
@@ -29215,7 +29216,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrei Anca', 9712);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrei Ancuaa', 9713);
+VALUES ('Alexandrei Ancua', 9713);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrei Anda', 9714);
@@ -29257,7 +29258,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrei Antonela', 9726);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrei Anuaa', 9727);
+VALUES ('Alexandrei Anua', 9727);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrei Ariadna', 9728);
@@ -29269,7 +29270,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrei Arina', 9730);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrei Aristiaa', 9731);
+VALUES ('Alexandrei Aristia', 9731);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrei Artemisa', 9732);
@@ -29317,7 +29318,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrei Bogdana', 9746);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrei Brânduaa', 9747);
+VALUES ('Alexandrei Brândua', 9747);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrei Camelia', 9748);
@@ -29392,13 +29393,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrei Codrina', 9771);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrei Codruaa', 9772);
+VALUES ('Alexandrei Codrua', 9772);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrei Constantina', 9773);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrei Constanaa', 9774);
+VALUES ('Alexandrei Constana', 9774);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrei Consuela', 9775);
@@ -29416,7 +29417,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrei Cosmina', 9779);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrei Crenguaa', 9780);
+VALUES ('Alexandrei Crengua', 9780);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrei Crina', 9781);
@@ -29662,7 +29663,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrescu Anca', 9861);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Ancuaa', 9862);
+VALUES ('Alexandrescu Ancua', 9862);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Anda', 9863);
@@ -29704,7 +29705,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrescu Antonela', 9875);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Anuaa', 9876);
+VALUES ('Alexandrescu Anua', 9876);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Ariadna', 9877);
@@ -29716,7 +29717,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrescu Arina', 9879);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Aristiaa', 9880);
+VALUES ('Alexandrescu Aristia', 9880);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Artemisa', 9881);
@@ -29764,7 +29765,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrescu Bogdana', 9895);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Brânduaa', 9896);
+VALUES ('Alexandrescu Brândua', 9896);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Camelia', 9897);
@@ -29839,13 +29840,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrescu Codrina', 9920);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Codruaa', 9921);
+VALUES ('Alexandrescu Codrua', 9921);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Constantina', 9922);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Constanaa', 9923);
+VALUES ('Alexandrescu Constana', 9923);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Consuela', 9924);
@@ -29863,7 +29864,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrescu Cosmina', 9928);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Crenguaa', 9929);
+VALUES ('Alexandrescu Crengua', 9929);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Crina', 9930);
@@ -30109,7 +30110,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrescu Anca', 10010);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Ancuaa', 10011);
+VALUES ('Alexandrescu Ancua', 10011);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Anda', 10012);
@@ -30151,7 +30152,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrescu Antonela', 10024);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Anuaa', 10025);
+VALUES ('Alexandrescu Anua', 10025);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Ariadna', 10026);
@@ -30163,7 +30164,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrescu Arina', 10028);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Aristiaa', 10029);
+VALUES ('Alexandrescu Aristia', 10029);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Artemisa', 10030);
@@ -30211,7 +30212,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrescu Bogdana', 10044);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Brânduaa', 10045);
+VALUES ('Alexandrescu Brândua', 10045);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Camelia', 10046);
@@ -30286,13 +30287,13 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrescu Codrina', 10069);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Codruaa', 10070);
+VALUES ('Alexandrescu Codrua', 10070);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Constantina', 10071);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Constanaa', 10072);
+VALUES ('Alexandrescu Constana', 10072);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Consuela', 10073);
@@ -30310,7 +30311,7 @@ INSERT INTO USERS (NAME, ID_USER)
 VALUES ('Alexandrescu Cosmina', 10077);
 
 INSERT INTO USERS (NAME, ID_USER) 
-VALUES ('Alexandrescu Crenguaa', 10078);
+VALUES ('Alexandrescu Crengua', 10078);
 
 INSERT INTO USERS (NAME, ID_USER) 
 VALUES ('Alexandrescu Crina', 10079);
@@ -30543,7 +30544,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandrica Anca', 53);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrica Ancuaa', 54);
+VALUES ('Alexandrica Ancua', 54);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrica Anda', 55);
@@ -30585,7 +30586,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandrica Antonela', 67);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrica Anuaa', 68);
+VALUES ('Alexandrica Anua', 68);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrica Ariadna', 69);
@@ -30597,7 +30598,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandrica Arina', 71);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrica Aristiaa', 72);
+VALUES ('Alexandrica Aristia', 72);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrica Artemisa', 73);
@@ -30645,7 +30646,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandrica Bogdana', 87);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrica Brânduaa', 88);
+VALUES ('Alexandrica Brândua', 88);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrica Camelia', 89);
@@ -30720,13 +30721,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandrica Codrina', 112);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrica Codruaa', 113);
+VALUES ('Alexandrica Codrua', 113);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrica Constantina', 114);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrica Constanaa', 115);
+VALUES ('Alexandrica Constana', 115);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrica Consuela', 116);
@@ -30744,7 +30745,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandrica Cosmina', 120);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrica Crenguaa', 121);
+VALUES ('Alexandrica Crengua', 121);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrica Crina', 122);
@@ -30990,7 +30991,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandrina Anca', 202);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrina Ancuaa', 203);
+VALUES ('Alexandrina Ancua', 203);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrina Anda', 204);
@@ -31032,7 +31033,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandrina Antonela', 216);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrina Anuaa', 217);
+VALUES ('Alexandrina Anua', 217);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrina Ariadna', 218);
@@ -31044,7 +31045,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandrina Arina', 220);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrina Aristiaa', 221);
+VALUES ('Alexandrina Aristia', 221);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrina Artemisa', 222);
@@ -31092,7 +31093,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandrina Bogdana', 236);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrina Brânduaa', 237);
+VALUES ('Alexandrina Brândua', 237);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrina Camelia', 238);
@@ -31167,13 +31168,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandrina Codrina', 261);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrina Codruaa', 262);
+VALUES ('Alexandrina Codrua', 262);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrina Constantina', 263);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrina Constanaa', 264);
+VALUES ('Alexandrina Constana', 264);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrina Consuela', 265);
@@ -31191,7 +31192,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandrina Cosmina', 269);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandrina Crenguaa', 270);
+VALUES ('Alexandrina Crengua', 270);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandrina Crina', 271);
@@ -31437,7 +31438,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroac Anca', 351);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroac Ancuaa', 352);
+VALUES ('Alexandroac Ancua', 352);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroac Anda', 353);
@@ -31479,7 +31480,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroac Antonela', 365);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroac Anuaa', 366);
+VALUES ('Alexandroac Anua', 366);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroac Ariadna', 367);
@@ -31491,7 +31492,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroac Arina', 369);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroac Aristiaa', 370);
+VALUES ('Alexandroac Aristia', 370);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroac Artemisa', 371);
@@ -31539,7 +31540,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroac Bogdana', 385);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroac Brânduaa', 386);
+VALUES ('Alexandroac Brândua', 386);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroac Camelia', 387);
@@ -31614,13 +31615,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroac Codrina', 410);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroac Codruaa', 411);
+VALUES ('Alexandroac Codrua', 411);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroac Constantina', 412);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroac Constanaa', 413);
+VALUES ('Alexandroac Constana', 413);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroac Consuela', 414);
@@ -31638,7 +31639,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroac Cosmina', 418);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroac Crenguaa', 419);
+VALUES ('Alexandroac Crengua', 419);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroac Crina', 420);
@@ -31884,7 +31885,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroae Anca', 500);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroae Ancuaa', 501);
+VALUES ('Alexandroae Ancua', 501);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroae Anda', 502);
@@ -31926,7 +31927,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroae Antonela', 514);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroae Anuaa', 515);
+VALUES ('Alexandroae Anua', 515);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroae Ariadna', 516);
@@ -31938,7 +31939,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroae Arina', 518);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroae Aristiaa', 519);
+VALUES ('Alexandroae Aristia', 519);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroae Artemisa', 520);
@@ -31986,7 +31987,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroae Bogdana', 534);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroae Brânduaa', 535);
+VALUES ('Alexandroae Brândua', 535);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroae Camelia', 536);
@@ -32061,13 +32062,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroae Codrina', 559);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroae Codruaa', 560);
+VALUES ('Alexandroae Codrua', 560);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroae Constantina', 561);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroae Constanaa', 562);
+VALUES ('Alexandroae Constana', 562);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroae Consuela', 563);
@@ -32085,7 +32086,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroae Cosmina', 567);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroae Crenguaa', 568);
+VALUES ('Alexandroae Crengua', 568);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroae Crina', 569);
@@ -32331,7 +32332,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaei Anca', 649);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaei Ancuaa', 650);
+VALUES ('Alexandroaei Ancua', 650);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaei Anda', 651);
@@ -32373,7 +32374,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaei Antonela', 663);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaei Anuaa', 664);
+VALUES ('Alexandroaei Anua', 664);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaei Ariadna', 665);
@@ -32385,7 +32386,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaei Arina', 667);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaei Aristiaa', 668);
+VALUES ('Alexandroaei Aristia', 668);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaei Artemisa', 669);
@@ -32433,7 +32434,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaei Bogdana', 683);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaei Brânduaa', 684);
+VALUES ('Alexandroaei Brândua', 684);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaei Camelia', 685);
@@ -32508,13 +32509,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaei Codrina', 708);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaei Codruaa', 709);
+VALUES ('Alexandroaei Codrua', 709);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaei Constantina', 710);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaei Constanaa', 711);
+VALUES ('Alexandroaei Constana', 711);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaei Consuela', 712);
@@ -32532,7 +32533,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaei Cosmina', 716);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaei Crenguaa', 717);
+VALUES ('Alexandroaei Crengua', 717);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaei Crina', 718);
@@ -32778,7 +32779,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaia Anca', 798);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaia Ancuaa', 799);
+VALUES ('Alexandroaia Ancua', 799);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaia Anda', 800);
@@ -32820,7 +32821,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaia Antonela', 812);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaia Anuaa', 813);
+VALUES ('Alexandroaia Anua', 813);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaia Ariadna', 814);
@@ -32832,7 +32833,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaia Arina', 816);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaia Aristiaa', 817);
+VALUES ('Alexandroaia Aristia', 817);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaia Artemisa', 818);
@@ -32880,7 +32881,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaia Bogdana', 832);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaia Brânduaa', 833);
+VALUES ('Alexandroaia Brândua', 833);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaia Camelia', 834);
@@ -32955,13 +32956,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaia Codrina', 857);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaia Codruaa', 858);
+VALUES ('Alexandroaia Codrua', 858);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaia Constantina', 859);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaia Constanaa', 860);
+VALUES ('Alexandroaia Constana', 860);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaia Consuela', 861);
@@ -32979,7 +32980,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaia Cosmina', 865);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaia Crenguaa', 866);
+VALUES ('Alexandroaia Crengua', 866);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaia Crina', 867);
@@ -33225,7 +33226,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaie Anca', 947);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaie Ancuaa', 948);
+VALUES ('Alexandroaie Ancua', 948);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaie Anda', 949);
@@ -33267,7 +33268,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaie Antonela', 961);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaie Anuaa', 962);
+VALUES ('Alexandroaie Anua', 962);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaie Ariadna', 963);
@@ -33279,7 +33280,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaie Arina', 965);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaie Aristiaa', 966);
+VALUES ('Alexandroaie Aristia', 966);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaie Artemisa', 967);
@@ -33327,7 +33328,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaie Bogdana', 981);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaie Brânduaa', 982);
+VALUES ('Alexandroaie Brândua', 982);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaie Camelia', 983);
@@ -33402,13 +33403,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaie Codrina', 1006);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaie Codruaa', 1007);
+VALUES ('Alexandroaie Codrua', 1007);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaie Constantina', 1008);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaie Constanaa', 1009);
+VALUES ('Alexandroaie Constana', 1009);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaie Consuela', 1010);
@@ -33426,7 +33427,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaie Cosmina', 1014);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaie Crenguaa', 1015);
+VALUES ('Alexandroaie Crengua', 1015);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaie Crina', 1016);
@@ -33672,7 +33673,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaiei Anca', 1096);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaiei Ancuaa', 1097);
+VALUES ('Alexandroaiei Ancua', 1097);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaiei Anda', 1098);
@@ -33714,7 +33715,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaiei Antonela', 1110);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaiei Anuaa', 1111);
+VALUES ('Alexandroaiei Anua', 1111);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaiei Ariadna', 1112);
@@ -33726,7 +33727,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaiei Arina', 1114);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaiei Aristiaa', 1115);
+VALUES ('Alexandroaiei Aristia', 1115);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaiei Artemisa', 1116);
@@ -33774,7 +33775,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaiei Bogdana', 1130);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaiei Brânduaa', 1131);
+VALUES ('Alexandroaiei Brândua', 1131);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaiei Camelia', 1132);
@@ -33849,13 +33850,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaiei Codrina', 1155);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaiei Codruaa', 1156);
+VALUES ('Alexandroaiei Codrua', 1156);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaiei Constantina', 1157);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaiei Constanaa', 1158);
+VALUES ('Alexandroaiei Constana', 1158);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaiei Consuela', 1159);
@@ -33873,7 +33874,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroaiei Cosmina', 1163);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroaiei Crenguaa', 1164);
+VALUES ('Alexandroaiei Crengua', 1164);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroaiei Crina', 1165);
@@ -34119,7 +34120,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroiae Anca', 1245);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiae Ancuaa', 1246);
+VALUES ('Alexandroiae Ancua', 1246);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiae Anda', 1247);
@@ -34161,7 +34162,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroiae Antonela', 1259);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiae Anuaa', 1260);
+VALUES ('Alexandroiae Anua', 1260);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiae Ariadna', 1261);
@@ -34173,7 +34174,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroiae Arina', 1263);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiae Aristiaa', 1264);
+VALUES ('Alexandroiae Aristia', 1264);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiae Artemisa', 1265);
@@ -34221,7 +34222,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroiae Bogdana', 1279);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiae Brânduaa', 1280);
+VALUES ('Alexandroiae Brândua', 1280);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiae Camelia', 1281);
@@ -34296,13 +34297,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroiae Codrina', 1304);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiae Codruaa', 1305);
+VALUES ('Alexandroiae Codrua', 1305);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiae Constantina', 1306);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiae Constanaa', 1307);
+VALUES ('Alexandroiae Constana', 1307);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiae Consuela', 1308);
@@ -34320,7 +34321,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroiae Cosmina', 1312);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiae Crenguaa', 1313);
+VALUES ('Alexandroiae Crengua', 1313);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiae Crina', 1314);
@@ -34566,7 +34567,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroiu Anca', 1394);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiu Ancuaa', 1395);
+VALUES ('Alexandroiu Ancua', 1395);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiu Anda', 1396);
@@ -34608,7 +34609,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroiu Antonela', 1408);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiu Anuaa', 1409);
+VALUES ('Alexandroiu Anua', 1409);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiu Ariadna', 1410);
@@ -34620,7 +34621,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroiu Arina', 1412);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiu Aristiaa', 1413);
+VALUES ('Alexandroiu Aristia', 1413);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiu Artemisa', 1414);
@@ -34668,7 +34669,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroiu Bogdana', 1428);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiu Brânduaa', 1429);
+VALUES ('Alexandroiu Brândua', 1429);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiu Camelia', 1430);
@@ -34743,13 +34744,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroiu Codrina', 1453);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiu Codruaa', 1454);
+VALUES ('Alexandroiu Codrua', 1454);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiu Constantina', 1455);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiu Constanaa', 1456);
+VALUES ('Alexandroiu Constana', 1456);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiu Consuela', 1457);
@@ -34767,7 +34768,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroiu Cosmina', 1461);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroiu Crenguaa', 1462);
+VALUES ('Alexandroiu Crengua', 1462);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroiu Crina', 1463);
@@ -35013,7 +35014,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroni Anca', 1543);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroni Ancuaa', 1544);
+VALUES ('Alexandroni Ancua', 1544);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroni Anda', 1545);
@@ -35055,7 +35056,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroni Antonela', 1557);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroni Anuaa', 1558);
+VALUES ('Alexandroni Anua', 1558);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroni Ariadna', 1559);
@@ -35067,7 +35068,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroni Arina', 1561);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroni Aristiaa', 1562);
+VALUES ('Alexandroni Aristia', 1562);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroni Artemisa', 1563);
@@ -35115,7 +35116,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroni Bogdana', 1577);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroni Brânduaa', 1578);
+VALUES ('Alexandroni Brândua', 1578);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroni Camelia', 1579);
@@ -35190,13 +35191,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroni Codrina', 1602);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroni Codruaa', 1603);
+VALUES ('Alexandroni Codrua', 1603);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroni Constantina', 1604);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroni Constanaa', 1605);
+VALUES ('Alexandroni Constana', 1605);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroni Consuela', 1606);
@@ -35214,7 +35215,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroni Cosmina', 1610);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroni Crenguaa', 1611);
+VALUES ('Alexandroni Crengua', 1611);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroni Crina', 1612);
@@ -35460,7 +35461,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroniu Anca', 1692);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroniu Ancuaa', 1693);
+VALUES ('Alexandroniu Ancua', 1693);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroniu Anda', 1694);
@@ -35502,7 +35503,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroniu Antonela', 1706);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroniu Anuaa', 1707);
+VALUES ('Alexandroniu Anua', 1707);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroniu Ariadna', 1708);
@@ -35514,7 +35515,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroniu Arina', 1710);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroniu Aristiaa', 1711);
+VALUES ('Alexandroniu Aristia', 1711);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroniu Artemisa', 1712);
@@ -35562,7 +35563,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroniu Bogdana', 1726);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroniu Brânduaa', 1727);
+VALUES ('Alexandroniu Brândua', 1727);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroniu Camelia', 1728);
@@ -35637,13 +35638,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroniu Codrina', 1751);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroniu Codruaa', 1752);
+VALUES ('Alexandroniu Codrua', 1752);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroniu Constantina', 1753);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroniu Constanaa', 1754);
+VALUES ('Alexandroniu Constana', 1754);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroniu Consuela', 1755);
@@ -35661,7 +35662,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandroniu Cosmina', 1759);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandroniu Crenguaa', 1760);
+VALUES ('Alexandroniu Crengua', 1760);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandroniu Crina', 1761);
@@ -35907,7 +35908,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandru Anca', 1841);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandru Ancuaa', 1842);
+VALUES ('Alexandru Ancua', 1842);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandru Anda', 1843);
@@ -35949,7 +35950,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandru Antonela', 1855);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandru Anuaa', 1856);
+VALUES ('Alexandru Anua', 1856);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandru Ariadna', 1857);
@@ -35961,7 +35962,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandru Arina', 1859);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandru Aristiaa', 1860);
+VALUES ('Alexandru Aristia', 1860);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandru Artemisa', 1861);
@@ -36009,7 +36010,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandru Bogdana', 1875);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandru Brânduaa', 1876);
+VALUES ('Alexandru Brândua', 1876);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandru Camelia', 1877);
@@ -36084,13 +36085,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandru Codrina', 1900);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandru Codruaa', 1901);
+VALUES ('Alexandru Codrua', 1901);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandru Constantina', 1902);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandru Constanaa', 1903);
+VALUES ('Alexandru Constana', 1903);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandru Consuela', 1904);
@@ -36108,7 +36109,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexandru Cosmina', 1908);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexandru Crenguaa', 1909);
+VALUES ('Alexandru Crengua', 1909);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexandru Crina', 1910);
@@ -36354,7 +36355,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexe Anca', 1990);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexe Ancuaa', 1991);
+VALUES ('Alexe Ancua', 1991);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexe Anda', 1992);
@@ -36396,7 +36397,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexe Antonela', 2004);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexe Anuaa', 2005);
+VALUES ('Alexe Anua', 2005);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexe Ariadna', 2006);
@@ -36408,7 +36409,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexe Arina', 2008);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexe Aristiaa', 2009);
+VALUES ('Alexe Aristia', 2009);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexe Artemisa', 2010);
@@ -36456,7 +36457,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexe Bogdana', 2024);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexe Brânduaa', 2025);
+VALUES ('Alexe Brândua', 2025);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexe Camelia', 2026);
@@ -36531,13 +36532,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexe Codrina', 2049);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexe Codruaa', 2050);
+VALUES ('Alexe Codrua', 2050);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexe Constantina', 2051);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexe Constanaa', 2052);
+VALUES ('Alexe Constana', 2052);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexe Consuela', 2053);
@@ -36555,7 +36556,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexe Cosmina', 2057);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexe Crenguaa', 2058);
+VALUES ('Alexe Crengua', 2058);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexe Crina', 2059);
@@ -36801,7 +36802,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexeanu Anca', 2139);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexeanu Ancuaa', 2140);
+VALUES ('Alexeanu Ancua', 2140);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexeanu Anda', 2141);
@@ -36843,7 +36844,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexeanu Antonela', 2153);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexeanu Anuaa', 2154);
+VALUES ('Alexeanu Anua', 2154);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexeanu Ariadna', 2155);
@@ -36855,7 +36856,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexeanu Arina', 2157);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexeanu Aristiaa', 2158);
+VALUES ('Alexeanu Aristia', 2158);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexeanu Artemisa', 2159);
@@ -36903,7 +36904,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexeanu Bogdana', 2173);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexeanu Brânduaa', 2174);
+VALUES ('Alexeanu Brândua', 2174);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexeanu Camelia', 2175);
@@ -36978,13 +36979,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexeanu Codrina', 2198);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexeanu Codruaa', 2199);
+VALUES ('Alexeanu Codrua', 2199);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexeanu Constantina', 2200);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexeanu Constanaa', 2201);
+VALUES ('Alexeanu Constana', 2201);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexeanu Consuela', 2202);
@@ -37002,7 +37003,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexeanu Cosmina', 2206);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexeanu Crenguaa', 2207);
+VALUES ('Alexeanu Crengua', 2207);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexeanu Crina', 2208);
@@ -37248,7 +37249,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexescu Anca', 2288);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexescu Ancuaa', 2289);
+VALUES ('Alexescu Ancua', 2289);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexescu Anda', 2290);
@@ -37290,7 +37291,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexescu Antonela', 2302);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexescu Anuaa', 2303);
+VALUES ('Alexescu Anua', 2303);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexescu Ariadna', 2304);
@@ -37302,7 +37303,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexescu Arina', 2306);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexescu Aristiaa', 2307);
+VALUES ('Alexescu Aristia', 2307);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexescu Artemisa', 2308);
@@ -37350,7 +37351,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexescu Bogdana', 2322);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexescu Brânduaa', 2323);
+VALUES ('Alexescu Brândua', 2323);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexescu Camelia', 2324);
@@ -37425,13 +37426,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexescu Codrina', 2347);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexescu Codruaa', 2348);
+VALUES ('Alexescu Codrua', 2348);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexescu Constantina', 2349);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexescu Constanaa', 2350);
+VALUES ('Alexescu Constana', 2350);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexescu Consuela', 2351);
@@ -37449,7 +37450,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexescu Cosmina', 2355);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexescu Crenguaa', 2356);
+VALUES ('Alexescu Crengua', 2356);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexescu Crina', 2357);
@@ -37695,7 +37696,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexi Anca', 2437);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexi Ancuaa', 2438);
+VALUES ('Alexi Ancua', 2438);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexi Anda', 2439);
@@ -37737,7 +37738,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexi Antonela', 2451);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexi Anuaa', 2452);
+VALUES ('Alexi Anua', 2452);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexi Ariadna', 2453);
@@ -37749,7 +37750,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexi Arina', 2455);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexi Aristiaa', 2456);
+VALUES ('Alexi Aristia', 2456);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexi Artemisa', 2457);
@@ -37797,7 +37798,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexi Bogdana', 2471);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexi Brânduaa', 2472);
+VALUES ('Alexi Brândua', 2472);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexi Camelia', 2473);
@@ -37872,13 +37873,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexi Codrina', 2496);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexi Codruaa', 2497);
+VALUES ('Alexi Codrua', 2497);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexi Constantina', 2498);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexi Constanaa', 2499);
+VALUES ('Alexi Constana', 2499);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexi Consuela', 2500);
@@ -37896,7 +37897,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexi Cosmina', 2504);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexi Crenguaa', 2505);
+VALUES ('Alexi Crengua', 2505);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexi Crina', 2506);
@@ -38142,7 +38143,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexianu Anca', 2586);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexianu Ancuaa', 2587);
+VALUES ('Alexianu Ancua', 2587);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexianu Anda', 2588);
@@ -38184,7 +38185,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexianu Antonela', 2600);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexianu Anuaa', 2601);
+VALUES ('Alexianu Anua', 2601);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexianu Ariadna', 2602);
@@ -38196,7 +38197,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexianu Arina', 2604);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexianu Aristiaa', 2605);
+VALUES ('Alexianu Aristia', 2605);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexianu Artemisa', 2606);
@@ -38244,7 +38245,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexianu Bogdana', 2620);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexianu Brânduaa', 2621);
+VALUES ('Alexianu Brândua', 2621);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexianu Camelia', 2622);
@@ -38319,13 +38320,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexianu Codrina', 2645);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexianu Codruaa', 2646);
+VALUES ('Alexianu Codrua', 2646);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexianu Constantina', 2647);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexianu Constanaa', 2648);
+VALUES ('Alexianu Constana', 2648);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexianu Consuela', 2649);
@@ -38343,7 +38344,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexianu Cosmina', 2653);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexianu Crenguaa', 2654);
+VALUES ('Alexianu Crengua', 2654);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexianu Crina', 2655);
@@ -38589,7 +38590,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexici Anca', 2735);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexici Ancuaa', 2736);
+VALUES ('Alexici Ancua', 2736);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexici Anda', 2737);
@@ -38631,7 +38632,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexici Antonela', 2749);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexici Anuaa', 2750);
+VALUES ('Alexici Anua', 2750);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexici Ariadna', 2751);
@@ -38643,7 +38644,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexici Arina', 2753);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexici Aristiaa', 2754);
+VALUES ('Alexici Aristia', 2754);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexici Artemisa', 2755);
@@ -38691,7 +38692,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexici Bogdana', 2769);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexici Brânduaa', 2770);
+VALUES ('Alexici Brândua', 2770);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexici Camelia', 2771);
@@ -38766,13 +38767,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexici Codrina', 2794);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexici Codruaa', 2795);
+VALUES ('Alexici Codrua', 2795);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexici Constantina', 2796);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexici Constanaa', 2797);
+VALUES ('Alexici Constana', 2797);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexici Consuela', 2798);
@@ -38790,7 +38791,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexici Cosmina', 2802);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexici Crenguaa', 2803);
+VALUES ('Alexici Crengua', 2803);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexici Crina', 2804);
@@ -39036,7 +39037,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexicu Anca', 2884);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexicu Ancuaa', 2885);
+VALUES ('Alexicu Ancua', 2885);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexicu Anda', 2886);
@@ -39078,7 +39079,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexicu Antonela', 2898);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexicu Anuaa', 2899);
+VALUES ('Alexicu Anua', 2899);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexicu Ariadna', 2900);
@@ -39090,7 +39091,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexicu Arina', 2902);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexicu Aristiaa', 2903);
+VALUES ('Alexicu Aristia', 2903);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexicu Artemisa', 2904);
@@ -39138,7 +39139,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexicu Bogdana', 2918);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexicu Brânduaa', 2919);
+VALUES ('Alexicu Brândua', 2919);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexicu Camelia', 2920);
@@ -39213,13 +39214,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexicu Codrina', 2943);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexicu Codruaa', 2944);
+VALUES ('Alexicu Codrua', 2944);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexicu Constantina', 2945);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexicu Constanaa', 2946);
+VALUES ('Alexicu Constana', 2946);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexicu Consuela', 2947);
@@ -39237,7 +39238,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexicu Cosmina', 2951);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexicu Crenguaa', 2952);
+VALUES ('Alexicu Crengua', 2952);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexicu Crina', 2953);
@@ -39483,7 +39484,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexie Anca', 3033);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexie Ancuaa', 3034);
+VALUES ('Alexie Ancua', 3034);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexie Anda', 3035);
@@ -39525,7 +39526,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexie Antonela', 3047);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexie Anuaa', 3048);
+VALUES ('Alexie Anua', 3048);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexie Ariadna', 3049);
@@ -39537,7 +39538,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexie Arina', 3051);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexie Aristiaa', 3052);
+VALUES ('Alexie Aristia', 3052);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexie Artemisa', 3053);
@@ -39585,7 +39586,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexie Bogdana', 3067);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexie Brânduaa', 3068);
+VALUES ('Alexie Brândua', 3068);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexie Camelia', 3069);
@@ -39660,13 +39661,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexie Codrina', 3092);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexie Codruaa', 3093);
+VALUES ('Alexie Codrua', 3093);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexie Constantina', 3094);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexie Constanaa', 3095);
+VALUES ('Alexie Constana', 3095);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexie Consuela', 3096);
@@ -39684,7 +39685,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexie Cosmina', 3100);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexie Crenguaa', 3101);
+VALUES ('Alexie Crengua', 3101);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexie Crina', 3102);
@@ -39930,7 +39931,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexii Anca', 3182);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexii Ancuaa', 3183);
+VALUES ('Alexii Ancua', 3183);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexii Anda', 3184);
@@ -39972,7 +39973,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexii Antonela', 3196);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexii Anuaa', 3197);
+VALUES ('Alexii Anua', 3197);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexii Ariadna', 3198);
@@ -39984,7 +39985,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexii Arina', 3200);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexii Aristiaa', 3201);
+VALUES ('Alexii Aristia', 3201);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexii Artemisa', 3202);
@@ -40032,7 +40033,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexii Bogdana', 3216);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexii Brânduaa', 3217);
+VALUES ('Alexii Brândua', 3217);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexii Camelia', 3218);
@@ -40107,13 +40108,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexii Codrina', 3241);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexii Codruaa', 3242);
+VALUES ('Alexii Codrua', 3242);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexii Constantina', 3243);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexii Constanaa', 3244);
+VALUES ('Alexii Constana', 3244);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexii Consuela', 3245);
@@ -40131,7 +40132,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexii Cosmina', 3249);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexii Crenguaa', 3250);
+VALUES ('Alexii Crengua', 3250);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexii Crina', 3251);
@@ -40377,7 +40378,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexiu Anca', 3331);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiu Ancuaa', 3332);
+VALUES ('Alexiu Ancua', 3332);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiu Anda', 3333);
@@ -40419,7 +40420,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexiu Antonela', 3345);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiu Anuaa', 3346);
+VALUES ('Alexiu Anua', 3346);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiu Ariadna', 3347);
@@ -40431,7 +40432,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexiu Arina', 3349);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiu Aristiaa', 3350);
+VALUES ('Alexiu Aristia', 3350);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiu Artemisa', 3351);
@@ -40479,7 +40480,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexiu Bogdana', 3365);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiu Brânduaa', 3366);
+VALUES ('Alexiu Brândua', 3366);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiu Camelia', 3367);
@@ -40554,13 +40555,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexiu Codrina', 3390);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiu Codruaa', 3391);
+VALUES ('Alexiu Codrua', 3391);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiu Constantina', 3392);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiu Constanaa', 3393);
+VALUES ('Alexiu Constana', 3393);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiu Consuela', 3394);
@@ -40578,7 +40579,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexiu Cosmina', 3398);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiu Crenguaa', 3399);
+VALUES ('Alexiu Crengua', 3399);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiu Crina', 3400);
@@ -40824,7 +40825,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexiuc Anca', 3480);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiuc Ancuaa', 3481);
+VALUES ('Alexiuc Ancua', 3481);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiuc Anda', 3482);
@@ -40866,7 +40867,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexiuc Antonela', 3494);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiuc Anuaa', 3495);
+VALUES ('Alexiuc Anua', 3495);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiuc Ariadna', 3496);
@@ -40878,7 +40879,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexiuc Arina', 3498);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiuc Aristiaa', 3499);
+VALUES ('Alexiuc Aristia', 3499);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiuc Artemisa', 3500);
@@ -40926,7 +40927,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexiuc Bogdana', 3514);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiuc Brânduaa', 3515);
+VALUES ('Alexiuc Brândua', 3515);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiuc Camelia', 3516);
@@ -41001,13 +41002,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexiuc Codrina', 3539);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiuc Codruaa', 3540);
+VALUES ('Alexiuc Codrua', 3540);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiuc Constantina', 3541);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiuc Constanaa', 3542);
+VALUES ('Alexiuc Constana', 3542);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiuc Consuela', 3543);
@@ -41025,7 +41026,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexiuc Cosmina', 3547);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexiuc Crenguaa', 3548);
+VALUES ('Alexiuc Crengua', 3548);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexiuc Crina', 3549);
@@ -41271,7 +41272,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoae Anca', 3629);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoae Ancuaa', 3630);
+VALUES ('Alexoae Ancua', 3630);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoae Anda', 3631);
@@ -41313,7 +41314,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoae Antonela', 3643);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoae Anuaa', 3644);
+VALUES ('Alexoae Anua', 3644);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoae Ariadna', 3645);
@@ -41325,7 +41326,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoae Arina', 3647);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoae Aristiaa', 3648);
+VALUES ('Alexoae Aristia', 3648);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoae Artemisa', 3649);
@@ -41373,7 +41374,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoae Bogdana', 3663);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoae Brânduaa', 3664);
+VALUES ('Alexoae Brândua', 3664);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoae Camelia', 3665);
@@ -41448,13 +41449,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoae Codrina', 3688);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoae Codruaa', 3689);
+VALUES ('Alexoae Codrua', 3689);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoae Constantina', 3690);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoae Constanaa', 3691);
+VALUES ('Alexoae Constana', 3691);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoae Consuela', 3692);
@@ -41472,7 +41473,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoae Cosmina', 3696);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoae Crenguaa', 3697);
+VALUES ('Alexoae Crengua', 3697);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoae Crina', 3698);
@@ -41718,7 +41719,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaei Anca', 3778);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaei Ancuaa', 3779);
+VALUES ('Alexoaei Ancua', 3779);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaei Anda', 3780);
@@ -41760,7 +41761,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaei Antonela', 3792);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaei Anuaa', 3793);
+VALUES ('Alexoaei Anua', 3793);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaei Ariadna', 3794);
@@ -41772,7 +41773,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaei Arina', 3796);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaei Aristiaa', 3797);
+VALUES ('Alexoaei Aristia', 3797);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaei Artemisa', 3798);
@@ -41820,7 +41821,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaei Bogdana', 3812);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaei Brânduaa', 3813);
+VALUES ('Alexoaei Brândua', 3813);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaei Camelia', 3814);
@@ -41895,13 +41896,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaei Codrina', 3837);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaei Codruaa', 3838);
+VALUES ('Alexoaei Codrua', 3838);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaei Constantina', 3839);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaei Constanaa', 3840);
+VALUES ('Alexoaei Constana', 3840);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaei Consuela', 3841);
@@ -41919,7 +41920,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaei Cosmina', 3845);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaei Crenguaa', 3846);
+VALUES ('Alexoaei Crengua', 3846);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaei Crina', 3847);
@@ -42165,7 +42166,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaia Anca', 3927);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaia Ancuaa', 3928);
+VALUES ('Alexoaia Ancua', 3928);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaia Anda', 3929);
@@ -42207,7 +42208,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaia Antonela', 3941);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaia Anuaa', 3942);
+VALUES ('Alexoaia Anua', 3942);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaia Ariadna', 3943);
@@ -42219,7 +42220,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaia Arina', 3945);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaia Aristiaa', 3946);
+VALUES ('Alexoaia Aristia', 3946);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaia Artemisa', 3947);
@@ -42267,7 +42268,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaia Bogdana', 3961);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaia Brânduaa', 3962);
+VALUES ('Alexoaia Brândua', 3962);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaia Camelia', 3963);
@@ -42342,13 +42343,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaia Codrina', 3986);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaia Codruaa', 3987);
+VALUES ('Alexoaia Codrua', 3987);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaia Constantina', 3988);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaia Constanaa', 3989);
+VALUES ('Alexoaia Constana', 3989);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaia Consuela', 3990);
@@ -42366,7 +42367,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaia Cosmina', 3994);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaia Crenguaa', 3995);
+VALUES ('Alexoaia Crengua', 3995);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaia Crina', 3996);
@@ -42612,7 +42613,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaie Anca', 4076);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaie Ancuaa', 4077);
+VALUES ('Alexoaie Ancua', 4077);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaie Anda', 4078);
@@ -42654,7 +42655,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaie Antonela', 4090);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaie Anuaa', 4091);
+VALUES ('Alexoaie Anua', 4091);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaie Ariadna', 4092);
@@ -42666,7 +42667,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaie Arina', 4094);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaie Aristiaa', 4095);
+VALUES ('Alexoaie Aristia', 4095);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaie Artemisa', 4096);
@@ -42714,7 +42715,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaie Bogdana', 4110);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaie Brânduaa', 4111);
+VALUES ('Alexoaie Brândua', 4111);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaie Camelia', 4112);
@@ -42789,13 +42790,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaie Codrina', 4135);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaie Codruaa', 4136);
+VALUES ('Alexoaie Codrua', 4136);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaie Constantina', 4137);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaie Constanaa', 4138);
+VALUES ('Alexoaie Constana', 4138);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaie Consuela', 4139);
@@ -42813,7 +42814,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoaie Cosmina', 4143);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoaie Crenguaa', 4144);
+VALUES ('Alexoaie Crengua', 4144);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoaie Crina', 4145);
@@ -43059,7 +43060,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoi Anca', 4225);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoi Ancuaa', 4226);
+VALUES ('Alexoi Ancua', 4226);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoi Anda', 4227);
@@ -43101,7 +43102,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoi Antonela', 4239);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoi Anuaa', 4240);
+VALUES ('Alexoi Anua', 4240);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoi Ariadna', 4241);
@@ -43113,7 +43114,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoi Arina', 4243);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoi Aristiaa', 4244);
+VALUES ('Alexoi Aristia', 4244);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoi Artemisa', 4245);
@@ -43161,7 +43162,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoi Bogdana', 4259);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoi Brânduaa', 4260);
+VALUES ('Alexoi Brândua', 4260);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoi Camelia', 4261);
@@ -43236,13 +43237,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoi Codrina', 4284);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoi Codruaa', 4285);
+VALUES ('Alexoi Codrua', 4285);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoi Constantina', 4286);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoi Constanaa', 4287);
+VALUES ('Alexoi Constana', 4287);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoi Consuela', 4288);
@@ -43260,7 +43261,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoi Cosmina', 4292);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoi Crenguaa', 4293);
+VALUES ('Alexoi Crengua', 4293);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoi Crina', 4294);
@@ -43506,7 +43507,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoiu Anca', 4374);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoiu Ancuaa', 4375);
+VALUES ('Alexoiu Ancua', 4375);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoiu Anda', 4376);
@@ -43548,7 +43549,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoiu Antonela', 4388);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoiu Anuaa', 4389);
+VALUES ('Alexoiu Anua', 4389);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoiu Ariadna', 4390);
@@ -43560,7 +43561,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoiu Arina', 4392);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoiu Aristiaa', 4393);
+VALUES ('Alexoiu Aristia', 4393);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoiu Artemisa', 4394);
@@ -43608,7 +43609,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoiu Bogdana', 4408);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoiu Brânduaa', 4409);
+VALUES ('Alexoiu Brândua', 4409);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoiu Camelia', 4410);
@@ -43683,13 +43684,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoiu Codrina', 4433);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoiu Codruaa', 4434);
+VALUES ('Alexoiu Codrua', 4434);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoiu Constantina', 4435);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoiu Constanaa', 4436);
+VALUES ('Alexoiu Constana', 4436);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoiu Consuela', 4437);
@@ -43707,7 +43708,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexoiu Cosmina', 4441);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexoiu Crenguaa', 4442);
+VALUES ('Alexoiu Crengua', 4442);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexoiu Crina', 4443);
@@ -43953,7 +43954,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexuc Anca', 4523);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexuc Ancuaa', 4524);
+VALUES ('Alexuc Ancua', 4524);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexuc Anda', 4525);
@@ -43995,7 +43996,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexuc Antonela', 4537);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexuc Anuaa', 4538);
+VALUES ('Alexuc Anua', 4538);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexuc Ariadna', 4539);
@@ -44007,7 +44008,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexuc Arina', 4541);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexuc Aristiaa', 4542);
+VALUES ('Alexuc Aristia', 4542);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexuc Artemisa', 4543);
@@ -44055,7 +44056,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexuc Bogdana', 4557);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexuc Brânduaa', 4558);
+VALUES ('Alexuc Brândua', 4558);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexuc Camelia', 4559);
@@ -44130,13 +44131,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexuc Codrina', 4582);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexuc Codruaa', 4583);
+VALUES ('Alexuc Codrua', 4583);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexuc Constantina', 4584);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexuc Constanaa', 4585);
+VALUES ('Alexuc Constana', 4585);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexuc Consuela', 4586);
@@ -44154,7 +44155,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alexuc Cosmina', 4590);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alexuc Crenguaa', 4591);
+VALUES ('Alexuc Crengua', 4591);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alexuc Crina', 4592);
@@ -44400,7 +44401,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfiri Anca', 4672);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfiri Ancuaa', 4673);
+VALUES ('Alfiri Ancua', 4673);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfiri Anda', 4674);
@@ -44442,7 +44443,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfiri Antonela', 4686);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfiri Anuaa', 4687);
+VALUES ('Alfiri Anua', 4687);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfiri Ariadna', 4688);
@@ -44454,7 +44455,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfiri Arina', 4690);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfiri Aristiaa', 4691);
+VALUES ('Alfiri Aristia', 4691);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfiri Artemisa', 4692);
@@ -44502,7 +44503,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfiri Bogdana', 4706);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfiri Brânduaa', 4707);
+VALUES ('Alfiri Brândua', 4707);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfiri Camelia', 4708);
@@ -44577,13 +44578,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfiri Codrina', 4731);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfiri Codruaa', 4732);
+VALUES ('Alfiri Codrua', 4732);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfiri Constantina', 4733);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfiri Constanaa', 4734);
+VALUES ('Alfiri Constana', 4734);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfiri Consuela', 4735);
@@ -44601,7 +44602,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfiri Cosmina', 4739);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfiri Crenguaa', 4740);
+VALUES ('Alfiri Crengua', 4740);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfiri Crina', 4741);
@@ -44847,7 +44848,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfloari Anca', 4821);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloari Ancuaa', 4822);
+VALUES ('Alfloari Ancua', 4822);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloari Anda', 4823);
@@ -44889,7 +44890,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfloari Antonela', 4835);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloari Anuaa', 4836);
+VALUES ('Alfloari Anua', 4836);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloari Ariadna', 4837);
@@ -44901,7 +44902,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfloari Arina', 4839);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloari Aristiaa', 4840);
+VALUES ('Alfloari Aristia', 4840);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloari Artemisa', 4841);
@@ -44949,7 +44950,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfloari Bogdana', 4855);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloari Brânduaa', 4856);
+VALUES ('Alfloari Brândua', 4856);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloari Camelia', 4857);
@@ -45024,13 +45025,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfloari Codrina', 4880);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloari Codruaa', 4881);
+VALUES ('Alfloari Codrua', 4881);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloari Constantina', 4882);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloari Constanaa', 4883);
+VALUES ('Alfloari Constana', 4883);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloari Consuela', 4884);
@@ -45048,7 +45049,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfloari Cosmina', 4888);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloari Crenguaa', 4889);
+VALUES ('Alfloari Crengua', 4889);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloari Crina', 4890);
@@ -45294,7 +45295,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfloarii Anca', 4970);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloarii Ancuaa', 4971);
+VALUES ('Alfloarii Ancua', 4971);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloarii Anda', 4972);
@@ -45336,7 +45337,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfloarii Antonela', 4984);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloarii Anuaa', 4985);
+VALUES ('Alfloarii Anua', 4985);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloarii Ariadna', 4986);
@@ -45348,7 +45349,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfloarii Arina', 4988);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloarii Aristiaa', 4989);
+VALUES ('Alfloarii Aristia', 4989);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloarii Artemisa', 4990);
@@ -45396,7 +45397,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfloarii Bogdana', 5004);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloarii Brânduaa', 5005);
+VALUES ('Alfloarii Brândua', 5005);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloarii Camelia', 5006);
@@ -45471,13 +45472,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfloarii Codrina', 5029);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloarii Codruaa', 5030);
+VALUES ('Alfloarii Codrua', 5030);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloarii Constantina', 5031);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloarii Constanaa', 5032);
+VALUES ('Alfloarii Constana', 5032);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloarii Consuela', 5033);
@@ -45495,7 +45496,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alfloarii Cosmina', 5037);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alfloarii Crenguaa', 5038);
+VALUES ('Alfloarii Crengua', 5038);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alfloarii Crina', 5039);
@@ -45741,7 +45742,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alflori Anca', 5119);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alflori Ancuaa', 5120);
+VALUES ('Alflori Ancua', 5120);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alflori Anda', 5121);
@@ -45783,7 +45784,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alflori Antonela', 5133);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alflori Anuaa', 5134);
+VALUES ('Alflori Anua', 5134);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alflori Ariadna', 5135);
@@ -45795,7 +45796,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alflori Arina', 5137);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alflori Aristiaa', 5138);
+VALUES ('Alflori Aristia', 5138);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alflori Artemisa', 5139);
@@ -45843,7 +45844,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alflori Bogdana', 5153);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alflori Brânduaa', 5154);
+VALUES ('Alflori Brândua', 5154);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alflori Camelia', 5155);
@@ -45918,13 +45919,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alflori Codrina', 5178);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alflori Codruaa', 5179);
+VALUES ('Alflori Codrua', 5179);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alflori Constantina', 5180);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alflori Constanaa', 5181);
+VALUES ('Alflori Constana', 5181);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alflori Consuela', 5182);
@@ -45942,7 +45943,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alflori Cosmina', 5186);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alflori Crenguaa', 5187);
+VALUES ('Alflori Crengua', 5187);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alflori Crina', 5188);
@@ -46188,7 +46189,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Algeorge Anca', 5268);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algeorge Ancuaa', 5269);
+VALUES ('Algeorge Ancua', 5269);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algeorge Anda', 5270);
@@ -46230,7 +46231,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Algeorge Antonela', 5282);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algeorge Anuaa', 5283);
+VALUES ('Algeorge Anua', 5283);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algeorge Ariadna', 5284);
@@ -46242,7 +46243,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Algeorge Arina', 5286);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algeorge Aristiaa', 5287);
+VALUES ('Algeorge Aristia', 5287);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algeorge Artemisa', 5288);
@@ -46290,7 +46291,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Algeorge Bogdana', 5302);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algeorge Brânduaa', 5303);
+VALUES ('Algeorge Brândua', 5303);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algeorge Camelia', 5304);
@@ -46365,13 +46366,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Algeorge Codrina', 5327);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algeorge Codruaa', 5328);
+VALUES ('Algeorge Codrua', 5328);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algeorge Constantina', 5329);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algeorge Constanaa', 5330);
+VALUES ('Algeorge Constana', 5330);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algeorge Consuela', 5331);
@@ -46389,7 +46390,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Algeorge Cosmina', 5335);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algeorge Crenguaa', 5336);
+VALUES ('Algeorge Crengua', 5336);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algeorge Crina', 5337);
@@ -46635,7 +46636,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Algiu Anca', 5417);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algiu Ancuaa', 5418);
+VALUES ('Algiu Ancua', 5418);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algiu Anda', 5419);
@@ -46677,7 +46678,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Algiu Antonela', 5431);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algiu Anuaa', 5432);
+VALUES ('Algiu Anua', 5432);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algiu Ariadna', 5433);
@@ -46689,7 +46690,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Algiu Arina', 5435);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algiu Aristiaa', 5436);
+VALUES ('Algiu Aristia', 5436);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algiu Artemisa', 5437);
@@ -46737,7 +46738,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Algiu Bogdana', 5451);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algiu Brânduaa', 5452);
+VALUES ('Algiu Brândua', 5452);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algiu Camelia', 5453);
@@ -46812,13 +46813,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Algiu Codrina', 5476);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algiu Codruaa', 5477);
+VALUES ('Algiu Codrua', 5477);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algiu Constantina', 5478);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algiu Constanaa', 5479);
+VALUES ('Algiu Constana', 5479);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algiu Consuela', 5480);
@@ -46836,7 +46837,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Algiu Cosmina', 5484);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Algiu Crenguaa', 5485);
+VALUES ('Algiu Crengua', 5485);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Algiu Crina', 5486);
@@ -47082,7 +47083,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alic Anca', 5566);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alic Ancuaa', 5567);
+VALUES ('Alic Ancua', 5567);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alic Anda', 5568);
@@ -47124,7 +47125,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alic Antonela', 5580);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alic Anuaa', 5581);
+VALUES ('Alic Anua', 5581);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alic Ariadna', 5582);
@@ -47136,7 +47137,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alic Arina', 5584);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alic Aristiaa', 5585);
+VALUES ('Alic Aristia', 5585);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alic Artemisa', 5586);
@@ -47184,7 +47185,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alic Bogdana', 5600);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alic Brânduaa', 5601);
+VALUES ('Alic Brândua', 5601);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alic Camelia', 5602);
@@ -47259,13 +47260,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alic Codrina', 5625);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alic Codruaa', 5626);
+VALUES ('Alic Codrua', 5626);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alic Constantina', 5627);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alic Constanaa', 5628);
+VALUES ('Alic Constana', 5628);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alic Consuela', 5629);
@@ -47283,7 +47284,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alic Cosmina', 5633);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alic Crenguaa', 5634);
+VALUES ('Alic Crengua', 5634);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alic Crina', 5635);
@@ -47529,7 +47530,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliceanu Anca', 5715);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliceanu Ancuaa', 5716);
+VALUES ('Aliceanu Ancua', 5716);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliceanu Anda', 5717);
@@ -47571,7 +47572,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliceanu Antonela', 5729);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliceanu Anuaa', 5730);
+VALUES ('Aliceanu Anua', 5730);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliceanu Ariadna', 5731);
@@ -47583,7 +47584,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliceanu Arina', 5733);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliceanu Aristiaa', 5734);
+VALUES ('Aliceanu Aristia', 5734);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliceanu Artemisa', 5735);
@@ -47631,7 +47632,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliceanu Bogdana', 5749);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliceanu Brânduaa', 5750);
+VALUES ('Aliceanu Brândua', 5750);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliceanu Camelia', 5751);
@@ -47706,13 +47707,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliceanu Codrina', 5774);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliceanu Codruaa', 5775);
+VALUES ('Aliceanu Codrua', 5775);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliceanu Constantina', 5776);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliceanu Constanaa', 5777);
+VALUES ('Aliceanu Constana', 5777);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliceanu Consuela', 5778);
@@ -47730,7 +47731,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliceanu Cosmina', 5782);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliceanu Crenguaa', 5783);
+VALUES ('Aliceanu Crengua', 5783);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliceanu Crina', 5784);
@@ -47976,7 +47977,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicescu Anca', 5864);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicescu Ancuaa', 5865);
+VALUES ('Alicescu Ancua', 5865);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicescu Anda', 5866);
@@ -48018,7 +48019,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicescu Antonela', 5878);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicescu Anuaa', 5879);
+VALUES ('Alicescu Anua', 5879);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicescu Ariadna', 5880);
@@ -48030,7 +48031,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicescu Arina', 5882);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicescu Aristiaa', 5883);
+VALUES ('Alicescu Aristia', 5883);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicescu Artemisa', 5884);
@@ -48078,7 +48079,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicescu Bogdana', 5898);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicescu Brânduaa', 5899);
+VALUES ('Alicescu Brândua', 5899);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicescu Camelia', 5900);
@@ -48153,13 +48154,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicescu Codrina', 5923);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicescu Codruaa', 5924);
+VALUES ('Alicescu Codrua', 5924);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicescu Constantina', 5925);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicescu Constanaa', 5926);
+VALUES ('Alicescu Constana', 5926);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicescu Consuela', 5927);
@@ -48177,7 +48178,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicescu Cosmina', 5931);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicescu Crenguaa', 5932);
+VALUES ('Alicescu Crengua', 5932);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicescu Crina', 5933);
@@ -48423,7 +48424,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliciuc Anca', 6013);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliciuc Ancuaa', 6014);
+VALUES ('Aliciuc Ancua', 6014);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliciuc Anda', 6015);
@@ -48465,7 +48466,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliciuc Antonela', 6027);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliciuc Anuaa', 6028);
+VALUES ('Aliciuc Anua', 6028);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliciuc Ariadna', 6029);
@@ -48477,7 +48478,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliciuc Arina', 6031);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliciuc Aristiaa', 6032);
+VALUES ('Aliciuc Aristia', 6032);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliciuc Artemisa', 6033);
@@ -48525,7 +48526,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliciuc Bogdana', 6047);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliciuc Brânduaa', 6048);
+VALUES ('Aliciuc Brândua', 6048);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliciuc Camelia', 6049);
@@ -48600,13 +48601,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliciuc Codrina', 6072);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliciuc Codruaa', 6073);
+VALUES ('Aliciuc Codrua', 6073);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliciuc Constantina', 6074);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliciuc Constanaa', 6075);
+VALUES ('Aliciuc Constana', 6075);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliciuc Consuela', 6076);
@@ -48624,7 +48625,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliciuc Cosmina', 6080);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliciuc Crenguaa', 6081);
+VALUES ('Aliciuc Crengua', 6081);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliciuc Crina', 6082);
@@ -48870,7 +48871,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandrescu Anca', 6162);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrescu Ancuaa', 6163);
+VALUES ('Alicsandrescu Ancua', 6163);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrescu Anda', 6164);
@@ -48912,7 +48913,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandrescu Antonela', 6176);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrescu Anuaa', 6177);
+VALUES ('Alicsandrescu Anua', 6177);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrescu Ariadna', 6178);
@@ -48924,7 +48925,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandrescu Arina', 6180);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrescu Aristiaa', 6181);
+VALUES ('Alicsandrescu Aristia', 6181);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrescu Artemisa', 6182);
@@ -48972,7 +48973,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandrescu Bogdana', 6196);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrescu Brânduaa', 6197);
+VALUES ('Alicsandrescu Brândua', 6197);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrescu Camelia', 6198);
@@ -49047,13 +49048,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandrescu Codrina', 6221);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrescu Codruaa', 6222);
+VALUES ('Alicsandrescu Codrua', 6222);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrescu Constantina', 6223);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrescu Constanaa', 6224);
+VALUES ('Alicsandrescu Constana', 6224);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrescu Consuela', 6225);
@@ -49071,7 +49072,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandrescu Cosmina', 6229);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrescu Crenguaa', 6230);
+VALUES ('Alicsandrescu Crengua', 6230);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrescu Crina', 6231);
@@ -49317,7 +49318,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandri Anca', 6311);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandri Ancuaa', 6312);
+VALUES ('Alicsandri Ancua', 6312);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandri Anda', 6313);
@@ -49359,7 +49360,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandri Antonela', 6325);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandri Anuaa', 6326);
+VALUES ('Alicsandri Anua', 6326);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandri Ariadna', 6327);
@@ -49371,7 +49372,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandri Arina', 6329);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandri Aristiaa', 6330);
+VALUES ('Alicsandri Aristia', 6330);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandri Artemisa', 6331);
@@ -49419,7 +49420,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandri Bogdana', 6345);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandri Brânduaa', 6346);
+VALUES ('Alicsandri Brândua', 6346);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandri Camelia', 6347);
@@ -49494,13 +49495,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandri Codrina', 6370);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandri Codruaa', 6371);
+VALUES ('Alicsandri Codrua', 6371);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandri Constantina', 6372);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandri Constanaa', 6373);
+VALUES ('Alicsandri Constana', 6373);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandri Consuela', 6374);
@@ -49518,7 +49519,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandri Cosmina', 6378);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandri Crenguaa', 6379);
+VALUES ('Alicsandri Crengua', 6379);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandri Crina', 6380);
@@ -49764,7 +49765,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandrii Anca', 6460);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrii Ancuaa', 6461);
+VALUES ('Alicsandrii Ancua', 6461);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrii Anda', 6462);
@@ -49806,7 +49807,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandrii Antonela', 6474);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrii Anuaa', 6475);
+VALUES ('Alicsandrii Anua', 6475);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrii Ariadna', 6476);
@@ -49818,7 +49819,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandrii Arina', 6478);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrii Aristiaa', 6479);
+VALUES ('Alicsandrii Aristia', 6479);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrii Artemisa', 6480);
@@ -49866,7 +49867,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandrii Bogdana', 6494);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrii Brânduaa', 6495);
+VALUES ('Alicsandrii Brândua', 6495);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrii Camelia', 6496);
@@ -49941,13 +49942,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandrii Codrina', 6519);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrii Codruaa', 6520);
+VALUES ('Alicsandrii Codrua', 6520);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrii Constantina', 6521);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrii Constanaa', 6522);
+VALUES ('Alicsandrii Constana', 6522);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrii Consuela', 6523);
@@ -49965,7 +49966,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandrii Cosmina', 6527);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandrii Crenguaa', 6528);
+VALUES ('Alicsandrii Crengua', 6528);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandrii Crina', 6529);
@@ -50211,7 +50212,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandroae Anca', 6609);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandroae Ancuaa', 6610);
+VALUES ('Alicsandroae Ancua', 6610);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandroae Anda', 6611);
@@ -50253,7 +50254,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandroae Antonela', 6623);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandroae Anuaa', 6624);
+VALUES ('Alicsandroae Anua', 6624);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandroae Ariadna', 6625);
@@ -50265,7 +50266,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandroae Arina', 6627);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandroae Aristiaa', 6628);
+VALUES ('Alicsandroae Aristia', 6628);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandroae Artemisa', 6629);
@@ -50313,7 +50314,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandroae Bogdana', 6643);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandroae Brânduaa', 6644);
+VALUES ('Alicsandroae Brândua', 6644);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandroae Camelia', 6645);
@@ -50388,13 +50389,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandroae Codrina', 6668);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandroae Codruaa', 6669);
+VALUES ('Alicsandroae Codrua', 6669);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandroae Constantina', 6670);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandroae Constanaa', 6671);
+VALUES ('Alicsandroae Constana', 6671);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandroae Consuela', 6672);
@@ -50412,7 +50413,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandroae Cosmina', 6676);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandroae Crenguaa', 6677);
+VALUES ('Alicsandroae Crengua', 6677);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandroae Crina', 6678);
@@ -50658,7 +50659,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandru Anca', 6758);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandru Ancuaa', 6759);
+VALUES ('Alicsandru Ancua', 6759);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandru Anda', 6760);
@@ -50700,7 +50701,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandru Antonela', 6772);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandru Anuaa', 6773);
+VALUES ('Alicsandru Anua', 6773);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandru Ariadna', 6774);
@@ -50712,7 +50713,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandru Arina', 6776);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandru Aristiaa', 6777);
+VALUES ('Alicsandru Aristia', 6777);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandru Artemisa', 6778);
@@ -50760,7 +50761,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandru Bogdana', 6792);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandru Brânduaa', 6793);
+VALUES ('Alicsandru Brândua', 6793);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandru Camelia', 6794);
@@ -50835,13 +50836,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandru Codrina', 6817);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandru Codruaa', 6818);
+VALUES ('Alicsandru Codrua', 6818);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandru Constantina', 6819);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandru Constanaa', 6820);
+VALUES ('Alicsandru Constana', 6820);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandru Consuela', 6821);
@@ -50859,7 +50860,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsandru Cosmina', 6825);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsandru Crenguaa', 6826);
+VALUES ('Alicsandru Crengua', 6826);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsandru Crina', 6827);
@@ -51105,7 +51106,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsanoroiu Anca', 6907);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsanoroiu Ancuaa', 6908);
+VALUES ('Alicsanoroiu Ancua', 6908);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsanoroiu Anda', 6909);
@@ -51147,7 +51148,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsanoroiu Antonela', 6921);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsanoroiu Anuaa', 6922);
+VALUES ('Alicsanoroiu Anua', 6922);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsanoroiu Ariadna', 6923);
@@ -51159,7 +51160,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsanoroiu Arina', 6925);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsanoroiu Aristiaa', 6926);
+VALUES ('Alicsanoroiu Aristia', 6926);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsanoroiu Artemisa', 6927);
@@ -51207,7 +51208,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsanoroiu Bogdana', 6941);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsanoroiu Brânduaa', 6942);
+VALUES ('Alicsanoroiu Brândua', 6942);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsanoroiu Camelia', 6943);
@@ -51282,13 +51283,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsanoroiu Codrina', 6966);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsanoroiu Codruaa', 6967);
+VALUES ('Alicsanoroiu Codrua', 6967);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsanoroiu Constantina', 6968);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsanoroiu Constanaa', 6969);
+VALUES ('Alicsanoroiu Constana', 6969);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsanoroiu Consuela', 6970);
@@ -51306,7 +51307,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicsanoroiu Cosmina', 6974);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicsanoroiu Crenguaa', 6975);
+VALUES ('Alicsanoroiu Crengua', 6975);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicsanoroiu Crina', 6976);
@@ -51552,7 +51553,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicu Anca', 7056);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicu Ancuaa', 7057);
+VALUES ('Alicu Ancua', 7057);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicu Anda', 7058);
@@ -51594,7 +51595,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicu Antonela', 7070);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicu Anuaa', 7071);
+VALUES ('Alicu Anua', 7071);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicu Ariadna', 7072);
@@ -51606,7 +51607,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicu Arina', 7074);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicu Aristiaa', 7075);
+VALUES ('Alicu Aristia', 7075);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicu Artemisa', 7076);
@@ -51654,7 +51655,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicu Bogdana', 7090);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicu Brânduaa', 7091);
+VALUES ('Alicu Brândua', 7091);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicu Camelia', 7092);
@@ -51729,13 +51730,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicu Codrina', 7115);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicu Codruaa', 7116);
+VALUES ('Alicu Codrua', 7116);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicu Constantina', 7117);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicu Constanaa', 7118);
+VALUES ('Alicu Constana', 7118);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicu Consuela', 7119);
@@ -51753,7 +51754,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alicu Cosmina', 7123);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alicu Crenguaa', 7124);
+VALUES ('Alicu Crengua', 7124);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alicu Crina', 7125);
@@ -51999,7 +52000,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alievici Anca', 7205);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alievici Ancuaa', 7206);
+VALUES ('Alievici Ancua', 7206);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alievici Anda', 7207);
@@ -52041,7 +52042,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alievici Antonela', 7219);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alievici Anuaa', 7220);
+VALUES ('Alievici Anua', 7220);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alievici Ariadna', 7221);
@@ -52053,7 +52054,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alievici Arina', 7223);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alievici Aristiaa', 7224);
+VALUES ('Alievici Aristia', 7224);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alievici Artemisa', 7225);
@@ -52101,7 +52102,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alievici Bogdana', 7239);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alievici Brânduaa', 7240);
+VALUES ('Alievici Brândua', 7240);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alievici Camelia', 7241);
@@ -52176,13 +52177,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alievici Codrina', 7264);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alievici Codruaa', 7265);
+VALUES ('Alievici Codrua', 7265);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alievici Constantina', 7266);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alievici Constanaa', 7267);
+VALUES ('Alievici Constana', 7267);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alievici Consuela', 7268);
@@ -52200,7 +52201,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alievici Cosmina', 7272);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alievici Crenguaa', 7273);
+VALUES ('Alievici Crengua', 7273);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alievici Crina', 7274);
@@ -52446,7 +52447,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alifanti Anca', 7354);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alifanti Ancuaa', 7355);
+VALUES ('Alifanti Ancua', 7355);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alifanti Anda', 7356);
@@ -52488,7 +52489,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alifanti Antonela', 7368);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alifanti Anuaa', 7369);
+VALUES ('Alifanti Anua', 7369);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alifanti Ariadna', 7370);
@@ -52500,7 +52501,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alifanti Arina', 7372);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alifanti Aristiaa', 7373);
+VALUES ('Alifanti Aristia', 7373);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alifanti Artemisa', 7374);
@@ -52548,7 +52549,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alifanti Bogdana', 7388);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alifanti Brânduaa', 7389);
+VALUES ('Alifanti Brândua', 7389);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alifanti Camelia', 7390);
@@ -52623,13 +52624,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alifanti Codrina', 7413);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alifanti Codruaa', 7414);
+VALUES ('Alifanti Codrua', 7414);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alifanti Constantina', 7415);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alifanti Constanaa', 7416);
+VALUES ('Alifanti Constana', 7416);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alifanti Consuela', 7417);
@@ -52647,7 +52648,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alifanti Cosmina', 7421);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alifanti Crenguaa', 7422);
+VALUES ('Alifanti Crengua', 7422);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alifanti Crina', 7423);
@@ -52893,7 +52894,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aligica Anca', 7503);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aligica Ancuaa', 7504);
+VALUES ('Aligica Ancua', 7504);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aligica Anda', 7505);
@@ -52935,7 +52936,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aligica Antonela', 7517);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aligica Anuaa', 7518);
+VALUES ('Aligica Anua', 7518);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aligica Ariadna', 7519);
@@ -52947,7 +52948,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aligica Arina', 7521);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aligica Aristiaa', 7522);
+VALUES ('Aligica Aristia', 7522);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aligica Artemisa', 7523);
@@ -52995,7 +52996,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aligica Bogdana', 7537);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aligica Brânduaa', 7538);
+VALUES ('Aligica Brândua', 7538);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aligica Camelia', 7539);
@@ -53070,13 +53071,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aligica Codrina', 7562);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aligica Codruaa', 7563);
+VALUES ('Aligica Codrua', 7563);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aligica Constantina', 7564);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aligica Constanaa', 7565);
+VALUES ('Aligica Constana', 7565);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aligica Consuela', 7566);
@@ -53094,7 +53095,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aligica Cosmina', 7570);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aligica Crenguaa', 7571);
+VALUES ('Aligica Crengua', 7571);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aligica Crina', 7572);
@@ -53340,7 +53341,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliman Anca', 7652);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliman Ancuaa', 7653);
+VALUES ('Aliman Ancua', 7653);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliman Anda', 7654);
@@ -53382,7 +53383,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliman Antonela', 7666);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliman Anuaa', 7667);
+VALUES ('Aliman Anua', 7667);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliman Ariadna', 7668);
@@ -53394,7 +53395,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliman Arina', 7670);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliman Aristiaa', 7671);
+VALUES ('Aliman Aristia', 7671);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliman Artemisa', 7672);
@@ -53442,7 +53443,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliman Bogdana', 7686);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliman Brânduaa', 7687);
+VALUES ('Aliman Brândua', 7687);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliman Camelia', 7688);
@@ -53517,13 +53518,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliman Codrina', 7711);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliman Codruaa', 7712);
+VALUES ('Aliman Codrua', 7712);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliman Constantina', 7713);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliman Constanaa', 7714);
+VALUES ('Aliman Constana', 7714);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliman Consuela', 7715);
@@ -53541,7 +53542,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliman Cosmina', 7719);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliman Crenguaa', 7720);
+VALUES ('Aliman Crengua', 7720);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliman Crina', 7721);
@@ -53787,7 +53788,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimanescu Anca', 7801);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimanescu Ancuaa', 7802);
+VALUES ('Alimanescu Ancua', 7802);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimanescu Anda', 7803);
@@ -53829,7 +53830,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimanescu Antonela', 7815);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimanescu Anuaa', 7816);
+VALUES ('Alimanescu Anua', 7816);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimanescu Ariadna', 7817);
@@ -53841,7 +53842,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimanescu Arina', 7819);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimanescu Aristiaa', 7820);
+VALUES ('Alimanescu Aristia', 7820);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimanescu Artemisa', 7821);
@@ -53889,7 +53890,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimanescu Bogdana', 7835);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimanescu Brânduaa', 7836);
+VALUES ('Alimanescu Brândua', 7836);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimanescu Camelia', 7837);
@@ -53964,13 +53965,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimanescu Codrina', 7860);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimanescu Codruaa', 7861);
+VALUES ('Alimanescu Codrua', 7861);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimanescu Constantina', 7862);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimanescu Constanaa', 7863);
+VALUES ('Alimanescu Constana', 7863);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimanescu Consuela', 7864);
@@ -53988,7 +53989,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimanescu Cosmina', 7868);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimanescu Crenguaa', 7869);
+VALUES ('Alimanescu Crengua', 7869);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimanescu Crina', 7870);
@@ -54234,7 +54235,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimareanu Anca', 7950);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimareanu Ancuaa', 7951);
+VALUES ('Alimareanu Ancua', 7951);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimareanu Anda', 7952);
@@ -54276,7 +54277,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimareanu Antonela', 7964);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimareanu Anuaa', 7965);
+VALUES ('Alimareanu Anua', 7965);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimareanu Ariadna', 7966);
@@ -54288,7 +54289,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimareanu Arina', 7968);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimareanu Aristiaa', 7969);
+VALUES ('Alimareanu Aristia', 7969);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimareanu Artemisa', 7970);
@@ -54336,7 +54337,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimareanu Bogdana', 7984);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimareanu Brânduaa', 7985);
+VALUES ('Alimareanu Brândua', 7985);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimareanu Camelia', 7986);
@@ -54411,13 +54412,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimareanu Codrina', 8009);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimareanu Codruaa', 8010);
+VALUES ('Alimareanu Codrua', 8010);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimareanu Constantina', 8011);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimareanu Constanaa', 8012);
+VALUES ('Alimareanu Constana', 8012);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimareanu Consuela', 8013);
@@ -54435,7 +54436,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimareanu Cosmina', 8017);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimareanu Crenguaa', 8018);
+VALUES ('Alimareanu Crengua', 8018);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimareanu Crina', 8019);
@@ -54681,7 +54682,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimpescu Anca', 8099);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimpescu Ancuaa', 8100);
+VALUES ('Alimpescu Ancua', 8100);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimpescu Anda', 8101);
@@ -54723,7 +54724,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimpescu Antonela', 8113);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimpescu Anuaa', 8114);
+VALUES ('Alimpescu Anua', 8114);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimpescu Ariadna', 8115);
@@ -54735,7 +54736,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimpescu Arina', 8117);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimpescu Aristiaa', 8118);
+VALUES ('Alimpescu Aristia', 8118);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimpescu Artemisa', 8119);
@@ -54783,7 +54784,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimpescu Bogdana', 8133);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimpescu Brânduaa', 8134);
+VALUES ('Alimpescu Brândua', 8134);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimpescu Camelia', 8135);
@@ -54858,13 +54859,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimpescu Codrina', 8158);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimpescu Codruaa', 8159);
+VALUES ('Alimpescu Codrua', 8159);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimpescu Constantina', 8160);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimpescu Constanaa', 8161);
+VALUES ('Alimpescu Constana', 8161);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimpescu Consuela', 8162);
@@ -54882,7 +54883,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alimpescu Cosmina', 8166);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alimpescu Crenguaa', 8167);
+VALUES ('Alimpescu Crengua', 8167);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alimpescu Crina', 8168);
@@ -55128,7 +55129,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alina Anca', 8248);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alina Ancuaa', 8249);
+VALUES ('Alina Ancua', 8249);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alina Anda', 8250);
@@ -55170,7 +55171,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alina Antonela', 8262);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alina Anuaa', 8263);
+VALUES ('Alina Anua', 8263);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alina Ariadna', 8264);
@@ -55182,7 +55183,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alina Arina', 8266);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alina Aristiaa', 8267);
+VALUES ('Alina Aristia', 8267);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alina Artemisa', 8268);
@@ -55230,7 +55231,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alina Bogdana', 8282);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alina Brânduaa', 8283);
+VALUES ('Alina Brândua', 8283);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alina Camelia', 8284);
@@ -55305,13 +55306,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alina Codrina', 8307);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alina Codruaa', 8308);
+VALUES ('Alina Codrua', 8308);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alina Constantina', 8309);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alina Constanaa', 8310);
+VALUES ('Alina Constana', 8310);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alina Consuela', 8311);
@@ -55329,7 +55330,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alina Cosmina', 8315);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alina Crenguaa', 8316);
+VALUES ('Alina Crengua', 8316);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alina Crina', 8317);
@@ -55575,7 +55576,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alinei Anca', 8397);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinei Ancuaa', 8398);
+VALUES ('Alinei Ancua', 8398);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinei Anda', 8399);
@@ -55617,7 +55618,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alinei Antonela', 8411);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinei Anuaa', 8412);
+VALUES ('Alinei Anua', 8412);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinei Ariadna', 8413);
@@ -55629,7 +55630,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alinei Arina', 8415);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinei Aristiaa', 8416);
+VALUES ('Alinei Aristia', 8416);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinei Artemisa', 8417);
@@ -55677,7 +55678,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alinei Bogdana', 8431);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinei Brânduaa', 8432);
+VALUES ('Alinei Brândua', 8432);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinei Camelia', 8433);
@@ -55752,13 +55753,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alinei Codrina', 8456);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinei Codruaa', 8457);
+VALUES ('Alinei Codrua', 8457);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinei Constantina', 8458);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinei Constanaa', 8459);
+VALUES ('Alinei Constana', 8459);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinei Consuela', 8460);
@@ -55776,7 +55777,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alinei Cosmina', 8464);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinei Crenguaa', 8465);
+VALUES ('Alinei Crengua', 8465);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinei Crina', 8466);
@@ -56022,7 +56023,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alinte Anca', 8546);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinte Ancuaa', 8547);
+VALUES ('Alinte Ancua', 8547);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinte Anda', 8548);
@@ -56064,7 +56065,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alinte Antonela', 8560);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinte Anuaa', 8561);
+VALUES ('Alinte Anua', 8561);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinte Ariadna', 8562);
@@ -56076,7 +56077,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alinte Arina', 8564);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinte Aristiaa', 8565);
+VALUES ('Alinte Aristia', 8565);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinte Artemisa', 8566);
@@ -56124,7 +56125,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alinte Bogdana', 8580);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinte Brânduaa', 8581);
+VALUES ('Alinte Brândua', 8581);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinte Camelia', 8582);
@@ -56199,13 +56200,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alinte Codrina', 8605);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinte Codruaa', 8606);
+VALUES ('Alinte Codrua', 8606);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinte Constantina', 8607);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinte Constanaa', 8608);
+VALUES ('Alinte Constana', 8608);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinte Consuela', 8609);
@@ -56223,7 +56224,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alinte Cosmina', 8613);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alinte Crenguaa', 8614);
+VALUES ('Alinte Crengua', 8614);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alinte Crina', 8615);
@@ -56469,7 +56470,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alioanei Anca', 8695);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioanei Ancuaa', 8696);
+VALUES ('Alioanei Ancua', 8696);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioanei Anda', 8697);
@@ -56511,7 +56512,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alioanei Antonela', 8709);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioanei Anuaa', 8710);
+VALUES ('Alioanei Anua', 8710);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioanei Ariadna', 8711);
@@ -56523,7 +56524,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alioanei Arina', 8713);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioanei Aristiaa', 8714);
+VALUES ('Alioanei Aristia', 8714);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioanei Artemisa', 8715);
@@ -56571,7 +56572,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alioanei Bogdana', 8729);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioanei Brânduaa', 8730);
+VALUES ('Alioanei Brândua', 8730);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioanei Camelia', 8731);
@@ -56646,13 +56647,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alioanei Codrina', 8754);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioanei Codruaa', 8755);
+VALUES ('Alioanei Codrua', 8755);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioanei Constantina', 8756);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioanei Constanaa', 8757);
+VALUES ('Alioanei Constana', 8757);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioanei Consuela', 8758);
@@ -56670,7 +56671,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alioanei Cosmina', 8762);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioanei Crenguaa', 8763);
+VALUES ('Alioanei Crengua', 8763);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioanei Crina', 8764);
@@ -56916,7 +56917,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alioani Anca', 8844);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioani Ancuaa', 8845);
+VALUES ('Alioani Ancua', 8845);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioani Anda', 8846);
@@ -56958,7 +56959,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alioani Antonela', 8858);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioani Anuaa', 8859);
+VALUES ('Alioani Anua', 8859);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioani Ariadna', 8860);
@@ -56970,7 +56971,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alioani Arina', 8862);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioani Aristiaa', 8863);
+VALUES ('Alioani Aristia', 8863);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioani Artemisa', 8864);
@@ -57018,7 +57019,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alioani Bogdana', 8878);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioani Brânduaa', 8879);
+VALUES ('Alioani Brândua', 8879);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioani Camelia', 8880);
@@ -57093,13 +57094,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alioani Codrina', 8903);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioani Codruaa', 8904);
+VALUES ('Alioani Codrua', 8904);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioani Constantina', 8905);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioani Constanaa', 8906);
+VALUES ('Alioani Constana', 8906);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioani Consuela', 8907);
@@ -57117,7 +57118,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alioani Cosmina', 8911);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alioani Crenguaa', 8912);
+VALUES ('Alioani Crengua', 8912);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alioani Crina', 8913);
@@ -57363,7 +57364,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alion Anca', 8993);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alion Ancuaa', 8994);
+VALUES ('Alion Ancua', 8994);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alion Anda', 8995);
@@ -57405,7 +57406,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alion Antonela', 9007);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alion Anuaa', 9008);
+VALUES ('Alion Anua', 9008);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alion Ariadna', 9009);
@@ -57417,7 +57418,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alion Arina', 9011);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alion Aristiaa', 9012);
+VALUES ('Alion Aristia', 9012);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alion Artemisa', 9013);
@@ -57465,7 +57466,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alion Bogdana', 9027);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alion Brânduaa', 9028);
+VALUES ('Alion Brândua', 9028);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alion Camelia', 9029);
@@ -57540,13 +57541,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alion Codrina', 9052);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alion Codruaa', 9053);
+VALUES ('Alion Codrua', 9053);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alion Constantina', 9054);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alion Constanaa', 9055);
+VALUES ('Alion Constana', 9055);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alion Consuela', 9056);
@@ -57564,7 +57565,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alion Cosmina', 9060);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alion Crenguaa', 9061);
+VALUES ('Alion Crengua', 9061);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alion Crina', 9062);
@@ -57810,7 +57811,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alionte Anca', 9142);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionte Ancuaa', 9143);
+VALUES ('Alionte Ancua', 9143);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionte Anda', 9144);
@@ -57852,7 +57853,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alionte Antonela', 9156);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionte Anuaa', 9157);
+VALUES ('Alionte Anua', 9157);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionte Ariadna', 9158);
@@ -57864,7 +57865,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alionte Arina', 9160);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionte Aristiaa', 9161);
+VALUES ('Alionte Aristia', 9161);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionte Artemisa', 9162);
@@ -57912,7 +57913,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alionte Bogdana', 9176);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionte Brânduaa', 9177);
+VALUES ('Alionte Brândua', 9177);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionte Camelia', 9178);
@@ -57987,13 +57988,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alionte Codrina', 9201);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionte Codruaa', 9202);
+VALUES ('Alionte Codrua', 9202);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionte Constantina', 9203);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionte Constanaa', 9204);
+VALUES ('Alionte Constana', 9204);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionte Consuela', 9205);
@@ -58011,7 +58012,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alionte Cosmina', 9209);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionte Crenguaa', 9210);
+VALUES ('Alionte Crengua', 9210);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionte Crina', 9211);
@@ -58257,7 +58258,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alionteoaei Anca', 9291);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionteoaei Ancuaa', 9292);
+VALUES ('Alionteoaei Ancua', 9292);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionteoaei Anda', 9293);
@@ -58299,7 +58300,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alionteoaei Antonela', 9305);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionteoaei Anuaa', 9306);
+VALUES ('Alionteoaei Anua', 9306);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionteoaei Ariadna', 9307);
@@ -58311,7 +58312,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alionteoaei Arina', 9309);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionteoaei Aristiaa', 9310);
+VALUES ('Alionteoaei Aristia', 9310);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionteoaei Artemisa', 9311);
@@ -58359,7 +58360,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alionteoaei Bogdana', 9325);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionteoaei Brânduaa', 9326);
+VALUES ('Alionteoaei Brândua', 9326);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionteoaei Camelia', 9327);
@@ -58434,13 +58435,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alionteoaei Codrina', 9350);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionteoaei Codruaa', 9351);
+VALUES ('Alionteoaei Codrua', 9351);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionteoaei Constantina', 9352);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionteoaei Constanaa', 9353);
+VALUES ('Alionteoaei Constana', 9353);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionteoaei Consuela', 9354);
@@ -58458,7 +58459,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alionteoaei Cosmina', 9358);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alionteoaei Crenguaa', 9359);
+VALUES ('Alionteoaei Crengua', 9359);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alionteoaei Crina', 9360);
@@ -58704,7 +58705,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alipranti Anca', 9440);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alipranti Ancuaa', 9441);
+VALUES ('Alipranti Ancua', 9441);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alipranti Anda', 9442);
@@ -58746,7 +58747,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alipranti Antonela', 9454);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alipranti Anuaa', 9455);
+VALUES ('Alipranti Anua', 9455);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alipranti Ariadna', 9456);
@@ -58758,7 +58759,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alipranti Arina', 9458);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alipranti Aristiaa', 9459);
+VALUES ('Alipranti Aristia', 9459);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alipranti Artemisa', 9460);
@@ -58806,7 +58807,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alipranti Bogdana', 9474);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alipranti Brânduaa', 9475);
+VALUES ('Alipranti Brândua', 9475);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alipranti Camelia', 9476);
@@ -58881,13 +58882,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alipranti Codrina', 9499);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alipranti Codruaa', 9500);
+VALUES ('Alipranti Codrua', 9500);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alipranti Constantina', 9501);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alipranti Constanaa', 9502);
+VALUES ('Alipranti Constana', 9502);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alipranti Consuela', 9503);
@@ -58905,7 +58906,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alipranti Cosmina', 9507);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alipranti Crenguaa', 9508);
+VALUES ('Alipranti Crengua', 9508);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alipranti Crina', 9509);
@@ -59151,7 +59152,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alisie Anca', 9589);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alisie Ancuaa', 9590);
+VALUES ('Alisie Ancua', 9590);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alisie Anda', 9591);
@@ -59193,7 +59194,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alisie Antonela', 9603);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alisie Anuaa', 9604);
+VALUES ('Alisie Anua', 9604);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alisie Ariadna', 9605);
@@ -59205,7 +59206,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alisie Arina', 9607);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alisie Aristiaa', 9608);
+VALUES ('Alisie Aristia', 9608);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alisie Artemisa', 9609);
@@ -59253,7 +59254,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alisie Bogdana', 9623);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alisie Brânduaa', 9624);
+VALUES ('Alisie Brândua', 9624);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alisie Camelia', 9625);
@@ -59328,13 +59329,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alisie Codrina', 9648);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alisie Codruaa', 9649);
+VALUES ('Alisie Codrua', 9649);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alisie Constantina', 9650);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alisie Constanaa', 9651);
+VALUES ('Alisie Constana', 9651);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alisie Consuela', 9652);
@@ -59352,7 +59353,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alisie Cosmina', 9656);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alisie Crenguaa', 9657);
+VALUES ('Alisie Crengua', 9657);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alisie Crina', 9658);
@@ -59598,7 +59599,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistar Anca', 9738);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistar Ancuaa', 9739);
+VALUES ('Alistar Ancua', 9739);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistar Anda', 9740);
@@ -59640,7 +59641,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistar Antonela', 9752);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistar Anuaa', 9753);
+VALUES ('Alistar Anua', 9753);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistar Ariadna', 9754);
@@ -59652,7 +59653,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistar Arina', 9756);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistar Aristiaa', 9757);
+VALUES ('Alistar Aristia', 9757);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistar Artemisa', 9758);
@@ -59700,7 +59701,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistar Bogdana', 9772);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistar Brânduaa', 9773);
+VALUES ('Alistar Brândua', 9773);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistar Camelia', 9774);
@@ -59775,13 +59776,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistar Codrina', 9797);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistar Codruaa', 9798);
+VALUES ('Alistar Codrua', 9798);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistar Constantina', 9799);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistar Constanaa', 9800);
+VALUES ('Alistar Constana', 9800);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistar Consuela', 9801);
@@ -59799,7 +59800,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistar Cosmina', 9805);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistar Crenguaa', 9806);
+VALUES ('Alistar Crengua', 9806);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistar Crina', 9807);
@@ -60045,7 +60046,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistarh Anca', 9887);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarh Ancuaa', 9888);
+VALUES ('Alistarh Ancua', 9888);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarh Anda', 9889);
@@ -60087,7 +60088,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistarh Antonela', 9901);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarh Anuaa', 9902);
+VALUES ('Alistarh Anua', 9902);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarh Ariadna', 9903);
@@ -60099,7 +60100,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistarh Arina', 9905);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarh Aristiaa', 9906);
+VALUES ('Alistarh Aristia', 9906);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarh Artemisa', 9907);
@@ -60147,7 +60148,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistarh Bogdana', 9921);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarh Brânduaa', 9922);
+VALUES ('Alistarh Brândua', 9922);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarh Camelia', 9923);
@@ -60222,13 +60223,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistarh Codrina', 9946);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarh Codruaa', 9947);
+VALUES ('Alistarh Codrua', 9947);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarh Constantina', 9948);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarh Constanaa', 9949);
+VALUES ('Alistarh Constana', 9949);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarh Consuela', 9950);
@@ -60246,7 +60247,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistarh Cosmina', 9954);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarh Crenguaa', 9955);
+VALUES ('Alistarh Crengua', 9955);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarh Crina', 9956);
@@ -60492,7 +60493,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistari Anca', 10036);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistari Ancuaa', 10037);
+VALUES ('Alistari Ancua', 10037);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistari Anda', 10038);
@@ -60534,7 +60535,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistari Antonela', 10050);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistari Anuaa', 10051);
+VALUES ('Alistari Anua', 10051);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistari Ariadna', 10052);
@@ -60546,7 +60547,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistari Arina', 10054);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistari Aristiaa', 10055);
+VALUES ('Alistari Aristia', 10055);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistari Artemisa', 10056);
@@ -60594,7 +60595,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistari Bogdana', 10070);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistari Brânduaa', 10071);
+VALUES ('Alistari Brândua', 10071);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistari Camelia', 10072);
@@ -60669,13 +60670,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistari Codrina', 10095);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistari Codruaa', 10096);
+VALUES ('Alistari Codrua', 10096);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistari Constantina', 10097);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistari Constanaa', 10098);
+VALUES ('Alistari Constana', 10098);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistari Consuela', 10099);
@@ -60693,7 +60694,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistari Cosmina', 10103);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistari Crenguaa', 10104);
+VALUES ('Alistari Crengua', 10104);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistari Crina', 10105);
@@ -60939,7 +60940,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistarica Anca', 10185);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarica Ancuaa', 10186);
+VALUES ('Alistarica Ancua', 10186);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarica Anda', 10187);
@@ -60981,7 +60982,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistarica Antonela', 10199);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarica Anuaa', 10200);
+VALUES ('Alistarica Anua', 10200);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarica Ariadna', 10201);
@@ -60993,7 +60994,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistarica Arina', 10203);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarica Aristiaa', 10204);
+VALUES ('Alistarica Aristia', 10204);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarica Artemisa', 10205);
@@ -61041,7 +61042,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistarica Bogdana', 10219);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarica Brânduaa', 10220);
+VALUES ('Alistarica Brândua', 10220);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarica Camelia', 10221);
@@ -61116,13 +61117,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistarica Codrina', 10244);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarica Codruaa', 10245);
+VALUES ('Alistarica Codrua', 10245);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarica Constantina', 10246);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarica Constanaa', 10247);
+VALUES ('Alistarica Constana', 10247);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarica Consuela', 10248);
@@ -61140,7 +61141,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alistarica Cosmina', 10252);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alistarica Crenguaa', 10253);
+VALUES ('Alistarica Crengua', 10253);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alistarica Crina', 10254);
@@ -61386,7 +61387,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliucai Anca', 10334);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliucai Ancuaa', 10335);
+VALUES ('Aliucai Ancua', 10335);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliucai Anda', 10336);
@@ -61428,7 +61429,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliucai Antonela', 10348);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliucai Anuaa', 10349);
+VALUES ('Aliucai Anua', 10349);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliucai Ariadna', 10350);
@@ -61440,7 +61441,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliucai Arina', 10352);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliucai Aristiaa', 10353);
+VALUES ('Aliucai Aristia', 10353);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliucai Artemisa', 10354);
@@ -61488,7 +61489,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliucai Bogdana', 10368);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliucai Brânduaa', 10369);
+VALUES ('Aliucai Brândua', 10369);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliucai Camelia', 10370);
@@ -61563,13 +61564,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliucai Codrina', 10393);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliucai Codruaa', 10394);
+VALUES ('Aliucai Codrua', 10394);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliucai Constantina', 10395);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliucai Constanaa', 10396);
+VALUES ('Aliucai Constana', 10396);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliucai Consuela', 10397);
@@ -61587,7 +61588,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Aliucai Cosmina', 10401);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Aliucai Crenguaa', 10402);
+VALUES ('Aliucai Crengua', 10402);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Aliucai Crina', 10403);
@@ -61833,7 +61834,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandrescu Anca', 10483);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrescu Ancuaa', 10484);
+VALUES ('Alixandrescu Ancua', 10484);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrescu Anda', 10485);
@@ -61875,7 +61876,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandrescu Antonela', 10497);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrescu Anuaa', 10498);
+VALUES ('Alixandrescu Anua', 10498);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrescu Ariadna', 10499);
@@ -61887,7 +61888,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandrescu Arina', 10501);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrescu Aristiaa', 10502);
+VALUES ('Alixandrescu Aristia', 10502);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrescu Artemisa', 10503);
@@ -61935,7 +61936,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandrescu Bogdana', 10517);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrescu Brânduaa', 10518);
+VALUES ('Alixandrescu Brândua', 10518);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrescu Camelia', 10519);
@@ -62010,13 +62011,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandrescu Codrina', 10542);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrescu Codruaa', 10543);
+VALUES ('Alixandrescu Codrua', 10543);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrescu Constantina', 10544);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrescu Constanaa', 10545);
+VALUES ('Alixandrescu Constana', 10545);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrescu Consuela', 10546);
@@ -62034,7 +62035,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandrescu Cosmina', 10550);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrescu Crenguaa', 10551);
+VALUES ('Alixandrescu Crengua', 10551);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrescu Crina', 10552);
@@ -62280,7 +62281,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandrica Anca', 10632);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrica Ancuaa', 10633);
+VALUES ('Alixandrica Ancua', 10633);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrica Anda', 10634);
@@ -62322,7 +62323,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandrica Antonela', 10646);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrica Anuaa', 10647);
+VALUES ('Alixandrica Anua', 10647);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrica Ariadna', 10648);
@@ -62334,7 +62335,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandrica Arina', 10650);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrica Aristiaa', 10651);
+VALUES ('Alixandrica Aristia', 10651);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrica Artemisa', 10652);
@@ -62382,7 +62383,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandrica Bogdana', 10666);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrica Brânduaa', 10667);
+VALUES ('Alixandrica Brândua', 10667);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrica Camelia', 10668);
@@ -62457,13 +62458,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandrica Codrina', 10691);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrica Codruaa', 10692);
+VALUES ('Alixandrica Codrua', 10692);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrica Constantina', 10693);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrica Constanaa', 10694);
+VALUES ('Alixandrica Constana', 10694);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrica Consuela', 10695);
@@ -62481,7 +62482,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandrica Cosmina', 10699);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandrica Crenguaa', 10700);
+VALUES ('Alixandrica Crengua', 10700);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandrica Crina', 10701);
@@ -62727,7 +62728,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandroaie Anca', 10781);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandroaie Ancuaa', 10782);
+VALUES ('Alixandroaie Ancua', 10782);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandroaie Anda', 10783);
@@ -62769,7 +62770,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandroaie Antonela', 10795);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandroaie Anuaa', 10796);
+VALUES ('Alixandroaie Anua', 10796);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandroaie Ariadna', 10797);
@@ -62781,7 +62782,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandroaie Arina', 10799);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandroaie Aristiaa', 10800);
+VALUES ('Alixandroaie Aristia', 10800);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandroaie Artemisa', 10801);
@@ -62829,7 +62830,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandroaie Bogdana', 10815);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandroaie Brânduaa', 10816);
+VALUES ('Alixandroaie Brândua', 10816);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandroaie Camelia', 10817);
@@ -62904,13 +62905,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandroaie Codrina', 10840);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandroaie Codruaa', 10841);
+VALUES ('Alixandroaie Codrua', 10841);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandroaie Constantina', 10842);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandroaie Constanaa', 10843);
+VALUES ('Alixandroaie Constana', 10843);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandroaie Consuela', 10844);
@@ -62928,7 +62929,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandroaie Cosmina', 10848);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandroaie Crenguaa', 10849);
+VALUES ('Alixandroaie Crengua', 10849);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandroaie Crina', 10850);
@@ -63174,7 +63175,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandru Anca', 10930);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandru Ancuaa', 10931);
+VALUES ('Alixandru Ancua', 10931);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandru Anda', 10932);
@@ -63216,7 +63217,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandru Antonela', 10944);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandru Anuaa', 10945);
+VALUES ('Alixandru Anua', 10945);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandru Ariadna', 10946);
@@ -63228,7 +63229,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandru Arina', 10948);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandru Aristiaa', 10949);
+VALUES ('Alixandru Aristia', 10949);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandru Artemisa', 10950);
@@ -63276,7 +63277,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandru Bogdana', 10964);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandru Brânduaa', 10965);
+VALUES ('Alixandru Brândua', 10965);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandru Camelia', 10966);
@@ -63351,13 +63352,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandru Codrina', 10989);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandru Codruaa', 10990);
+VALUES ('Alixandru Codrua', 10990);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandru Constantina', 10991);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandru Constanaa', 10992);
+VALUES ('Alixandru Constana', 10992);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandru Consuela', 10993);
@@ -63375,7 +63376,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alixandru Cosmina', 10997);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alixandru Crenguaa', 10998);
+VALUES ('Alixandru Crengua', 10998);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alixandru Crina', 10999);
@@ -63621,7 +63622,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alizoaei Anca', 11079);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alizoaei Ancuaa', 11080);
+VALUES ('Alizoaei Ancua', 11080);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alizoaei Anda', 11081);
@@ -63663,7 +63664,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alizoaei Antonela', 11093);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alizoaei Anuaa', 11094);
+VALUES ('Alizoaei Anua', 11094);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alizoaei Ariadna', 11095);
@@ -63675,7 +63676,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alizoaei Arina', 11097);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alizoaei Aristiaa', 11098);
+VALUES ('Alizoaei Aristia', 11098);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alizoaei Artemisa', 11099);
@@ -63723,7 +63724,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alizoaei Bogdana', 11113);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alizoaei Brânduaa', 11114);
+VALUES ('Alizoaei Brândua', 11114);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alizoaei Camelia', 11115);
@@ -63798,13 +63799,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alizoaei Codrina', 11138);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alizoaei Codruaa', 11139);
+VALUES ('Alizoaei Codrua', 11139);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alizoaei Constantina', 11140);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alizoaei Constanaa', 11141);
+VALUES ('Alizoaei Constana', 11141);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alizoaei Consuela', 11142);
@@ -63822,7 +63823,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Alizoaei Cosmina', 11146);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Alizoaei Crenguaa', 11147);
+VALUES ('Alizoaei Crengua', 11147);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Alizoaei Crina', 11148);
@@ -64068,7 +64069,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almagean Anca', 11228);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagean Ancuaa', 11229);
+VALUES ('Almagean Ancua', 11229);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagean Anda', 11230);
@@ -64110,7 +64111,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almagean Antonela', 11242);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagean Anuaa', 11243);
+VALUES ('Almagean Anua', 11243);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagean Ariadna', 11244);
@@ -64122,7 +64123,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almagean Arina', 11246);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagean Aristiaa', 11247);
+VALUES ('Almagean Aristia', 11247);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagean Artemisa', 11248);
@@ -64170,7 +64171,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almagean Bogdana', 11262);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagean Brânduaa', 11263);
+VALUES ('Almagean Brândua', 11263);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagean Camelia', 11264);
@@ -64245,13 +64246,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almagean Codrina', 11287);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagean Codruaa', 11288);
+VALUES ('Almagean Codrua', 11288);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagean Constantina', 11289);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagean Constanaa', 11290);
+VALUES ('Almagean Constana', 11290);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagean Consuela', 11291);
@@ -64269,7 +64270,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almagean Cosmina', 11295);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagean Crenguaa', 11296);
+VALUES ('Almagean Crengua', 11296);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagean Crina', 11297);
@@ -64515,7 +64516,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almaghe Anca', 11377);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almaghe Ancuaa', 11378);
+VALUES ('Almaghe Ancua', 11378);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almaghe Anda', 11379);
@@ -64557,7 +64558,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almaghe Antonela', 11391);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almaghe Anuaa', 11392);
+VALUES ('Almaghe Anua', 11392);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almaghe Ariadna', 11393);
@@ -64569,7 +64570,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almaghe Arina', 11395);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almaghe Aristiaa', 11396);
+VALUES ('Almaghe Aristia', 11396);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almaghe Artemisa', 11397);
@@ -64617,7 +64618,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almaghe Bogdana', 11411);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almaghe Brânduaa', 11412);
+VALUES ('Almaghe Brândua', 11412);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almaghe Camelia', 11413);
@@ -64692,13 +64693,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almaghe Codrina', 11436);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almaghe Codruaa', 11437);
+VALUES ('Almaghe Codrua', 11437);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almaghe Constantina', 11438);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almaghe Constanaa', 11439);
+VALUES ('Almaghe Constana', 11439);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almaghe Consuela', 11440);
@@ -64716,7 +64717,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almaghe Cosmina', 11444);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almaghe Crenguaa', 11445);
+VALUES ('Almaghe Crengua', 11445);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almaghe Crina', 11446);
@@ -64962,7 +64963,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almagiu Anca', 11526);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagiu Ancuaa', 11527);
+VALUES ('Almagiu Ancua', 11527);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagiu Anda', 11528);
@@ -65004,7 +65005,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almagiu Antonela', 11540);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagiu Anuaa', 11541);
+VALUES ('Almagiu Anua', 11541);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagiu Ariadna', 11542);
@@ -65016,7 +65017,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almagiu Arina', 11544);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagiu Aristiaa', 11545);
+VALUES ('Almagiu Aristia', 11545);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagiu Artemisa', 11546);
@@ -65064,7 +65065,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almagiu Bogdana', 11560);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagiu Brânduaa', 11561);
+VALUES ('Almagiu Brândua', 11561);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagiu Camelia', 11562);
@@ -65139,13 +65140,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almagiu Codrina', 11585);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagiu Codruaa', 11586);
+VALUES ('Almagiu Codrua', 11586);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagiu Constantina', 11587);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagiu Constanaa', 11588);
+VALUES ('Almagiu Constana', 11588);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagiu Consuela', 11589);
@@ -65163,7 +65164,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almagiu Cosmina', 11593);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almagiu Crenguaa', 11594);
+VALUES ('Almagiu Crengua', 11594);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almagiu Crina', 11595);
@@ -65409,7 +65410,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajan Anca', 11675);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajan Ancuaa', 11676);
+VALUES ('Almajan Ancua', 11676);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajan Anda', 11677);
@@ -65451,7 +65452,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajan Antonela', 11689);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajan Anuaa', 11690);
+VALUES ('Almajan Anua', 11690);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajan Ariadna', 11691);
@@ -65463,7 +65464,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajan Arina', 11693);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajan Aristiaa', 11694);
+VALUES ('Almajan Aristia', 11694);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajan Artemisa', 11695);
@@ -65511,7 +65512,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajan Bogdana', 11709);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajan Brânduaa', 11710);
+VALUES ('Almajan Brândua', 11710);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajan Camelia', 11711);
@@ -65586,13 +65587,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajan Codrina', 11734);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajan Codruaa', 11735);
+VALUES ('Almajan Codrua', 11735);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajan Constantina', 11736);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajan Constanaa', 11737);
+VALUES ('Almajan Constana', 11737);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajan Consuela', 11738);
@@ -65610,7 +65611,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajan Cosmina', 11742);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajan Crenguaa', 11743);
+VALUES ('Almajan Crengua', 11743);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajan Crina', 11744);
@@ -65856,7 +65857,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajanu Anca', 11824);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajanu Ancuaa', 11825);
+VALUES ('Almajanu Ancua', 11825);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajanu Anda', 11826);
@@ -65898,7 +65899,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajanu Antonela', 11838);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajanu Anuaa', 11839);
+VALUES ('Almajanu Anua', 11839);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajanu Ariadna', 11840);
@@ -65910,7 +65911,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajanu Arina', 11842);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajanu Aristiaa', 11843);
+VALUES ('Almajanu Aristia', 11843);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajanu Artemisa', 11844);
@@ -65958,7 +65959,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajanu Bogdana', 11858);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajanu Brânduaa', 11859);
+VALUES ('Almajanu Brândua', 11859);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajanu Camelia', 11860);
@@ -66033,13 +66034,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajanu Codrina', 11883);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajanu Codruaa', 11884);
+VALUES ('Almajanu Codrua', 11884);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajanu Constantina', 11885);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajanu Constanaa', 11886);
+VALUES ('Almajanu Constana', 11886);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajanu Consuela', 11887);
@@ -66057,7 +66058,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajanu Cosmina', 11891);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajanu Crenguaa', 11892);
+VALUES ('Almajanu Crengua', 11892);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajanu Crina', 11893);
@@ -66303,7 +66304,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajean Anca', 11973);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajean Ancuaa', 11974);
+VALUES ('Almajean Ancua', 11974);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajean Anda', 11975);
@@ -66345,7 +66346,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajean Antonela', 11987);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajean Anuaa', 11988);
+VALUES ('Almajean Anua', 11988);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajean Ariadna', 11989);
@@ -66357,7 +66358,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajean Arina', 11991);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajean Aristiaa', 11992);
+VALUES ('Almajean Aristia', 11992);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajean Artemisa', 11993);
@@ -66405,7 +66406,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajean Bogdana', 12007);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajean Brânduaa', 12008);
+VALUES ('Almajean Brândua', 12008);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajean Camelia', 12009);
@@ -66480,13 +66481,13 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajean Codrina', 12032);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajean Codruaa', 12033);
+VALUES ('Almajean Codrua', 12033);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajean Constantina', 12034);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajean Constanaa', 12035);
+VALUES ('Almajean Constana', 12035);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajean Consuela', 12036);
@@ -66504,7 +66505,7 @@ INSERT INTO CHILDREN (NAME, ID_CHILD)
 VALUES ('Almajean Cosmina', 12040);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
-VALUES ('Almajean Crenguaa', 12041);
+VALUES ('Almajean Crengua', 12041);
 
 INSERT INTO CHILDREN (NAME, ID_CHILD) 
 VALUES ('Almajean Crina', 12042);
@@ -66684,9 +66685,9 @@ loop
 
 select name into v_name from users where id_user=v_id;
 select replace(v_name,' ','.') into v_name from dual;
-v_email:=v_name || '@yahoo.com';
-v_username:=v_name;
-v_password:=v_name;
+v_email:=v_name ||v_id|| '@yahoo.com';
+v_username:=v_name||v_id;
+v_password:=v_name||v_id;
 
 update users set username=v_username,password=v_password,email=v_email,nr_children=0 where id_user=v_id;
 
@@ -66711,6 +66712,4 @@ exit when v_id=12096;
 end loop;
 end;
 end;
-
-select * from users;
 
