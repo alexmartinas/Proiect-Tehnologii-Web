@@ -2,7 +2,7 @@
 
 <form action="pagingnotificationsP2.php?page=0" method="post">
   Filter IdCopil:
-  <input type="text" name="numar">
+  <input type="number" name="numar">
   <input type="submit" name="Ok" value="Ok">
 </form>
 
