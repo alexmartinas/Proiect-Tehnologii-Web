@@ -9,6 +9,9 @@
 	$passwordconf=$_REQUEST["conf-Password"];
 	$email=$_REQUEST["Email"];
 
+	if( $nume!="" && $passwordconf!="" && $passwordnew!="" && $email!="" && $usernameold!="" ) 
+	{
+
   	//Oracle DB user name
 $contOracle = 'vlad';
 
@@ -63,6 +66,13 @@ oci_free_statement($stid);
 // Close connection 
 oci_close($connection);
 
+}
+
+}
+
+else
+{
+	echo "Nu lasati campuri goale!";
 }
 
 

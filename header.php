@@ -52,6 +52,10 @@
 						<li>
 							<a href="register.php">Logout</a>
 						</li>
+						</li>
+						<li>
+							<a href="delete-user.php">Delete User</a>
+						</li>
 						<li>
 							<a href="findkid.php">Find kid</a>
 						</li>

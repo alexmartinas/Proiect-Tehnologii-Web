@@ -20,7 +20,13 @@
 	);
 
 
-	$stidl = oci_parse($connection, "select * from children where name like $numecopil ");	
+	$stidl = @oci_parse($connection, "select * from children where name like $numecopil ");
+	if (!$stidl) {
+    $e = oci_error($connection);
+    echo "Nu ati introdus numele intr-un format corect!";
+	}	
+	else
+	{
 	$response = @oci_execute($stidl);
 	if ( $response == false ) echo "Puneti numele intre ghilimele!";
 	else 
@@ -39,7 +45,10 @@
 
 	}
 	oci_free_statement($stidl);
+
+	}
 	oci_close($connection);
+
 
 
 

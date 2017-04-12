@@ -25,13 +25,13 @@
 						<div class="form-group form-group-gender">
 							<label>Gender</label>
 							<div class="form-group">
-								<p><input type="radio" name="gender" id="male"><label for="male">Male</label></p>
+								<p><input type="radio" name="gender" id="male" value="male" checked="checked"><label for="male">Male</label></p>
 							</div>
 							<div class="form-group">
-								<p><input type="radio" name="gender" id="female"><label for="female">Female</label></p>
+								<p><input type="radio" name="gender" id="female" value="female"><label for="female">Female</label></p>
 							</div>
 						</div>
-						<button type="submit" class="btn btn-primary">Add</button>
+						<button type="submit" class="btn btn-primary" value="male">Add</button>
 						<?php
 								if (isset($_GET["msg"]) && $_GET["msg"] == 'haveit') {
 								echo "Deja monitorizati acest copil!";
