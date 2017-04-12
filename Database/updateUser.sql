@@ -13,12 +13,12 @@ BEGIN
       then
         mesaj:='This user already exists.Please choose something else!';
      else
-       select count(email) into v_count from users where email=eml and username!=usrn;
+       select count(email) into v_count from users where email=eml and username!=usrn_vechi;
          if(v_count!=0)
            then
              mesaj:='Used email.Please choose something else!';
          else
-          update users set username=usrn,password=parola_noua,name=nume||' ' ||prenume,email=eml where username=usrn_vechi; 
+          update users set username=usrn_nou,password=parola_noua,name=nume||' ' ||prenume,email=eml where username=usrn_vechi; 
           mesaj:= 'Account updated';
         end if;
     end if;
