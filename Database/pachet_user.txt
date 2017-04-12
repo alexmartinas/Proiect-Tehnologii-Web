@@ -1,13 +1,11 @@
-<<<<<<< HEAD
-CREATE OR REPLACE PACKAGE pachetul_meu IS
+create or replace PACKAGE pachetul_meu IS
      PROCEDURE INREGISTRARE(nume varchar2,prenume varchar2,usrn varchar2,parola varchar2,eml varchar2,mesaj out varchar2);
      FUNCTION LOG_IN(usrn varchar2 ,parola varchar2) RETURN varchar2;
      PROCEDURE UPDATE_USER(nume varchar2,prenume varchar2,usrn_vechi varchar2,usrn_nou varchar2,parola_veche varchar2,parola_noua varchar2,eml varchar2,mesaj out varchar2);
      PROCEDURE delete_user(usrn varchar2,parola varchar2, mesaj out varchar2);
 END pachetul_meu;
 /
-
-CREATE OR REPLACE PACKAGE BODY pachetul_meu IS
+create or replace PACKAGE BODY pachetul_meu IS
 --INREGISTRARE
 PROCEDURE inregistrare(nume varchar2,prenume varchar2,usrn varchar2,parola varchar2,eml varchar2,mesaj out varchar2)  as
 v_user_id users.id_user%type;
@@ -24,7 +22,7 @@ BEGIN
              mesaj:='Email folosit';
          else
           select max(id_user) into v_user_id from users;
-          insert into users values(v_user_id+1,usrn,parola,nume || ' ' || prenume,eml,0);
+          insert into users values(v_user_id+1,nume || ' ' || prenume,usrn,parola,eml,0);
           mesaj:= 'Inregistrare efectuata';
         end if;
     end if;
@@ -96,103 +94,4 @@ BEGIN
 END;
 
 --sfarsit
-=======
-CREATE OR REPLACE PACKAGE pachetul_meu IS
-     PROCEDURE INREGISTRARE(nume varchar2,prenume varchar2,usrn varchar2,parola varchar2,eml varchar2,mesaj out varchar2);
-     FUNCTION LOG_IN(usrn varchar2 ,parola varchar2) RETURN varchar2;
-     PROCEDURE UPDATE_USER(nume varchar2,prenume varchar2,usrn_vechi varchar2,usrn_nou varchar2,parola_veche varchar2,parola_noua varchar2,eml varchar2,mesaj out varchar2);
-     PROCEDURE delete_user(usrn varchar2,parola varchar2, mesaj out varchar2);
-END pachetul_meu;
-/
-
-CREATE OR REPLACE PACKAGE BODY pachetul_meu IS
---INREGISTRARE
-PROCEDURE inregistrare(nume varchar2,prenume varchar2,usrn varchar2,parola varchar2,eml varchar2,mesaj out varchar2)  as
-v_user_id users.id_user%type;
-v_count integer;
-BEGIN
-  select count(username) into v_count from users where username=usrn;
-    if(v_count!=0)
-      then
-        mesaj:='This user already exists. Choose something else!';
-      else
-        select count(email) into v_count from users where email=eml;
-         if(v_count!=0)
-           then
-             mesaj:='Email folosit';
-         else
-          select max(id_user) into v_user_id from users;
-          insert into users values(v_user_id+1,usrn,parola,nume || ' ' || prenume,eml,0);
-          mesaj:= 'Inregistrare efectuata';
-        end if;
-    end if;
-END;
-
---LOGARE
-FUNCTION LOG_IN(usrn varchar2 ,parola varchar2)
-  RETURN varchar2 AS
-v_username varchar2(40);
-v_password varchar2(40);
-v_count integer:=0;
-BEGIN
-  select count(users.username) into v_count from users where users.username=usrn;
-  if(v_count!=1)
-    then
-      return 'Utilizator inexistent ';
-    else
-      select users.password into v_password from users where users.username=usrn;
-      if(v_password!=parola)
-          then
-            return 'Parola gresita';
-      end if;
-  end if;
-return 'Logare cu succes';
-END;
-
---UPDATE
-PROCEDURE update_user(nume varchar2,prenume varchar2,usrn_vechi varchar2,usrn_nou varchar2,parola_veche varchar2,parola_noua varchar2,eml varchar2,mesaj out varchar2)  as
-v_user_id users.id_user%type;
-v_count integer;
-passwd users.password%type;
-BEGIN
-  select password into passwd from users where password=parola_veche;
-  if(parola_veche!=passwd)
-    then
-      mesaj:='Wrong password';
-    else
-     select count(username) into v_count from users where username=usrn_nou and username!=usrn_vechi;
-     if(v_count!=0)
-      then
-        mesaj:='This user already exists.Please choose something else!';
-     else
-       select count(email) into v_count from users where email=eml and username!=usrn_vechi;
-         if(v_count!=0)
-           then
-             mesaj:='Used email.Please choose something else!';
-         else
-          update users set username=usrn_nou,password=parola_noua,name=nume||' ' ||prenume,email=eml where username=usrn_vechi; 
-          mesaj:= 'Account updated';
-        end if;
-    end if;
-  end if;
-END;
-
---DELETE
-PROCEDURE delete_user(usrn varchar2,parola varchar2, mesaj out varchar2)  as
-v_user_pass users.password%type;
-v_count integer;
-BEGIN
-    select password into v_user_pass from users where username=usrn;
-    if(v_user_pass!=parola)
-      then
-        mesaj:='Incorrect password';
-    else
-      delete from users where username=usrn;
-      delete from monitoring where id_user=(select id_user from users where username=usrn);
-       mesaj:= 'Your account has been deleted';
-    end if;
-END;
-
---sfarsit
->>>>>>> 89a18199151d70e85613145cdcb2a1615aa241f1
 END pachetul_meu;
