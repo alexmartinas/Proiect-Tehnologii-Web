@@ -53,7 +53,7 @@ CREATE TABLE Interactions
 (
     Id_child INTEGER NOT NULL,
     Id_contact INTEGER NOT NULL,
-    Date_i DATE NOT NULL,
+    Date_i TIMESTAMP NOT NULL,
     Location_x INTEGER,
     Location_y INTEGER,
     Type_i VARCHAR(20),
@@ -63,7 +63,7 @@ CREATE TABLE Interactions
 CREATE TABLE Notifications
 (
     Id_child INTEGER NOT NULL,
-    Date_n DATE NOT NULL,
+    Date_n TIMESTAMP NOT NULL,
     Id_interest INTEGER,
     Distance INTEGER,
     CONSTRAINT notifications_pk PRIMARY KEY(Id_child, Date_n)
