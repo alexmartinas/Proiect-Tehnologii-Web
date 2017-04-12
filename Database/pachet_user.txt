@@ -23,7 +23,7 @@ BEGIN
              mesaj:='Email folosit';
          else
           select max(id_user) into v_user_id from users;
-          insert into users values(v_user_id+1,nume || ' ' || prenume,usrn,parola,eml,0);
+          insert into users values(v_user_id+1,usrn,parola,nume || ' ' || prenume,eml,0);
           mesaj:= 'Inregistrare efectuata';
         end if;
     end if;
