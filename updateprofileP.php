@@ -1,13 +1,13 @@
 <?php
 	
-
+	session_start();
 	$nume=$_REQUEST["Name"];
 	$prenume=$_REQUEST["Surname"];
-	$username=$_REQUEST["Username"];
-	$password=$_REQUEST["Password"];
+	$usernameold=$_SESSION['username'];
+	$passwordold=$_REQUEST["Password"];
+	$passwordnew=$_REQUEST["new-Password"];
+	$passwordconf=$_REQUEST["conf-Password"];
 	$email=$_REQUEST["Email"];
-
-	if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
 
   	//Oracle DB user name
 $contOracle = 'vlad';
@@ -32,23 +32,22 @@ else
 {
 
 $mesaj = 'VAKSNFASKLFNASFASFLASFASLKFASNLKFASNLFKASF';
-$stid = oci_parse($connection, 'call inregistrare(:v_nume,:v_prenume,:v_username2,:v_password2,:v_email,:v_mesaj)');
+$stid = oci_parse($connection, 'call update_user(:v_nume,:v_prenume,:v_uservechi,:v_usernou,:v_parolaveche,:v_parolanoua,:v_email,:v_mesaj)');
 oci_bind_by_name($stid, ":v_nume", $nume);
 oci_bind_by_name($stid, ":v_prenume", $prenume);
-oci_bind_by_name($stid, ":v_username2", $username);
-oci_bind_by_name($stid, ":v_password2", $password);
+oci_bind_by_name($stid, ":v_uservechi", $usernameold);
+oci_bind_by_name($stid, ":v_usernou", $usernameold);
+oci_bind_by_name($stid, ":v_parolaveche", $passwordold);
+oci_bind_by_name($stid, ":v_parolanoua", $passwordnew);
 oci_bind_by_name($stid, ":v_email", $email);
 oci_bind_by_name($stid, ":v_mesaj", $mesaj);
 oci_execute($stid);
 
-echo $mesaj;
 
+if( $mesaj == 'This user already exists.Please choose something else!' ) header("Location: my-profile.php?msg=already");
+if( $mesaj == 'Used email.Please choose something else!' ) header("Location: my-profile.php?msg=email");
+if( $mesaj == 'Account updated' ) header("Location: my-profile.php?msg=fin");
 
-if ($mesaj == 'Email folosit') {
-
-	header("Location: register.php?msg=usedemail");
-}
-else header("Location: register.php?msg=done");
 
 //while ($row = oci_fetch_array ($stid,OCI_NUM)) {
  //   foreach($row as $data)
@@ -60,11 +59,6 @@ oci_free_statement($stid);
 // Close connection 
 oci_close($connection);
 
-}
-
-}
- else {
-  echo("$email is not a valid email address");
 }
 
 
