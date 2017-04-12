@@ -31,6 +31,12 @@
 						<li>	
 							<a href="add-child.php">Add child</a>
 						</li>
+						<li>
+							<a href="delete-child.php">Delete child</a>
+						</li>
+						<li>
+							<a href="nearby-children.php">Nearby children</a>
+						</li>
 						<li>	
 							<a href="notification.php?page=0">Notification</a>
 						</li>
@@ -38,10 +44,16 @@
 							<a href="my-profile.php">My Profile</a>
 						</li>
 						<li>
+							<a href="user-list.php?page=0">Lista Useri</a>
+						</li>
+						<li>
 							<a href="contact.php">Contact</a>
 						</li>
 						<li>
 							<a href="register.php">Logout</a>
+						</li>
+						<li>
+							<a href="findkid.php">Find kid</a>
 						</li>
 					</ul>
 				</form>

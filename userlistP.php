@@ -1,10 +1,5 @@
-<?php include 'header.php' ?>
 <?php
-
-
-	if (!isset($_GET["id"])) {$id_tutore=$_REQUEST['numar'];}
-	else { $id_tutore=$_GET["id"]; $id_tutore=$id_tutore-1; }
-
+	
 	//Oracle DB user name
 	$contOracle = 'vlad';
 
@@ -38,25 +33,23 @@
 	$pagevfin=$pagev+20;
 
 	$nrrows = 0;
-	$stidl = oci_parse($connection, 'select id_child,date_n,id_interest,distance from (select id_child,date_n,id_interest,distance,ROWNUM r from notifications) where r between :v_page1 and :v_page2 and id_child=:v_id_tutore');
+	$stidl = oci_parse($connection, 'select username,name,email from (select username,name,email,ROWNUM r from users) where r between :v_page1 and :v_page2');
 	oci_bind_by_name($stidl, ":v_page1", $pagev);
 	oci_bind_by_name($stidl, ":v_page2", $pagevfin);
-	oci_bind_by_name($stidl, ":v_id_tutore", $id_tutore);
 	oci_execute($stidl);
 
 
 	while ($row = oci_fetch_array ($stidl,OCI_NUM)) {
     foreach($row as $data) 
     	{
-    	   echo $data."   ";
+    	   echo $data."\t";
     	 }
     echo "<br>";
 
 
 	}
 
-	$stid = oci_parse($connection, 'select id_child,date_n,id_interest,distance from notifications where id_child=:v_id_tutore');
-	oci_bind_by_name($stid, ":v_id_tutore", $id_tutore);
+	$stid = oci_parse($connection, 'select * from users');
 	oci_execute($stid);
 
 	while ($row = oci_fetch_array ($stid,OCI_NUM)) {
@@ -68,7 +61,7 @@
 
 	}
 
-	$x = $nrrows / 20;
+	$x = $nrrows / 100;
 	$x = ceil($x);
 
 	$i=0;
@@ -77,7 +70,7 @@
 	for($i=1; $i<=$x; $i++)
 	{
 
-		?> <a href="pagingnotificationsP2.php?page=<?php echo $i ?>&id=<?php echo $id_tutore+1?>" style="text-decoration: none"> <?php echo $i." "; ?> </a> <?php 
+		?> <a href="user-list.php?page=<?php echo $i ?>" style="text-decoration: none"> <?php echo $i." "; ?> </a> <?php 
 	}
 	oci_free_statement($stid);
 	oci_close($connection);

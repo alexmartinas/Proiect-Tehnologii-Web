@@ -55,7 +55,7 @@
 
 	}
 
-	$stid = oci_parse($connection, 'select id_child,date_n,id_interest,distance from notifications where id_child=:v_id_tutore');
+	$stid = oci_parse($connection, 'select id_child,date_n,id_interest,distance from notifications where id_interest=:v_id_tutore');
 	oci_bind_by_name($stid, ":v_id_tutore", $id_tutore);
 	oci_execute($stid);
 

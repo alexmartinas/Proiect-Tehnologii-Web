@@ -33,6 +33,11 @@ else
 
 $mesaj = 'VAKSNFASKLFNASFASFLASFASLKFASNLKFASNLFKASF';
 $stid = oci_parse($connection, 'call pachetul_meu.inregistrare(:v_nume,:v_prenume,:v_username2,:v_password2,:v_email,:v_mesaj)');
+if (!$stid) {
+    $e = oci_error($conn);
+    trigger_error(htmlentities($e['message']), E_USER_ERROR);
+}
+
 oci_bind_by_name($stid, ":v_nume", $nume);
 oci_bind_by_name($stid, ":v_prenume", $prenume);
 oci_bind_by_name($stid, ":v_username2", $username);
@@ -44,11 +49,10 @@ oci_execute($stid);
 echo $mesaj;
 
 
-if ($mesaj == 'Email folosit') {
+if ($mesaj == 'Email folosit') header("Location: register.php?msg=usedemail");
+if( $mesaj == 'This user already exists. Choose something else!') header("Location: register.php?msg=userexists");
+if( $mesaj == 'Inregistrare efectuata') header("Location: register.php?msg=done");
 
-	header("Location: register.php?msg=usedemail");
-}
-else header("Location: register.php?msg=done");
 
 //while ($row = oci_fetch_array ($stid,OCI_NUM)) {
  //   foreach($row as $data)
@@ -64,9 +68,8 @@ oci_close($connection);
 
 }
  else {
-  header("Location: register.php?msg=wrongemail");
+  header("Location: register.php?msg=invalidemail");
 }
- header("Location: register.php?msg=wrongemail");
 
 
 ?>
