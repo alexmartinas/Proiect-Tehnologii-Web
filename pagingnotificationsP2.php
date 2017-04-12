@@ -52,13 +52,17 @@
 	oci_bind_by_name($stidl, ":v_id_tutore", $id_tutore);
 	oci_bind_by_name($stidl, ":v_id_interest", $id_interest);
 	oci_execute($stidl);
+
+	$testnodata = "0";
 	while ($row = oci_fetch_array ($stidl,OCI_NUM)) {
     foreach($row as $data) 
     	{
     	   echo $data."   ";
     	 }
+    $testnodata = "1";
     echo "<br>";
 	}
+	if($testnodata == "0" ) echo "Nu exista date!";
 	$stid = oci_parse($connection, 'select id_child,date_n,id_interest,distance from notifications where id_child=:v_id_tutore and id_interest=:v_id_interest');
 	oci_bind_by_name($stid, ":v_id_tutore", $id_tutore);
 	oci_bind_by_name($stid, ":v_id_interest", $id_interest);
