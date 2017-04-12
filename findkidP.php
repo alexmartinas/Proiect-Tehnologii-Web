@@ -28,7 +28,7 @@
 	else
 	{
 	$response = @oci_execute($stidl);
-	if ( $response == false ) echo "Puneti numele intre ghilimele!";
+	if ( $response == false ) echo "Nu ati introdus numele intr-un format corect!";
 	else 
 	{
 

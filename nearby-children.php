@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="form-wrap">
-					<h2>Add new child</h2>
+					<h2>Nearby children</h2>
 					<form action="nearbychildrenP.php" method="post">
 						<div class="form-group">
 							<label>Id Device</label>
