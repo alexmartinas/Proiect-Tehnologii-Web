@@ -22,6 +22,8 @@
 	$stid = oci_parse($connection, 'select id_user from users where username like :v_user_session');
 	oci_bind_by_name($stid, ":v_user_session", $user_session);
 	oci_execute($stid);
+
+
 	while ($row = oci_fetch_array ($stid,OCI_NUM)) {
     foreach($row as $data) 
     	{
@@ -53,11 +55,16 @@
 	oci_bind_by_name($stidl, ":v_id_interest", $id_interest);
 	oci_execute($stidl);
 
+
+	echo "Id &#160 &#160 &#160  &#160 &#160&#160 Data &#160 &#160 &#160 &#160 &#160  &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 Tutore  &#160 Distanta <br>";
+
+
 	$testnodata = "0";
 	while ($row = oci_fetch_array ($stidl,OCI_NUM)) {
     foreach($row as $data) 
     	{
-    	   echo $data."   ";
+    	   echo $data;
+    	   echo "&#160 &#160 &#160 &#160 &#160 &#160 ";
     	 }
     $testnodata = "1";
     echo "<br>";
