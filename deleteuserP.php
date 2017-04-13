@@ -1,3 +1,4 @@
+<?php include 'header.php' ?>
 <?php
 	
 	$password = $_REQUEST["parola"];

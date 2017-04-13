@@ -59,6 +59,12 @@
 						<li>
 							<a href="findkid.php">Find kid</a>
 						</li>
+						<li>
+							<a href="statisticsP.php">Statistics</a>
+						</li>
+						<li>
+							<a href="lastyear.php">LastYearNotifications</a>
+						</li>
 					</ul>
 				</form>
 		 	</li>
