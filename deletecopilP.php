@@ -54,9 +54,9 @@
 	echo $mesaj;
 
 
-	if ($mesaj == 'Copil inexistent') header("Location: delete-child.php?msg=noexist");
-	if ($mesaj == 'Nu monitorizati acest copil') header("Location: delete-child.php?msg=nocopil");
-	if ($mesaj == 'Stergere efectuata cu succes') header("Location: delete-child.php?msg=done");
+	if ($mesaj == 'Copil inexistent') header("Location: delete-child.html?msg=noexist");
+	if ($mesaj == 'Nu monitorizati acest copil') header("Location: delete-child.html?msg=nocopil");
+	if ($mesaj == 'Stergere efectuata cu succes') header("Location: delete-child.html?msg=done");
 
 
 	//while ($row = oci_fetch_array ($stid,OCI_NUM)) {

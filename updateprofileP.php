@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php include 'header.html' ?>
 <?php
 	
 	session_start();
@@ -52,9 +52,9 @@ oci_bind_by_name($stid, ":v_mesaj", $mesaj);
 oci_execute($stid);
 
 
-if( $mesaj == 'This user already exists.Please choose something else!' ) header("Location: my-profile.php?msg=already");
-if( $mesaj == 'Used email.Please choose something else!' ) header("Location: my-profile.php?msg=email");
-if( $mesaj == 'Account updated' ) header("Location: my-profile.php?msg=fin");
+if( $mesaj == 'This user already exists.Please choose something else!' ) header("Location: my-profile.html?msg=already");
+if( $mesaj == 'Used email.Please choose something else!' ) header("Location: my-profile.html?msg=email");
+if( $mesaj == 'Account updated' ) header("Location: my-profile.html?msg=fin");
 
 
 //while ($row = oci_fetch_array ($stid,OCI_NUM)) {

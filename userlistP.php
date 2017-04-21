@@ -73,7 +73,7 @@
 	for($i=1; $i<=$x; $i++)
 	{
 
-		?> <a href="user-list.php?page=<?php echo $i ?>" style="text-decoration: none"> <?php echo $i." "; ?> </a> <?php 
+		?> <a href="user-list.html?page=<?php echo $i ?>" style="text-decoration: none"> <?php echo $i." "; ?> </a> <?php 
 	}
 	oci_free_statement($stid);
 	oci_close($connection);

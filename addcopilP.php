@@ -65,9 +65,9 @@
 
 	if ($mesaj == 'Copil adaugat') {
 
-		header("Location: add-child.php?msg=done");
+		header("Location: add-child.html?msg=done");
 	}
-	else header("Location: add-child.php?msg=haveit");
+	else header("Location: add-child.html?msg=haveit");
 
 
 	//while ($row = oci_fetch_array ($stid,OCI_NUM)) {

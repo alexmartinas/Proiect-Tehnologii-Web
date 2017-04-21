@@ -8,7 +8,6 @@
 	$parolaOracle = 'VLAD';
 
 	$connection_string = 'localhost/xe';
-
 	$connection = oci_connect(
 	$contOracle,
 	$parolaOracle,
@@ -21,7 +20,8 @@
 	else
 	{
 
-	$stid = oci_parse($connection, 'select pachetul_meu.LOG_IN(:v_username,:v_password) from dual');
+	$stid = oci_parse($connection, 'select PACHETUL_MEU.LOG_IN(:v_username,:v_password) from dual');
+
 	oci_bind_by_name($stid, ":v_username", $username);
 	oci_bind_by_name($stid, ":v_password", $password);
 	oci_execute($stid);
@@ -35,11 +35,11 @@
 
 	if($data == 'Logare cu succes') {
 		$_SESSION['username'] = $username;
-		header("Location: index.php");
+		header("Location: index.html");
 	}
 	else 
 	{
-		header("Location: register.php?msg=failed");
+		header("Location: register.html?msg=failed");
 	}
 
 	oci_free_statement($stid);

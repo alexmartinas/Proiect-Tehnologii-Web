@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php include 'header.html' ?>
 <?php
 	
 	$password = $_REQUEST["parola"];
@@ -42,7 +42,7 @@
 	oci_execute($stid);
 
 	if( $mesaj == 'Incorrect password') echo $mesaj;
-	if( $mesaj == 'Your account has been deleted') header("Location: register.php");
+	if( $mesaj == 'Your account has been deleted') header("Location: register.html");
 
 
 	oci_free_statement($stid);
