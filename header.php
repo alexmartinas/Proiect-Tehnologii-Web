@@ -52,8 +52,18 @@
 						<li>
 							<a href="register.php">Logout</a>
 						</li>
+						</li>
+						<li>
+							<a href="delete-user.php">Delete User</a>
+						</li>
 						<li>
 							<a href="findkid.php">Find kid</a>
+						</li>
+						<li>
+							<a href="statisticsP.php">Statistics</a>
+						</li>
+						<li>
+							<a href="lastyear.php">LastYearNotifications</a>
 						</li>
 					</ul>
 				</form>

@@ -7,7 +7,7 @@
 	$password=$_REQUEST["Password"];
 	$email=$_REQUEST["Email"];
 
-	if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+	if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false && $nume!="" && $prenume!="" && $username!="" && $password!="" ) {
 
   	//Oracle DB user name
 $contOracle = 'vlad';
@@ -68,7 +68,7 @@ oci_close($connection);
 
 }
  else {
-  header("Location: register.php?msg=invalidemail");
+ 	echo "Invalid credentials";
 }
 
 

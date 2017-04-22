@@ -1,5 +1,6 @@
 <?php include 'header.php' ?>
 <?php
+
 	if (!isset($_GET["id"])) {$id_tutore=$_REQUEST['numar'];}
 	else { $id_tutore=$_GET["id"]; $id_tutore=$id_tutore-1; }
 	//Oracle DB user name
@@ -14,6 +15,26 @@
 	$parolaOracle,
 	$connection_string
 	);
+
+
+	session_start();
+	$user_session=$_SESSION['username'];
+	$stid = oci_parse($connection, 'select id_user from users where username like :v_user_session');
+	oci_bind_by_name($stid, ":v_user_session", $user_session);
+	oci_execute($stid);
+
+
+	while ($row = oci_fetch_array ($stid,OCI_NUM)) {
+    foreach($row as $data) 
+    	{
+    	   $trololo = 123; 
+    	 }
+	}
+
+	$id_interest = $data;
+
+
+
 	$page = $_GET["page"];
 	if($page=="0" || $page=="1")
 	{
@@ -23,22 +44,35 @@
 	{
 		$pagev=($page*20)-20;
 	}
+
 	$pagevfin=$pagev+20;
 	$nrrows = 0;
-	$stidl = oci_parse($connection, 'select id_child,date_n,id_interest,distance from (select id_child,date_n,id_interest,distance,ROWNUM r from notifications) where r between :v_page1 and :v_page2 and id_child=:v_id_tutore');
+
+	$stidl = oci_parse($connection, 'select id_child,date_n,id_interest,distance from (select id_child,date_n,id_interest,distance,ROWNUM r from notifications where id_child=:v_id_tutore and id_interest=:v_id_interest) where r between :v_page1 and :v_page2');
 	oci_bind_by_name($stidl, ":v_page1", $pagev);
 	oci_bind_by_name($stidl, ":v_page2", $pagevfin);
 	oci_bind_by_name($stidl, ":v_id_tutore", $id_tutore);
+	oci_bind_by_name($stidl, ":v_id_interest", $id_interest);
 	oci_execute($stidl);
+
+
+	echo "Id &#160 &#160 &#160  &#160 &#160&#160 Data &#160 &#160 &#160 &#160 &#160  &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 Tutore  &#160 Distanta <br>";
+
+
+	$testnodata = "0";
 	while ($row = oci_fetch_array ($stidl,OCI_NUM)) {
     foreach($row as $data) 
     	{
-    	   echo $data."   ";
+    	   echo $data;
+    	   echo "&#160 &#160 &#160 &#160 &#160 &#160 ";
     	 }
+    $testnodata = "1";
     echo "<br>";
 	}
-	$stid = oci_parse($connection, 'select id_child,date_n,id_interest,distance from notifications where id_child=:v_id_tutore');
+	if($testnodata == "0" ) echo "Nu exista date!";
+	$stid = oci_parse($connection, 'select id_child,date_n,id_interest,distance from notifications where id_child=:v_id_tutore and id_interest=:v_id_interest');
 	oci_bind_by_name($stid, ":v_id_tutore", $id_tutore);
+	oci_bind_by_name($stid, ":v_id_interest", $id_interest);
 	oci_execute($stid);
 	while ($row = oci_fetch_array ($stid,OCI_NUM)) {
     foreach($row as $data) 

@@ -38,12 +38,15 @@
 	oci_bind_by_name($stidl, ":v_page2", $pagevfin);
 	oci_execute($stidl);
 
+	echo "Username &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160  &#160 &#160&#160 Name &#160 &#160 &#160 &#160 &#160  &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160  Email <br>";
+
 
 	while ($row = oci_fetch_array ($stidl,OCI_NUM)) {
     foreach($row as $data) 
     	{
-    	   echo $data."\t";
-    	 }
+    	  echo $data;
+    	  echo "&#160 &#160 &#160 &#160 &#160 &#160 ";
+    	}
     echo "<br>";
 
 

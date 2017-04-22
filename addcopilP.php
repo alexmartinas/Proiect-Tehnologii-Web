@@ -5,7 +5,7 @@
 	$nume=$_REQUEST["Name"];
 	$prenume=$_REQUEST["Surname"];
 	$varsta=$_REQUEST["Age"];
-	$gen=$_REQUEST["gender"];
+	$gen=$_POST["gender"];
 
 
 	  	//Oracle DB user name
