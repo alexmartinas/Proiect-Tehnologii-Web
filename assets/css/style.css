@@ -241,7 +241,7 @@ header a:hover{
 
 
 /*map*/
-.affix-content iframe{
+.affix-content embed-responsive-item iframe{
 	position: relative;
 	top: 0;
 	left: 0;

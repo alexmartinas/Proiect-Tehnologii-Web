@@ -1,4 +1,4 @@
-<footer>
+n<footer>
 	
 </footer>
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
