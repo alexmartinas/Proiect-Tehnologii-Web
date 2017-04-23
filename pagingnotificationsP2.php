@@ -1,4 +1,4 @@
-<?php include 'header.html' ?>
+<?php include 'header.php' ?>
 <?php
 
 	if (!isset($_GET["id"])) {$id_tutore=$_REQUEST['numar'];}

@@ -6,7 +6,7 @@
 	<!-- META -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no">
+	<meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=yes">
 	
 	<!-- STYLE -->
 	<link rel="stylesheet" type="text/css" href="assets/css/libs/bootstrap.min.css">
@@ -18,7 +18,7 @@
 
 </head>
 <body>
-<header>
+<header class="logged-out">
 	<div class="container clearfix">
 		<ul class="list-inline unlogged-in">
 			<li class="logo-wrap col-md-3 col-xs-3"><h4><a href="register.php">Kimo</a></h4></li><!--

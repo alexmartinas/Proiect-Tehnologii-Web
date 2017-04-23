@@ -49,9 +49,9 @@ oci_execute($stid);
 echo $mesaj;
 
 
-if ($mesaj == 'Email folosit') header("Location: register.html?msg=usedemail");
-if( $mesaj == 'This user already exists. Choose something else!') header("Location: register.html?msg=userexists");
-if( $mesaj == 'Inregistrare efectuata') header("Location: register.html?msg=done");
+if ($mesaj == 'Email folosit') header("Location: register.php?msg=usedemail");
+if( $mesaj == 'This user already exists. Choose something else!') header("Location: register.php?msg=userexists");
+if( $mesaj == 'Inregistrare efectuata') header("Location: register.php?msg=done");
 
 
 //while ($row = oci_fetch_array ($stid,OCI_NUM)) {
