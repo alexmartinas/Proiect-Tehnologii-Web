@@ -10,11 +10,6 @@
  			 overflow-y: scroll;
 		}
 
-		table
-		{
-			width: 30%;
-			padding-bottom: 100px;
-		}
 
 		table ,th ,td
 		{
@@ -24,7 +19,7 @@
 
 		th, td
 		{
-			padding: 10px;
+			padding: 5px;
 			text-align: center;
 
 		}
@@ -53,7 +48,7 @@
 	<body>
 		
 
-		<table style="font-family: sans-serif; font-size: 11pt; position:absolute; top:100px; left:600px; margin-bottom:50px;">
+		<table style="font-family: sans-serif; font-size: 11pt; position:absolute; top:100px; left:700px; margin-bottom:50px;">
 			<tr>
 
 			</tr>
@@ -68,16 +63,19 @@
 		</table>
 
 
-	<div style="font-family: sans-serif; font-size: 11pt; position:absolute; left:0px; bottom:800px;">
+	<div class="pagination"; style="font-family: sans-serif; font-size: 11pt; position:absolute; left:0px; bottom:800px;">
 	<?php
 
 	for($i=1; $i<=$x; $i++)
 	{
 
-		?> <a href="notification.php?page=<?php echo $i ?>" style="text-decoration: none"> <?php echo $i." "; ?> </a> <?php 
+		/*?> <a href="notification.php?page=<?php echo $i ?>"> </a> <?php  */
 	}
 
 	?>
 	</div>
 
+	<div style=" position:absolute; left:730px; bottom:5px;">
+	<?php include 'pagination/index.php' ?> 
+	</div>
 	</body>
