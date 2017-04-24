@@ -9,9 +9,10 @@
 	<meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=yes">
 	
 	<!-- STYLE -->
-	<link rel="stylesheet" type="text/css" href="assets/css/libs/bootstrap.min.css">
+ 	<link rel="stylesheet" type="text/css" href="assets/css/libs/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/libs/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 
 	<!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
@@ -53,7 +54,7 @@
 						</ul>
 					</li>
 						<li>	
-							<a href="notification.php?page=0">Notification</a>
+							<a href="notification.php">Notification</a>
 						</li>
 						<li>
 							<a href="my-profile.php">

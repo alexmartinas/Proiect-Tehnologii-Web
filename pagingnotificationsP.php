@@ -17,7 +17,7 @@
 	$connection_string
 	);
 
-	session_start();
+	@session_start();
 	$user_session=$_SESSION['username'];
 	$stid = oci_parse($connection, 'select id_user from users where username like :v_user_session');
 	oci_bind_by_name($stid, ":v_user_session", $user_session);
@@ -60,7 +60,6 @@
     foreach($row as $data) 
     	{
     	   echo "<td> $data </td>";
-    	   echo "&#160 &#160 &#160 &#160 &#160 &#160 ";
     	 }
     echo "<br>";
     echo "</tr>";
