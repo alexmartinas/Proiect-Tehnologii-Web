@@ -1,5 +1,6 @@
 <?php
-
+	
+	session_start();
   	//Oracle DB user name
 	$contOracle = 'vlad';
 
@@ -40,8 +41,7 @@
 	while ($row = oci_fetch_array ($stid,OCI_NUM)) {
     foreach($row as $data) 
     	{
-    	   echo $data." ";
-    	   echo " <br>";
+    		echo "<li><a href=\"#\"><span class=\"glyphicon glyphicon-baby-formula\"></span> ".$data."</a></li>";
     	}
 	}
 

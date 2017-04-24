@@ -68,7 +68,7 @@ oci_close($connection);
 
 }
  else {
- 	echo "Invalid credentials";
+ 	header("Location: register.php?msg=invalidCredentials");
 }
 
 

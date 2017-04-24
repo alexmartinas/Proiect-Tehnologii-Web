@@ -30,22 +30,27 @@
 						<button type="submit" class="btn btn-primary">Register</button>
 						<?php
 							if (isset($_GET["msg"]) && $_GET["msg"] == 'usedemail') {
-							echo "Used email";
+							echo "<div id=\"greseala\" class=\"alert alert-info\" role=\"alert\" style=\"width:250px; position:relative; display:visible; left:200px;top:0px;\" >Used email</div";
 							}
 						?>
 						<?php
 							if (isset($_GET["msg"]) && $_GET["msg"] == 'done') {
-							echo "Registration succesful";
+							echo "<div id=\"greseala\" class=\"alert alert-info\" role=\"alert\" style=\"width:250px; position:relative; display:visible; left:200px;top:0px;\" >Registration done</div";
 							}
 						?>
 						<?php
 							if (isset($_GET["msg"]) && $_GET["msg"] == 'invalidedmail') {
-							echo "Invalid email";
+							echo "<div id=\"greseala\" class=\"alert alert-info\" role=\"alert\" style=\"width:250px; position:relative; display:visible; left:200px;top:0px;\" >Email used</div";
 							}
 						?>
 						<?php
 							if (isset($_GET["msg"]) && $_GET["msg"] == 'userexists') {
-							echo "User already exists!";
+							echo "<div id=\"greseala\" class=\"alert alert-info\" role=\"alert\" style=\"width:250px; position:relative; display:visible; left:200px;top:0px;\" >User already exists</div";
+							}
+						?>
+						<?php
+							if (isset($_GET["msg"]) && $_GET["msg"] == 'invalidCredentials') {
+							echo "<div id=\"greseala\" class=\"alert alert-info\" role=\"alert\" style=\"width:250px; position:relative; display:visible; left:200px;top:0px;\" >Please complete all fields!</div";
 							}
 						?>
 					</form>
