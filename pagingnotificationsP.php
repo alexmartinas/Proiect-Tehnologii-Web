@@ -17,7 +17,7 @@
 	$connection_string
 	);
 
-	session_start();
+	@session_start();
 	$user_session=$_SESSION['username'];
 	$stid = oci_parse($connection, 'select id_user from users where username like :v_user_session');
 	oci_bind_by_name($stid, ":v_user_session", $user_session);
@@ -54,16 +54,15 @@
 	oci_bind_by_name($stidl, ":v_id_interest", $id_interest);
 	oci_execute($stidl);
 
-	echo "Id &#160 &#160 &#160  &#160 &#160&#160 Data &#160 &#160 &#160 &#160 &#160  &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 Tutore  &#160 Distanta <br>";
 
+	echo "<tr>";
 	while ($row = oci_fetch_array ($stidl,OCI_NUM)) {
     foreach($row as $data) 
     	{
-    	   echo $data;
-    	   echo "&#160 &#160 &#160 &#160 &#160 &#160 ";
+    	   echo "<td> $data </td>";
     	 }
     echo "<br>";
-
+    echo "</tr>";
 
 	}
 
@@ -86,11 +85,8 @@
 	$i=0;
 
 	echo "<br>"; echo "<br>";
-	for($i=1; $i<=$x; $i++)
-	{
 
-		?> <a href="notification.php?page=<?php echo $i ?>" style="text-decoration: none"> <?php echo $i." "; ?> </a> <?php 
-	}
+
 	oci_free_statement($stid);
 	oci_close($connection);
 
