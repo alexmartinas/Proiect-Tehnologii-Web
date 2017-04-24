@@ -51,7 +51,7 @@
 <div class="page-wrap page-wrap-child">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3 col-xs-12 col-xs-offset-12" >
+			<div class="col-md-5 col-md-offset-4 col-xs-12 col-xs-offset-1" >
 				<div class="form-wrap">
 		<table style="font-family: sans-serif; font-size: 11pt; position:center; top:-400px; left:100px; margin-bottom:50px;">
 			<tr>
