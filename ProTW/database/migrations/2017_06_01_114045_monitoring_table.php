@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Monitoring extends Migration
+class MonitoringTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,18 +15,9 @@ class Monitoring extends Migration
     {
         Schema::create('monitoring', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->integer('child_id');
+            $table->integer('id_user');
+            $table->integer('id_child');
 
-            $table->foreign('user_id')
-                  ->reference('id')
-                  ->on('users')
-                  ->onDelete('cascade');
-
-            $table->foreign('child_id')
-                ->reference('id')
-                ->on('children')
-                ->onDelete('cascade');
         });
     }
 

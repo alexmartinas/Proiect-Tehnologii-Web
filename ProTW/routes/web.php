@@ -12,11 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('layouts/app');
+    if(Auth::check())
+        return redirect('/index');
+    else
+        return redirect('/login');
 });
-
-
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/index', 'HomeController@index')->name('home');
+

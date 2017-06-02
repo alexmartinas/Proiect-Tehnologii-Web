@@ -11,15 +11,30 @@
     <title>{{ config('app.name', 'Kimo') }}</title>
 
     <!-- Styles -->
-    <link href="{{ ('css/app.css') }}" rel="stylesheet">
+    <link href="{{ ('assets/css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ ('assets/css/libs/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ ('assets/css/libs/bootstrap-theme.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{('assets/css/style.css') }}">
+    <!-- Styles -->
+    <style>
 
-
-
+        body {
+            background-image: url({{asset('images/kids.jpg') }});
+            background-repeat:no-repeat;
+            background-size:100% 100vh;
+            background-color: #fff;
+            color: #636b6f;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
 
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-inverse bg-primary navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -33,7 +48,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'Kimo') }}
                     </a>
                 </div>
 
@@ -50,25 +65,50 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                            <ul class=" container clearfix collapse navbar-collapse nav navbar-nav navbar-right" id="myNavbar">
+                                <li >
+                                    <a href="{{ route('home') }}">Home</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Children
+                                        <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="add-child.php">Add child</a>
+                                        </li>
+                                        <li>
+                                            <a href="delete-child.php">Delete child</a>
+                                        </li>
+                                        <li>
+                                            <a href="nearby-children.php">Monitor children</a>
+                                        </li>
+                                        <li>
+                                            <a href="children.php">Children Informations</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="notification.php">Notification</a>
+                                </li>
+                                <li>
+                                    <a href="my-profile.php">
+                                        <span class="glyphicon glyphicon-user"></span> My Profile</a>
+                                </li>
+                                <li>
+                                    <a href="contact.php">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><span class="glyphicon glyphicon-log-out"></span>
+                                        Logout
+                                    </a>
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>
+                            </ul>
                         @endif
                     </ul>
                 </div>
@@ -79,6 +119,14 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script crossorigin="anonymous" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+            src="https://codejquery.com/jquery-3.1.0.min.js">
+    </script>
+    <script src="{{ asset('assets/js/map.js') }}"></script>
+
+    {{--Harta--}}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL3Z9H-3qKGzVvR2RB2j_U9l95qnPWc2I&libraries=places"
+            async defer></script>
 </body>
 </html>

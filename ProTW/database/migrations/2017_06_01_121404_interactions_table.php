@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateChildrenTable extends Migration
+class InteractionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,16 @@ class CreateChildrenTable extends Migration
      */
     public function up()
     {
-        Schema::create('children', function (Blueprint $table) {
+
+        Schema::create('interactions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->unsignedSmallInteger('age');
-            $table->string('gender');
-            $table->string('phone_number')->unique();
+            $table->integer('id_child');
+            $table->integer('id_contact');
             $table->double('location_x',20,15);
             $table->double('location_y',20,15);
-            $table->timestamps();
+            $table->timestamp('date_i');
+            $table->string('type_i');
+
         });
     }
 
@@ -32,6 +33,6 @@ class CreateChildrenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('children');
+        Schema::dropIfExists('monitoring');
     }
 }
