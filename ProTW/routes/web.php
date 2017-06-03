@@ -21,4 +21,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/index', 'HomeController@index')->name('home');
-
+Route::get('/add-child', 'ChildrenController@addChild')->name('add-child');
+Route::get('/delete-child', 'ChildrenController@deleteChild')->name('delete-child');
+Route::get('/monitor-children', 'ChildrenController@monitorChildren')->name('monitor-children');
+Route::get('/children-information', 'ChildrenController@childrenInformation')->name('children-information');
+Route::get('/update', 'MyProfileController@updateProfile')->name('update');

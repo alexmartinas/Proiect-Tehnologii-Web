@@ -74,28 +74,22 @@
                                         <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="add-child.php">Add child</a>
+                                            <a href="{{ route('add-child') }}">Add child</a>
                                         </li>
                                         <li>
-                                            <a href="delete-child.php">Delete child</a>
-                                        </li>
-                                        <li>
-                                            <a href="nearby-children.php">Monitor children</a>
-                                        </li>
-                                        <li>
-                                            <a href="children.php">Children Informations</a>
+                                            <a href="{{ route('monitor-children') }}">Monitor children</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="notification.php">Notification</a>
+                                    <a href="#">Notification</a>
                                 </li>
                                 <li>
-                                    <a href="my-profile.php">
+                                    <a href="{{ route('update') }}">
                                         <span class="glyphicon glyphicon-user"></span> My Profile</a>
                                 </li>
                                 <li>
-                                    <a href="contact.php">Contact</a>
+                                    <a href="#">Contact</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('logout') }}"

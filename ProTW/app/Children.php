@@ -9,6 +9,7 @@ class Children extends Model
     protected $fillable=[
         'name',
         'gender',
+        'phone_number',
         'age'
     ];
 }
