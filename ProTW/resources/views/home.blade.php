@@ -17,12 +17,12 @@
                     <div class="navbar-collapse collapse sidebar-navbar-collapse">
                         <ul class="nav navbar-nav" id="sidenav01">
                             <li >
-                                    <h4>
-                                        Your position
-                                        <br>
-                                    </h4>
+                                <h4>
+                                    {{ Auth::user()->name }}
+                                    <br>
+                                </h4>
                             </li>
-                        @yield('copii')
+                            @yield('copii')
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>

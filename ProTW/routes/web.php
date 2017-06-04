@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/children','ChildrenController@listChildren');
 Route::get('/index', 'HomeController@index')->name('home');
 Route::get('/add-child', 'ChildrenController@addChild')->name('add-child');
 Route::get('/delete-child', 'ChildrenController@deleteChild')->name('delete-child');
