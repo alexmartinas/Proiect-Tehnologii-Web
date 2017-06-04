@@ -29,11 +29,7 @@ class ChildrenController extends Controller
         return $data;
     }
 
-    public function updateChild($phone)
-    {
-        $child=Children::get()->where('phone_number',$phone);
-        $chil=
-    }
+   
 
 
 }
