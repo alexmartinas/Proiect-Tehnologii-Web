@@ -18,7 +18,7 @@
                         <ul class="nav navbar-nav" id="sidenav01">
                             <li >
                                     <h4>
-                                        Your position
+                                        {{ Auth::user()->name }}
                                         <br>
                                     </h4>
                             </li>

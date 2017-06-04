@@ -1,35 +1,39 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: alex
+ * Date: 03.06.2017
+ * Time: 15:24
+ */
 
 namespace App\Http\Controllers;
 
-use App\User;
-use Illuminate\Http\Request;
+
+use App\Children;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class HomeController extends Controller
+class ChildrenController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function listChildren()
     {
         $query="SELECT U.ID AS USER_ID ,C.ID AS CHILD_ID,C.NAME,C.AGE,C.GENDER,C.LOCATION_X,C.LOCATION_Y FROM CHILDREN C, MONITORING M, USERS U WHERE C.ID=M.ID_CHILD AND M.ID_USER=U.ID AND U.ID='";
         $query=$query.Auth::user()->getAuthIdentifier()."'";
-        $children=DB::select($query);
-        return view('index',compact('children'));
+        $data[]=DB::select($query);
+
+        return $data;
     }
+
+    public function updateChild($phone)
+    {
+        $child=Children::get()->where('phone_number',$phone);
+        $chil=
+    }
+
 
 }

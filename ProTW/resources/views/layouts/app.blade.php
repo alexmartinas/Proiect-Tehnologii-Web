@@ -127,6 +127,6 @@
 
     {{--Harta--}}
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL3Z9H-3qKGzVvR2RB2j_U9l95qnPWc2I&libraries=places"
-            async defer></script>
+            ></script>
 </body>
 </html>

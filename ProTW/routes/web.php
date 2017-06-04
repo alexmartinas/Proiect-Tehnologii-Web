@@ -22,3 +22,7 @@ Auth::routes();
 
 Route::get('/index', 'HomeController@index')->name('home');
 
+Route::get('/children','ChildrenController@listChildren');
+
+
+
