@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class MonitoringTable extends Migration
+class LicenceCodesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class MonitoringTable extends Migration
      */
     public function up()
     {
-        Schema::create('monitoring', function (Blueprint $table) {
+        Schema::create('licence_codes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_user');
-            $table->integer('id_child');
+            $table->string('device_id')->unique();
+            $table->boolean('used');
             $table->timestamps();
 
         });
+
     }
 
     /**
@@ -29,7 +30,6 @@ class MonitoringTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('monitoring');
-
+        Schema::dropIfExists('licence_codes');
     }
 }

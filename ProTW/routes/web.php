@@ -19,10 +19,14 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
-Route::get('/index', 'HomeController@index')->name('home');
-
+Route::post('/update', 'MyProfileController@update')->name('update');
+Route::post('/add-child', 'ChildrenController@addNewChild')->name('add-child');
+Route::post('/add-existing-child', 'ChildrenController@addExistingChild')->name('add-existing-child');
 Route::get('/children','ChildrenController@listChildren');
-
-
-
+Route::get('/index', 'HomeController@index')->name('home');
+Route::get('/add-child', 'ChildrenController@addChild')->name('add-child');
+Route::get('/add-existing-child','ChildrenController@addEChild')->name('add-existing-child');
+Route::get('/delete-child', 'ChildrenController@deleteChild')->name('delete-child');
+Route::get('/monitor-children', 'ChildrenController@monitorChildren')->name('monitor-children');
+Route::get('/children-information', 'ChildrenController@childrenInformation')->name('children-information');
+Route::get('/update', 'MyProfileController@updateProfile')->name('update');

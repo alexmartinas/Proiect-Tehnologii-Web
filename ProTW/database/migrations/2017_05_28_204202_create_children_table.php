@@ -18,7 +18,7 @@ class CreateChildrenTable extends Migration
             $table->string('name');
             $table->unsignedSmallInteger('age');
             $table->string('gender');
-            $table->string('phone_number')->unique();
+            $table->string('device_id');
             $table->double('location_x',20,15);
             $table->double('location_y',20,15);
             $table->timestamps();

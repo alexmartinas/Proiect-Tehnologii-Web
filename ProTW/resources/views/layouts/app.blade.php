@@ -74,28 +74,25 @@
                                         <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="add-child.php">Add child</a>
+                                            <a href="{{ route('add-child') }}">Add child</a>
                                         </li>
                                         <li>
-                                            <a href="delete-child.php">Delete child</a>
+                                            <a href="{{ route('add-existing-child') }}">Add existing child</a>
                                         </li>
                                         <li>
-                                            <a href="nearby-children.php">Monitor children</a>
-                                        </li>
-                                        <li>
-                                            <a href="children.php">Children Informations</a>
+                                            <a href="{{ route('monitor-children') }}">Monitor children</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="notification.php">Notification</a>
+                                    <a href="#">Notification</a>
                                 </li>
                                 <li>
-                                    <a href="my-profile.php">
+                                    <a href="{{ route('update') }}">
                                         <span class="glyphicon glyphicon-user"></span> My Profile</a>
                                 </li>
                                 <li>
-                                    <a href="contact.php">Contact</a>
+                                    <a href="#">Contact</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('logout') }}"
@@ -120,13 +117,10 @@
 
     <!-- Scripts -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
-    <script crossorigin="anonymous" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-            src="https://codejquery.com/jquery-3.1.0.min.js">
-    </script>
     <script src="{{ asset('assets/js/map.js') }}"></script>
 
     {{--Harta--}}
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL3Z9H-3qKGzVvR2RB2j_U9l95qnPWc2I&libraries=places"
-            ></script>
+            async defer></script>
 </body>
 </html>

@@ -16,7 +16,6 @@
                 <h5>
                     {{ $child->name }}
                 </h5>
-
             </a>
         </li>
     @endforeach
@@ -27,7 +26,7 @@
 
     <div class="container">
 
-        <div id="map">
+        <div id="map2">
 
         </div>
 

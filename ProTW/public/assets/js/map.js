@@ -21,9 +21,9 @@ $(document).ready(function () {
     }
 
     function createMarker(loc,i,name) {
-         marker[i] = new google.maps.Marker({
+        marker[i] = new google.maps.Marker({
             position: loc,
-             icon: "../images/kid.png",
+            icon: "../images/kid.png",
             map: map,
             title:name,
         });
@@ -45,6 +45,7 @@ $(document).ready(function () {
         bounds = new google.maps.LatLngBounds();
         bounds.extend(myLatLng);
         map.fitBounds(bounds);
+        map.set('zoom',14);
         showChildrenOnMap();
         window.setInterval(function(){
             showChildrenOnMap();
@@ -58,16 +59,16 @@ $(document).ready(function () {
     function showChildrenOnMap() {
 
         $.get('/children',function (data) {
-           console.log(data);
+            console.log(data);
             for(i=0;i<data[0].length;i++){
                 console.log(data[0][i].location_x);
                 console.log(data[0][i].location_y);
-                    var latval = data[0][i].location_x;
-                    var lngval = data[0][i].location_x;
-                    var loc= new google.maps.LatLng(latval,lngval);
-                    bounds.extend(loc);
-                    map.fitBounds(bounds);
-                    var name=data[0][i].name;
+                var latval = data[0][i].location_x;
+                var lngval = data[0][i].location_y;
+                var loc= new google.maps.LatLng(latval,lngval);
+                bounds.extend(loc);
+                map.fitBounds(bounds);
+                var name=data[0][i].name;
                 createMarker(loc,i,name);
             }
 
