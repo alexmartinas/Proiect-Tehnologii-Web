@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateChildrenTable extends Migration
+class LicenceCodesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,12 @@ class CreateChildrenTable extends Migration
      */
     public function up()
     {
-        Schema::create('children', function (Blueprint $table) {
+        Schema::create('licence_codes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->unsignedSmallInteger('age');
-            $table->string('gender');
             $table->string('device_id')->unique();
-            $table->double('location_x',20,15);
-            $table->double('location_y',20,15);
-            $table->timestamps();
+            $table->boolean('used');
         });
+
     }
 
     /**
@@ -32,6 +28,6 @@ class CreateChildrenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('children');
+        Schema::dropIfExists('licence_codes');
     }
 }

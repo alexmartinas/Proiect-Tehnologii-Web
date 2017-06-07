@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::post('/update', 'MyProfileController@create')->name('update');
 Route::get('/children','ChildrenController@listChildren');
 Route::get('/index', 'HomeController@index')->name('home');
 Route::get('/add-child', 'ChildrenController@addChild')->name('add-child');

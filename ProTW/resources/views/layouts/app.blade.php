@@ -114,9 +114,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
-    <script crossorigin="anonymous" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-            src="https://codejquery.com/jquery-3.1.0.min.js">
-    </script>
     <script src="{{ asset('assets/js/map.js') }}"></script>
 
     {{--Harta--}}

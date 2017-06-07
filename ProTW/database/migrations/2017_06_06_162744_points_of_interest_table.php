@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateChildrenTable extends Migration
+class PointsOfInterestTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateChildrenTable extends Migration
      */
     public function up()
     {
-        Schema::create('children', function (Blueprint $table) {
+
+        Schema::create('points_of_interest', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_child');
             $table->string('name');
-            $table->unsignedSmallInteger('age');
-            $table->string('gender');
-            $table->string('device_id')->unique();
             $table->double('location_x',20,15);
             $table->double('location_y',20,15);
-            $table->timestamps();
         });
     }
 
@@ -32,6 +30,6 @@ class CreateChildrenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('children');
+        Schema::dropIfExists('points_of_interest');
     }
 }

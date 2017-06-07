@@ -20,8 +20,7 @@ class InteractionsTable extends Migration
             $table->integer('id_contact');
             $table->double('location_x',20,15);
             $table->double('location_y',20,15);
-            $table->timestamp('date_i');
-            $table->string('type_i');
+            $table->timestamp('happened_at');
 
         });
     }
@@ -33,6 +32,6 @@ class InteractionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('monitoring');
+        Schema::dropIfExists('interactions');
     }
 }

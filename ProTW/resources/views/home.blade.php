@@ -16,13 +16,9 @@
                     </div>
                     <div class="navbar-collapse collapse sidebar-navbar-collapse">
                         <ul class="nav navbar-nav" id="sidenav01">
-                            <li >
-                                <h4>
-                                    {{ Auth::user()->name }}
-                                    <br>
-                                </h4>
-                            </li>
+
                             @yield('copii')
+
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
@@ -34,6 +30,7 @@
                     <h3><span class="glyphicon glyphicon-map-marker"></span> Location</h3>
                 </div>
             </div>
+
             @yield('harta')
 
         </div>
