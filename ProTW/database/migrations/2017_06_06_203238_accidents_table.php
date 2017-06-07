@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class PointsOfInterestTable extends Migration
+class AccidentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class PointsOfInterestTable extends Migration
      */
     public function up()
     {
-
-        Schema::create('points_of_interest', function (Blueprint $table) {
+        Schema::create('accidents', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('description');
             $table->integer('id_child');
-            $table->string('name');
-            $table->double('location_x',20,15);
-            $table->double('location_y',20,15);
+            $table->timestamp('happened_at');
         });
     }
 
@@ -30,6 +28,6 @@ class PointsOfInterestTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('points_of_interest');
+        Schema::dropIfExists('notifications');
     }
 }

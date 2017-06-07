@@ -64,7 +64,7 @@ $(document).ready(function () {
                 console.log(data[0][i].location_x);
                 console.log(data[0][i].location_y);
                 var latval = data[0][i].location_x;
-                var lngval = data[0][i].location_y;
+                var lngval = data[0][i].location_x;
                 var loc= new google.maps.LatLng(latval,lngval);
                 bounds.extend(loc);
                 map.fitBounds(bounds);

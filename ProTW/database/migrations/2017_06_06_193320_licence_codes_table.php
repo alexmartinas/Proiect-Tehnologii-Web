@@ -17,8 +17,6 @@ class LicenceCodesTable extends Migration
             $table->increments('id');
             $table->string('device_id')->unique();
             $table->boolean('used');
-            $table->timestamps();
-
         });
 
     }
