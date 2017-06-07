@@ -30,7 +30,7 @@
             margin: 0;
         }
     </style>
-
+    @yield('tablestyle')
 </head>
 <body>
     <div id="app">
@@ -82,7 +82,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#">Notification</a>
+                                    <a href="notifications">Notification</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('update') }}">
