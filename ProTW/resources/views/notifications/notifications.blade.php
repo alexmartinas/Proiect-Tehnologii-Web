@@ -4,7 +4,7 @@
 
 @section('tablestyle')
 <style>
-    table {
+    table{
     width:60%;
     height: 10em;
     position: absolute;
@@ -35,31 +35,36 @@
 @endsection
 
 @section('content')
-    <table>
+    <table id="notificationsTable">
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Notification type</th>
-            <th>Date</th>
+            <th onclick="sortTable(0)">Name</th>
+            <th onclick="sortTable(1)">Notification type</th>
+            <th onclick="sortTable(2)">Description</th>
+            <th onclick="sortTable(3)">Date</th>
+            <th onclick="sortTable(4)">Location</th>
         </tr>
         <tr>
-            <td>1</td>
-            <td>Smith</td>
+            <td>Vlad</td>
             <td>accident</td>
-            <td>2017.01.01 22:45:12</td>
+            <td>Vlad s-a lovit cu degetul de mouse si a intrat in fifa</td>
+            <td>2017.06.07 15:45:12</td>
+            <td>Iasi, Piata Unirii, Strada X, Ap y</td>
         </tr>
         <tr>
-            <td>2</td>
-            <td>Jackson</td>
-            <td>atac</td>
-            <td>2017.01.01</td>
+            <td>Alex</td>
+            <td>distantare</td>
+            <td>Alex si-a bagat picioarele si a plecat la roman ca Vlad si Petrica nu lucreaza la TW. Cel mai aproape punct de interes este fratele lui.</td>
+            <td>2017.06.07 16:45:12</td>
+            <td>Roman, Piata Unirii, Strada X, Ap y</td>
         </tr>
         <tr>
-            <td>3</td>
-            <td>Doe</td>
+            <td>Petrica</td>
             <td>accident</td>
-            <td>2017.01.01</td>
+            <td>Petrica lucreaza de rupe la tw si i-a luat foc creierul</td>
+            <td>2017.06.07 00:45:12</td>
+            <td>Iasi, Copou, Camin Gaudeamus, Camera 518</td>
         </tr>
     </table>
+
 
 @endsection

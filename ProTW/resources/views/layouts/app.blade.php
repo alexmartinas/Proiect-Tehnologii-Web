@@ -115,6 +115,7 @@
     <!-- Scripts -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="{{ asset('assets/js/map.js') }}"></script>
+    <script src="{{ asset('assets/js/sort.js') }}"></script>
 
     {{--Harta--}}
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL3Z9H-3qKGzVvR2RB2j_U9l95qnPWc2I&libraries=places"
