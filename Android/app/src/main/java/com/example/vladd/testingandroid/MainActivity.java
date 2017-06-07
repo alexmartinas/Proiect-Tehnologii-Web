@@ -1,5 +1,17 @@
 package com.example.vladd.testingandroid;
 
+import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Build;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +26,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,18 +42,49 @@ import android.hardware.SensorEventListener;
 import android.widget.TextView;
 
 
-public class MainActivity extends AppCompatActivity implements SensorEventListener{
+public class MainActivity extends AppCompatActivity implements SensorEventListener, GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener {
 
     private TextView xText, yText, zText;
     private Sensor mySensor;
     private SensorManager SM;
     private int count;
 
+    //for gps location
+    private static final int MY_PERMISSION_REQUEST_CODE = 7171;
+    private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 7172;
+    private TextView txtCoordinates;
+    private Button btnGetCoordinates, btnLocationUpdates;
+    private boolean mRequestingLocationUpdates = false;
+    private LocationRequest mLocationRequest;
+    private GoogleApiClient mGoogleApiClient;
+    private Location mLastLocation;
 
-    EditText edtTen,edtMail;
+    private static int UPDATE_INTERVAL = 5000;
+    private static int FATEST_INTERVAL = 3000;
+    private static int DISPLACEMENT = 10;
+
+
+    EditText edtTen, edtMail;
     Button btnGoi;
     String URL_POST = "http://192.168.2.102/demoandroid/post.php";
 
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode) {
+
+            case MY_PERMISSION_REQUEST_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    if (checkPlayServices()) {
+
+                        buildGoogleApiClient();
+                    }
+                }
+                break;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         });
 
         //Create Sensor Manager
-        SM = (SensorManager)getSystemService(SENSOR_SERVICE);
+        SM = (SensorManager) getSystemService(SENSOR_SERVICE);
 
         //Accelerometer Sensor
         mySensor = SM.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -67,10 +115,155 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         SM.registerListener(this, mySensor, SensorManager.SENSOR_DELAY_NORMAL);
 
         //Assign TextView
-        xText = (TextView)findViewById(R.id.xText);
-        yText = (TextView)findViewById(R.id.yText);
-        zText = (TextView)findViewById(R.id.zText);
+        xText = (TextView) findViewById(R.id.xText);
+        yText = (TextView) findViewById(R.id.yText);
+        zText = (TextView) findViewById(R.id.zText);
+
+
+        //Location
+        txtCoordinates = (TextView) findViewById(R.id.txtCoordinates);
+        btnGetCoordinates = (Button) findViewById(R.id.btnGetCoordinates);
+        btnLocationUpdates = (Button) findViewById(R.id.btnTrackLocation);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{
+
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+
+            }, MY_PERMISSION_REQUEST_CODE);
+
+
+        } else {
+
+            if (checkPlayServices()) {
+
+                buildGoogleApiClient();
+                createLocationRequest();
+
+            }
+        }
+
+        btnGetCoordinates.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                displayLocation();
+
+            }
+        });
+
+        btnLocationUpdates.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                tooglePeriodicLoctionUpdates();
+            }
+
+        });
+
+
     }
+
+    @Override
+    public void onStart(){
+
+        super.onStart();
+        if(mGoogleApiClient != null) {
+
+            mGoogleApiClient.connect();
+        }
+    }
+
+    @Override
+    public void onStop() {
+
+        LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient,this);
+        if(mGoogleApiClient != null)
+            mGoogleApiClient.disconnect();
+        super.onStop();
+
+    }
+
+    private void tooglePeriodicLoctionUpdates() {
+
+        if(!mRequestingLocationUpdates){
+
+            btnLocationUpdates.setText("Stop location update");
+            mRequestingLocationUpdates = true;
+            startLocationUpdates();
+        }
+        else
+        {
+
+            btnLocationUpdates.setText("Start location update");
+            mRequestingLocationUpdates = false;
+            stopLocationUpdates();
+        }
+    }
+
+
+    private void displayLocation() {
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        if (mLastLocation != null) {
+
+            double latitude = mLastLocation.getLatitude();
+            double longitude = mLastLocation.getLongitude();
+            txtCoordinates.setText(latitude + " / " + longitude);
+        } else {
+            txtCoordinates.setText("Couldn't get it. Make sure location is enabled");
+
+
+        }
+    }
+
+    private void createLocationRequest() {
+        mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(UPDATE_INTERVAL);
+        mLocationRequest.setFastestInterval(FATEST_INTERVAL);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setSmallestDisplacement(DISPLACEMENT);
+
+
+    }
+
+    private synchronized void buildGoogleApiClient() {
+
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API).build();
+
+        mGoogleApiClient.connect();
+    }
+
+    private boolean checkPlayServices() {
+
+        int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+        if (resultCode != ConnectionResult.SUCCESS) {
+
+            if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
+
+                GooglePlayServicesUtil.getErrorDialog(resultCode, this, PLAY_SERVICES_RESOLUTION_REQUEST).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "This device is not supported", Toast.LENGTH_LONG).show();
+                finish();
+            }
+            return false;
+        }
+        return true;
+    }
+
 
     @Override
     public void onSensorChanged(SensorEvent event) {
@@ -79,17 +272,21 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         yText.setText("Y: " + event.values[1]);
         zText.setText("Z: " + event.values[2]);
 
-        if(event.values[0] > 25) {
-            System.out.println("PROBLEMA LA X" + event.values[0]); count++;
+        if (event.values[0] > 25) {
+            System.out.println("PROBLEMA LA X" + event.values[0]);
+            count++;
         }
-        if(event.values[1] > 25) {
-            System.out.println("PROBLEMA LA Y" + event.values[1]); count++;
+        if (event.values[1] > 25) {
+            System.out.println("PROBLEMA LA Y" + event.values[1]);
+            count++;
         }
-        if(event.values[2] > 25) {
-            System.out.println("PROBLEMA LA Z" + event.values[2]); count++;
+        if (event.values[2] > 25) {
+            System.out.println("PROBLEMA LA Z" + event.values[2]);
+            count++;
         }
-        if(count>5) {
-            System.out.println("SIGNAL ACCIDENT"); count=0;
+        if (count > 5) {
+            System.out.println("SIGNAL ACCIDENT");
+            count = 0;
         }
 
     }
@@ -107,24 +304,24 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             @Override
             public void onResponse(String response) {
 
-                Toast.makeText(getApplication(),response,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplication(), response, Toast.LENGTH_SHORT).show();
             }
-            }, new Response.ErrorListener() {
+        }, new Response.ErrorListener() {
 
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainActivity.this,error+"",Toast.LENGTH_SHORT).show();
-                }
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(MainActivity.this, error + "", Toast.LENGTH_SHORT).show();
+            }
         }
-        ){
+        ) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
 
-                Map<String,String> params = new HashMap<String,String>();
+                Map<String, String> params = new HashMap<String, String>();
                 String TEN = edtTen.getText().toString();
                 String EMAIL = edtMail.getText().toString();
-                params.put("TEN",TEN);
-                params.put("EMAIL",EMAIL);
+                params.put("TEN", TEN);
+                params.put("EMAIL", EMAIL);
 
                 return params;
             }
@@ -134,4 +331,43 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         requestQueue.add(stringRequest);
     }
 
+    private void startLocationUpdates() {
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+
+    }
+
+    private void stopLocationUpdates() {
+
+            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient,this);
+    }
+
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+        displayLocation();
+        if(mRequestingLocationUpdates)
+            startLocationUpdates();
+
+    }
+
+
+    @Override
+    public void onConnectionSuspended(int i) {
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        //not used
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+
+        mLastLocation = location;
+        displayLocation();
+    }
 }
