@@ -94,6 +94,7 @@ class ChildrenController extends Controller
                     'id_user' => Auth::user()->getAuthIdentifier(),
                     'id_child' =>$child['id'],
                 ]);
+                 \Session::flash('flash_message_add',"Child added to your monitoring list");
                  return Redirect::to('/index');
         }
 
@@ -113,7 +114,7 @@ class ChildrenController extends Controller
         {
             if ($result['used'] == 1) {
                 $rez=Monitoring::where('id_child',$child['id'])->where('id_user',Auth::user()->id)->first();
-                if($rez!=0)
+                if($rez!=null)
                 {
                     $message="You already monitor this child";
                     return view('children.add-existing-child')->with('message',$message);
@@ -124,6 +125,8 @@ class ChildrenController extends Controller
                         'id_user' => Auth::user()->id,
                         'id_child' => $child['id'],
                     ]);
+                    \Session::flash('flash_message_add',"Child added to your monitoring list");
+
                     return Redirect::to('/index');
                 }
             } else {

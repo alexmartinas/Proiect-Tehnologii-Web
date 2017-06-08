@@ -34,8 +34,9 @@ Route::get('/delete-child', 'ChildrenController@deleteChild')->name('delete-chil
 Route::get('/monitor-children', 'ChildrenController@monitorChildren')->name('monitor-children');
 Route::get('/children-information', 'ChildrenController@childrenInformation')->name('children-information');
 Route::get('/update', 'MyProfileController@updateProfile')->name('update');
-Route::get('/notifications', 'NotificationsController@index')->name('notifications');
 Route::get('/child/{id}', 'ChildrenController@child');
 
+Route::get('/notifications', 'NotificationsController@index')->name('notifications');
+Route::get('/saveRecord', 'NotificationsController@saveRecord')->name('saveRecord');
 
 
