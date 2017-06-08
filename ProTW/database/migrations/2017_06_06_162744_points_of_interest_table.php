@@ -16,6 +16,7 @@ class PointsOfInterestTable extends Migration
 
         Schema::create('points_of_interest', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_user');
             $table->integer('id_child');
             $table->string('name');
             $table->double('location_x',20,15);

@@ -27,7 +27,8 @@
         <div class="col-sm-9 col-md-10 affix-content">
             <div class="container">
                 <div class="page-header">
-                    <h3><span class="glyphicon glyphicon-map-marker"></span> Location</h3>
+                    <h3><span class="glyphicon glyphicon-map-marker"></span> Location
+                    </h3>
                 </div>
             </div>
 

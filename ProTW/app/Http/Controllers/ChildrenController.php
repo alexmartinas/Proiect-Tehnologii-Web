@@ -13,6 +13,7 @@ use App\Children;
 use App\Http\Requests\AddChildrenRequest;
 use App\LicenceCodes;
 use App\Monitoring;
+use App\PointsOfInterest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
@@ -61,16 +62,15 @@ class ChildrenController extends Controller
     public function addNewChild(AddChildrenRequest $data)
 
     {
-        $results=LicenceCodes::all()->where('device_id',$data['device_id']);
+        $result=LicenceCodes::where('device_id',$data['device_id'])->first();
 
 
-        if ($results==null)
+        if ($result==null)
         {
             $message="Invalid licence code";
             return view('children.add-child')->with('message',$message);
         }
         else
-            foreach ($results as $result)
                 if($result['used']==1)
                  {
                        $message="Child already monitored by someone else.Please use the other form";
@@ -89,56 +89,55 @@ class ChildrenController extends Controller
             $result['used']=1;
             $result->save();
 
-            $child=Children::all()->where('device_id',$data['device_id']);
-
-            Monitoring::create([
-                'id_user' => Auth::user()->getAuthIdentifier(),
-                'id_child' =>$child[0]['id'],
-            ]);
+            $child=Children::where('device_id',$data['device_id'])->first();
+                Monitoring::create([
+                    'id_user' => Auth::user()->getAuthIdentifier(),
+                    'id_child' =>$child['id'],
+                ]);
                  return Redirect::to('/index');
         }
 
     }
 
-
     public function addExistingChild()
     {
         $data=Request::all();
-        $children=Children::all()->where('device_id',$data['device_id']);
-        $results=LicenceCodes::all()->where('device_id',$data['device_id']);
-        if ($results==null)
+        $child=Children::where('device_id',$data['device_id'])->first();
+        $result=LicenceCodes::where('device_id',$data['device_id'])->first();
+        if ($result==null)
         {
             $message="Invalid licence code";
             return view('children.add-existing-child')->with('message',$message);
         }
         else
         {
-            foreach ($results as $result){
-                foreach ($children as $child) {
-                    if ($result['used'] == 1) {
-                        $rez=Monitoring::all()->where('id_child',$child['id'])->where('id_user',Auth::user()->id)->count();
-
-                        if($rez!=0)
-                        {
-                            $message="You already monitor this child";
-                            return view('children.add-existing-child')->with('message',$message);
-                        }
-                        else
-                            {
-                                Monitoring::create([
-                                    'id_user' => Auth::user()->id,
-                                    'id_child' => $child['id'],
-                                ]);
-                                return Redirect::to('/index');
-                            }
-                    } else {
-                        $message = "No child monitored with this licence code.Use the other form to register one";
-                         return view('children.add-existing-child')->with('message',$message);
-                    }
-
+            if ($result['used'] == 1) {
+                $rez=Monitoring::where('id_child',$child['id'])->where('id_user',Auth::user()->id)->first();
+                if($rez!=0)
+                {
+                    $message="You already monitor this child";
+                    return view('children.add-existing-child')->with('message',$message);
                 }
+                else
+                {
+                    Monitoring::create([
+                        'id_user' => Auth::user()->id,
+                        'id_child' => $child['id'],
+                    ]);
+                    return Redirect::to('/index');
+                }
+            } else {
+                $message = "No child monitored with this licence code.Use the other form to register one";
+                return view('children.add-existing-child')->with('message',$message);
             }
         }
+    }
+
+    public function child($id){
+
+        $points=PointsOfInterest::all()->where('id_user',Auth::user()->getAuthIdentifier())->where('id_child',$id);
+        $child=Children::find($id);
+        return view('children.child')->with('child',$child)->with('points',$points);
     }
 
 }

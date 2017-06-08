@@ -19,6 +19,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::post('/device/location', 'DeviceController@location');
+Route::post('/device/notification', 'DeviceController@notification');
 Route::post('/update', 'MyProfileController@update')->name('update');
 Route::post('/add-child', 'ChildrenController@addNewChild')->name('add-child');
 Route::post('/add-existing-child', 'ChildrenController@addExistingChild')->name('add-existing-child');
@@ -31,3 +34,7 @@ Route::get('/monitor-children', 'ChildrenController@monitorChildren')->name('mon
 Route::get('/children-information', 'ChildrenController@childrenInformation')->name('children-information');
 Route::get('/update', 'MyProfileController@updateProfile')->name('update');
 Route::get('/notifications', 'NotificationsController@index')->name('notifications');
+Route::get('/child/{id}', 'ChildrenController@child');
+
+
+

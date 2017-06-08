@@ -11,10 +11,10 @@
     <title>{{ config('app.name', 'Kimo') }}</title>
 
     <!-- Styles -->
-    <link href="{{ ('assets/css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ ('assets/css/libs/bootstrap.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ ('assets/css/libs/bootstrap-theme.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{('assets/css/style.css') }}">
+    <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/libs/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/libs/bootstrap-theme.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
     <!-- Styles -->
     <style>
 
@@ -120,6 +120,8 @@
     <!-- Scripts -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="{{ asset('assets/js/map.js') }}"></script>
+    <script src="{{ asset('assets/js/sort.js') }}"></script>
+
 
     {{--Harta--}}
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL3Z9H-3qKGzVvR2RB2j_U9l95qnPWc2I&libraries=places"
