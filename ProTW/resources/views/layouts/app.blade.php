@@ -133,6 +133,7 @@
     <!-- Scripts -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="{{ asset('assets/js/map.js') }}"></script>
+    <script src="{{ asset('assets/js/map2.js') }}"></script>
     <script src="{{ asset('assets/js/sort.js') }}"></script>
     <script>
         $('div.alert-success').delay(3000).slideUp(300);

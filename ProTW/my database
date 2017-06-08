@@ -6,6 +6,7 @@ drop table notifications;
 drop table points_of_interest;
 drop table accidents;
 drop table licence_codes;
+drop table geofences;
 drop sequence users_id_seq;
 drop sequence children_id_seq;
 drop sequence notifications_id_seq;
@@ -14,6 +15,7 @@ drop sequence monitoring_id_seq;
 drop sequence points_of_interest_id_seq;
 drop sequence accidents_id_seq;
 drop sequence licence_codes_id_seq;
+drop sequence geofences_id_seq;
 
 insert into licence_codes values(1,'kBBWtcDM+ZGmwvws1ab30+c0ktG94L81nYMjF2nTOkA=',0,sysdate,sysdate);
 insert into licence_codes values(2,'P8Lzj+LAyRmjfpmFthDKRUNRqOIToHVOr1AeUocGTd4=',0,sysdate,sysdate);

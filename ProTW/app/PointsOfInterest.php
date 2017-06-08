@@ -10,6 +10,8 @@ class PointsOfInterest extends Model
 
     protected $fillable=[
         'id_child',
+        'id_user',
+        'name',
         'name'
     ];
 }
