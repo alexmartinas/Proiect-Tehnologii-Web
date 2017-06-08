@@ -6,10 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Children extends Model
 {
+    protected $table = 'children';
+
     protected $fillable=[
         'name',
         'gender',
-        'phone_number',
-        'age'
+        'device_id',
+        'age',
+        'location_x',
+        'location_y'
     ];
 }

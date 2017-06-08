@@ -7,10 +7,11 @@
     table{
     width:60%;
     height: 10em;
-    position: absolute;
+    position: relative;
     top: 20%;
     left: 50%;
     margin-right: -50%;
+    margin-top: 110px;
     transform: translate(-50%, -50%);
     }
     table, th, td {

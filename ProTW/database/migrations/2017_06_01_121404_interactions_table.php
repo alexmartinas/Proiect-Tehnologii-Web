@@ -21,6 +21,7 @@ class InteractionsTable extends Migration
             $table->double('location_x',20,15);
             $table->double('location_y',20,15);
             $table->timestamp('happened_at');
+            $table->timestamps();
 
         });
     }

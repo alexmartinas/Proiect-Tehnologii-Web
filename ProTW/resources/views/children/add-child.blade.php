@@ -58,9 +58,8 @@
                                 <label for="gender" class="col-md-4 control-label">Gender</label>
 
                                 <div class="col-md-6">
-                                    <input type="radio" name="gender" value="{{ old('gender') }}" required> Male<br>
-                                    <input type="radio" name="gender" value="{{ old('gender') }}"> Female<br>
-
+                                        <input type="radio" name="gender" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
                                     @if ($errors->has('gender'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('gender') }}</strong>
@@ -73,10 +72,14 @@
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Register
+                                        Add
                                     </button>
                                 </div>
                             </div>
+
+                            @if($message!='Ok')
+                                <div class="alert alert-danger">{{$message}}</div>
+                            @endif
                         </form>
                     </div>
                 </div>

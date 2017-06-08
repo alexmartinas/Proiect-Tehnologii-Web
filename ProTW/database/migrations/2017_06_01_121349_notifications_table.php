@@ -15,10 +15,12 @@ class NotificationsTable extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_user');
             $table->integer('id_child');
+            $table->double('description',20,15);
+            $table->double('location_x',20,15);
+            $table->double('location_y',20,15);
             $table->timestamp('happened_at');
-            $table->double('distance',20,15);
+            $table->timestamps();
 
 
         });

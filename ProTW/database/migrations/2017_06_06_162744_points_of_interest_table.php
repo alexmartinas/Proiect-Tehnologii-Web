@@ -20,6 +20,8 @@ class PointsOfInterestTable extends Migration
             $table->string('name');
             $table->double('location_x',20,15);
             $table->double('location_y',20,15);
+            $table->timestamps();
+
         });
     }
 

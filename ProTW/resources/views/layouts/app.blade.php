@@ -30,7 +30,9 @@
             margin: 0;
         }
     </style>
+
     @yield('tablestyle')
+
 </head>
 <body>
     <div id="app">
@@ -77,12 +79,15 @@
                                             <a href="{{ route('add-child') }}">Add child</a>
                                         </li>
                                         <li>
+                                            <a href="{{ route('add-existing-child') }}">Add existing child</a>
+                                        </li>
+                                        <li>
                                             <a href="{{ route('monitor-children') }}">Monitor children</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="notifications">Notification</a>
+                                    <a href="{{ route('notifications') }}">Notifications</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('update') }}">
@@ -115,7 +120,6 @@
     <!-- Scripts -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="{{ asset('assets/js/map.js') }}"></script>
-    <script src="{{ asset('assets/js/sort.js') }}"></script>
 
     {{--Harta--}}
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL3Z9H-3qKGzVvR2RB2j_U9l95qnPWc2I&libraries=places"
