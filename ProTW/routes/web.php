@@ -21,6 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::post('/device/location', 'DeviceController@location');
+Route::post('/device/id', 'DeviceController@checkDeviceId');
 Route::post('/device/notification', 'DeviceController@notification');
 Route::post('/update', 'MyProfileController@update')->name('update');
 Route::post('/add-child', 'ChildrenController@addNewChild')->name('add-child');

@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 
 use App\Children;
+use App\LicenceCodes;
 use App\Notifications;
 use Carbon\Carbon;
 
@@ -62,5 +63,17 @@ class DeviceController
 
     }
 
+    public function checkDeviceId($device){
+        $code=LicenceCodes::where('device_code',$device)->first();
+        if($code==null){
+            return response('Wrong device id', 405)
+                ->header('Content-Type', 'text/plain');
+        }
+        else
+        {
+            return response('Device id validated', 200)
+                ->header('Content-Type', 'text/plain');
+        }
+    }
 
 }
