@@ -1,14 +1,8 @@
 package com.example.vladd.testingandroid;
 
 import android.Manifest;
-import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.os.Build;
-import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -54,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private static final int MY_PERMISSION_REQUEST_CODE = 7171;
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 7172;
     private TextView txtCoordinates;
+    private TextView txtCoordinates2;
     private Button btnGetCoordinates, btnLocationUpdates;
     private boolean mRequestingLocationUpdates = false;
     private LocationRequest mLocationRequest;
@@ -62,12 +57,13 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     private static int UPDATE_INTERVAL = 5000;
     private static int FATEST_INTERVAL = 3000;
-    private static int DISPLACEMENT = 10;
+    private static int DISPLACEMENT = 0;
 
 
     EditText edtTen, edtMail;
     Button btnGoi;
-    String URL_POST = "http://192.168.2.102/demoandroid/post.php";
+    String URL_POST = "http://192.168.2.102:80/device/location";
+    String URL_POST2 = "http://192.168.2.102:80/device/notification";
 
 
     @Override
@@ -91,19 +87,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        edtTen = (EditText) findViewById(R.id.editText);
-        edtMail = (EditText) findViewById(R.id.editText2);
-        btnGoi = (Button) findViewById(R.id.button);
 
-        btnGoi.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-
-                InsertSV();
-            }
-
-        });
 
         //Create Sensor Manager
         SM = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -122,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         //Location
         txtCoordinates = (TextView) findViewById(R.id.txtCoordinates);
+        txtCoordinates2 = (TextView) findViewById(R.id.txtCoordinates2);
         btnGetCoordinates = (Button) findViewById(R.id.btnGetCoordinates);
         btnLocationUpdates = (Button) findViewById(R.id.btnTrackLocation);
 
@@ -146,6 +131,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             }
         }
 
+
         btnGetCoordinates.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -161,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             @Override
             public void onClick(View view) {
 
-                tooglePeriodicLoctionUpdates();
+                togglePeriodicLocationUpdates();
             }
 
         });
@@ -189,7 +175,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     }
 
-    private void tooglePeriodicLoctionUpdates() {
+    private void togglePeriodicLocationUpdates() {
 
         if(!mRequestingLocationUpdates){
 
@@ -219,7 +205,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
             double latitude = mLastLocation.getLatitude();
             double longitude = mLastLocation.getLongitude();
-            txtCoordinates.setText(latitude + " / " + longitude);
+            txtCoordinates.setText(latitude + "");
+            txtCoordinates2.setText(longitude + "");
+            POSTLocation();
         } else {
             txtCoordinates.setText("Couldn't get it. Make sure location is enabled");
 
@@ -286,6 +274,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         }
         if (count > 5) {
             System.out.println("SIGNAL ACCIDENT");
+            POSTNotification();
             count = 0;
         }
 
@@ -297,7 +286,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         //Not in use
     }
 
-    private void InsertSV() {
+    private void POSTLocation() {
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_POST, new Response.Listener<String>() {
 
@@ -318,10 +307,46 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             protected Map<String, String> getParams() throws AuthFailureError {
 
                 Map<String, String> params = new HashMap<String, String>();
-                String TEN = edtTen.getText().toString();
-                String EMAIL = edtMail.getText().toString();
-                params.put("TEN", TEN);
-                params.put("EMAIL", EMAIL);
+                String LAT = txtCoordinates.getText().toString();
+                String LONG = txtCoordinates2.getText().toString();
+                String ID = "ybUEPII8H5iYLhwzw7Xz8Dk7hgRnafsDBDF8fHExCsQ=";
+                params.put("LAT", LAT);
+                params.put("LONG", LONG);
+                params.put("ID", ID);
+
+                return params;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
+
+    private void POSTNotification() {
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_POST2, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+
+                Toast.makeText(getApplication(), response, Toast.LENGTH_SHORT).show();
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(MainActivity.this, error + "", Toast.LENGTH_SHORT).show();
+            }
+        }
+        ) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+
+                Map<String, String> params = new HashMap<String, String>();
+                String NOTIF = "BIT BY DOG;";
+                String ID = "ybUEPII8H5iYLhwzw7Xz8Dk7hgRnafsDBDF8fHExCsQ=";
+                params.put("NOTIF", NOTIF);
+                params.put("ID", ID);
 
                 return params;
             }

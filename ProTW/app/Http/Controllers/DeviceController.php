@@ -1,20 +1,20 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 08.06.2017
- * Time: 12:32
- */
 
 namespace App\Http\Controllers;
 
 
 use App\Children;
 use App\LicenceCodes;
+use App\Monitoring;
 use App\Notifications;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
-class DeviceController
+class DeviceController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -26,56 +26,69 @@ class DeviceController
         $this->middleware('guest');
     }
 
-    public function location($lat,$long,$device)
-    {
-        $child=Children::where('device_id',$device)->first();
-        if($child!=null){
-            $child->location_x=$lat;
-            $child->location_y=$long;
-            $child->save();
-            return response('Location updated', 200)
-                ->header('Content-Type', 'text/plain');
-        }
-        else
-            return response('Wrong device id', 405)
-                ->header('Content-Type', 'text/plain');
-    }
+    public function notification(Request $request){
 
-    public function notification($device,$description){
+        $id = $request->input("ID");
+        $description = $request->input("NOTIF");
+        $child=Children::where('device_id',$id)->first();
 
-        $child=Children::where('device_id',$device)->first();
         if($child==null){
-            return response('Wrong device id', 405)
+            return response('Wrong device id'.$id.' '.$description, 200)
                 ->header('Content-Type', 'text/plain');
         }
         else{
 
+            $user=Monitoring::where('id_child',$child['id'])->first();
             Notifications::create([
                 'id_child' => $child['id'],
+                'id_user' => $user['id'],
+                'name' => $child['name'],
                 'description' =>$description,
+                'type' => 'accident',
                 'location_x' =>$child['location_x'],
                 'location_y' =>$child['location_y'],
-                'happened_at' =>Carbon::now()
+                'happened_at' =>Carbon::now(),
             ]);
 
             \Session::flash('flash_message',$description);
-            return response('Notification added', 200)
+            return response('New Notification!', 200)
                 ->header('Content-Type', 'text/plain');
         }
 
     }
 
-    public function checkDeviceId($device){
-        $code=LicenceCodes::where('device_code',$device)->first();
+    public function checkDeviceId(Request $request){
+
+        $id = $request->input('ID');
+        $code=LicenceCodes::where('device_id',$id)->first();
         if($code==null){
-            return response('Wrong device id', 405)
+            return response('Wrong device id.'.$id, 200)
                 ->header('Content-Type', 'text/plain');
         }
         else
         {
-            return response('Device id validated', 200)
+            return response('Device added'.$id, 200)
                 ->header('Content-Type', 'text/plain');
         }
     }
 
+    public function checkDeviceId2(Request $request){
+
+        $id = $request->input('ID');
+        $lat = $request->input('LAT');
+        $long = $request->input('LONG');
+        $child=Children::where('device_id',$id)->first();
+        if($child!=null){
+            $child->location_x=$lat;
+            $child->location_y=$long;
+            $child->save();
+            return response('Updated', 200)
+                ->header('Content-Type', 'text/plain');
+        }
+        else
+        {
+            return response('Wrong device ???'.$lat.' '.$long.' '.$id.' ', 200)
+                ->header('Content-Type', 'text/plain');
+        }
+    }
 }

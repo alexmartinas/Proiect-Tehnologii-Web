@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::post('/device/location', 'DeviceController@location');
+Route::post('/device/location', 'DeviceController@checkDeviceId2');
 Route::post('/device/id', 'DeviceController@checkDeviceId');
 Route::post('/device/notification', 'DeviceController@notification');
 Route::post('/update', 'MyProfileController@update')->name('update');
