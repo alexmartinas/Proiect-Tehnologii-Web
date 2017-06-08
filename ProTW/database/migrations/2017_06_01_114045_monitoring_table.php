@@ -17,8 +17,6 @@ class MonitoringTable extends Migration
             $table->increments('id');
             $table->integer('id_user');
             $table->integer('id_child');
-            $table->integer('id_point');
-            $table->integer('distance');
             $table->timestamps();
 
         });

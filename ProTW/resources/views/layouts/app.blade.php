@@ -36,6 +36,19 @@
 </head>
 <body>
     <div id="app">
+
+        @if(Session::has('flash_message_add'))
+            <div class="alert alert-success">
+                {{Session::get('flash_message_add')}}
+            </div>
+        @endif
+        @if(Session::has('flash_message'))
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                {{Session::get('flash_message')}}
+            </div>
+        @endif
+
         <nav class="navbar navbar-inverse bg-primary navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -121,6 +134,9 @@
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="{{ asset('assets/js/map.js') }}"></script>
     <script src="{{ asset('assets/js/sort.js') }}"></script>
+    <script>
+        $('div.alert-success').delay(3000).slideUp(300);
+    </script>
 
 
     {{--Harta--}}

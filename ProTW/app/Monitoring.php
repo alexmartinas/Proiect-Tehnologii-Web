@@ -10,8 +10,6 @@ class Monitoring extends Model
 
     protected $fillable=[
         'id_user',
-        'id_child',
-        'id_point',
-        'distance'
+        'id_child'
     ];
 }

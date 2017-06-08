@@ -57,6 +57,8 @@ class DeviceController
                 'location_y' =>$child['location_y'],
                 'happened_at' =>Carbon::now()
             ]);
+
+            \Session::flash('flash_message',$description);
             return response('Notification added', 200)
                 ->header('Content-Type', 'text/plain');
         }
