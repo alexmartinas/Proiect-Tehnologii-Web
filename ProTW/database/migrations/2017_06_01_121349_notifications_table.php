@@ -17,8 +17,13 @@ class NotificationsTable extends Migration
             $table->increments('id');
             $table->integer('id_user');
             $table->integer('id_child');
+            $table->string('name');
+            $table->string('description');
+            $table->string('type');
+            $table->double('location_x',20,15);
+            $table->double('location_y',20,15);
             $table->timestamp('happened_at');
-            $table->double('distance',20,15);
+            $table->timestamps();
 
 
         });

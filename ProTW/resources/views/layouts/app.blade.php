@@ -11,10 +11,11 @@
     <title>{{ config('app.name', 'Kimo') }}</title>
 
     <!-- Styles -->
-    <link href="{{ ('assets/css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ ('assets/css/libs/bootstrap.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ ('assets/css/libs/bootstrap-theme.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{('assets/css/style.css') }}">
+    <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/libs/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/libs/bootstrap-theme.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
     <!-- Styles -->
     <style>
 
@@ -30,10 +31,25 @@
             margin: 0;
         }
     </style>
+
     @yield('tablestyle')
+
 </head>
 <body>
     <div id="app">
+
+        @if(Session::has('flash_message_add'))
+            <div class="alert alert-success">
+                {{Session::get('flash_message_add')}}
+            </div>
+        @endif
+        @if(Session::has('flash_message'))
+            <div class="alert alert-danger">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                {{Session::get('flash_message')}}
+            </div>
+        @endif
+
         <nav class="navbar navbar-inverse bg-primary navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -74,15 +90,21 @@
                                         <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li>
+                                            <a href="{{ route('home') }}">Children list</a>
+                                        </li>
+                                        <li>
                                             <a href="{{ route('add-child') }}">Add child</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('monitor-children') }}">Monitor children</a>
+                                            <a href="{{ route('add-existing-child') }}">Add existing child</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('monitor-children') }}">Add interest point</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="notifications">Notification</a>
+                                    <a href="{{ route('notifications') }}">Notifications</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('update') }}">
@@ -114,8 +136,15 @@
 
     <!-- Scripts -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
-    <script src="{{ asset('assets/js/map.js') }}"></script>
+    <script src="{{ asset('assets/js/mapChildren.js') }}"></script>
+    <script src="{{ asset('assets/js/mapAddPointsOfInterest.js') }}"></script>
+    <script src="{{ asset('assets/js/mapPointsOfInterest.js') }}"></script>
     <script src="{{ asset('assets/js/sort.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    <script>
+        $('div.alert-success').delay(3000).slideUp(300);
+    </script>
+
 
     {{--Harta--}}
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL3Z9H-3qKGzVvR2RB2j_U9l95qnPWc2I&libraries=places"

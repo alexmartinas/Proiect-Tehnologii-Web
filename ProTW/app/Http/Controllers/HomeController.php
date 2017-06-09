@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $query="SELECT U.ID AS USER_ID ,C.ID AS CHILD_ID,C.NAME,C.AGE,C.GENDER,C.LOCATION_X,C.LOCATION_Y FROM CHILDREN C, MONITORING M, USERS U WHERE C.ID=M.ID_CHILD AND M.ID_USER=U.ID AND U.ID='";
+        $query="SELECT U.ID ,C.ID ,C.NAME,C.AGE,C.GENDER,C.LOCATION_X,C.LOCATION_Y FROM CHILDREN C, MONITORING M, USERS U WHERE C.ID=M.ID_CHILD AND M.ID_USER=U.ID AND U.ID='";
         $query=$query.Auth::user()->getAuthIdentifier()."'";
         $children=DB::select($query);
         return view('index',compact('children'));

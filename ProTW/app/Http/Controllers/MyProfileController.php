@@ -10,7 +10,10 @@ namespace App\Http\Controllers;
 
 
 use App\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+
 
 class MyProfileController extends Controller
 {
@@ -45,21 +48,21 @@ class MyProfileController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function update(array $data)
+    protected function update()
     {
+        $data=Request::all();
         $user = Auth::user();
 
-        $user->username = $data->username;
-        $user->email = $data->email;
+        $user->name = $data['name'];
+        $user->email = $data['email'];
 
-        if ( ! $data->password == '')
+        if ( ! $data['password'] == '')
         {
-            $user->password = bcrypt($data->password);
+            $user['password'] = bcrypt($data['password']);
         }
 
         $user->save();
 
-        Flash::message('Your account has been updated!');
         return Redirect::to('/index');
     }
 

@@ -19,13 +19,34 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::post('/update', 'MyProfileController@create')->name('update');
+
+//Device routes
+Route::post('/device/location', 'DeviceController@checkDeviceId2');
+Route::post('/device/id', 'DeviceController@checkDeviceId');
+Route::post('/device/notification', 'DeviceController@notification');
+
+//PointsOfInterest routes
+Route::post('/points-of-interest/addPoints', 'PointsOfInterestController@addPoints');
+Route::get('/points-of-interest/getPoints', 'PointsOfInterestController@childPointsOfInterest');
+Route::post('/points-of-interest/deletePoint', 'PointsOfInterestController@deletePoint');
+
+Route::get('/monitor-children/childInfo', 'ChildrenController@childInfo');
+Route::post('/add-child', 'ChildrenController@addNewChild')->name('add-child');
+Route::post('/add-existing-child', 'ChildrenController@addExistingChild')->name('add-existing-child');
 Route::get('/children','ChildrenController@listChildren');
-Route::get('/index', 'HomeController@index')->name('home');
 Route::get('/add-child', 'ChildrenController@addChild')->name('add-child');
+Route::get('/add-existing-child','ChildrenController@addEChild')->name('add-existing-child');
 Route::get('/delete-child', 'ChildrenController@deleteChild')->name('delete-child');
 Route::get('/monitor-children', 'ChildrenController@monitorChildren')->name('monitor-children');
 Route::get('/children-information', 'ChildrenController@childrenInformation')->name('children-information');
+Route::get('/child/{id}', 'ChildrenController@child');
+
+Route::post('/update', 'MyProfileController@update')->name('update');
 Route::get('/update', 'MyProfileController@updateProfile')->name('update');
 
-Route::get('notifications', 'NotificationsController@index');
+Route::get('/index', 'HomeController@index')->name('home');
+
+Route::get('/notifications', 'NotificationsController@index')->name('notifications');
+Route::get('/saveRecord', 'NotificationsController@saveRecord')->name('saveRecord');
+
+

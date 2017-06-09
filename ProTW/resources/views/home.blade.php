@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="row affix-row">
-        <div class="col-sm-3 col-md-2 affix-sidebar">
-            <div class="sidebar-nav">
-                <div class="navbar navbar-default" role="navigation">
+        <div class="col-sm-3 col-md-2 affix-sidebar" >
+            <div class="sidebar-nav"  >
+                <div class="navbar navbar-default" role="navigation" style="overflow-y: scroll; height:530px;" >
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
                             <span class="sr-only">Toggle navigation</span>
@@ -14,7 +14,7 @@
                         </button>
                         <span class="visible-xs navbar-brand"></span>
                     </div>
-                    <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                    <div class="navbar-collapse collapse sidebar-navbar-collapse" >
                         <ul class="nav navbar-nav" id="sidenav01">
 
                             @yield('copii')
@@ -27,7 +27,9 @@
         <div class="col-sm-9 col-md-10 affix-content">
             <div class="container">
                 <div class="page-header">
-                    <h3><span class="glyphicon glyphicon-map-marker"></span> Location</h3>
+                    <h3><span class="glyphicon glyphicon-map-marker"></span> Location
+                        @yield('geofence')
+                    </h3>
                 </div>
             </div>
 

@@ -4,15 +4,15 @@
 
     <li >
         <a href="{{ route('update') }}">
-            <h3>
-                {{ Auth::user()->name }}
-            </h3>
+            <h4>
+                &#160&#160&#160&#160&#160&#160&#160Children list
+            </h4>
         </a>
     </li>
 
     @foreach($children as $child)
         <li>
-            <a title="Name:{{$child->name}} &#010Age:{{$child->age }} &#010Gender:{{ $child->gender }}" >
+            <a href="/child/{{ $child->id }}" title="Name:{{$child->name}} &#010Age:{{$child->age }} &#010Gender:{{ $child->gender }}" >
                 <h5>
                     {{ $child->name }}
                 </h5>
@@ -27,7 +27,7 @@
 
     <div class="container">
 
-        <div id="map">
+        <div id="mapChildren">
 
         </div>
 
