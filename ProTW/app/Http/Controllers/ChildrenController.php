@@ -58,25 +58,6 @@ class ChildrenController extends Controller
         return $data;
     }
 
-    public function addPoints(Request $request){
-        $nume = $request->input("name");
-        $lat = $request->input("lat");
-        $long = $request->input("lng");
-        $children=$request->input("children");
-        foreach ($children as $child)
-        {
-            PointsOfInterest::create([
-                'id_user' =>Auth::user()->getAuthIdentifier(),
-                'id_child' =>$child,
-                'name' =>$nume,
-                'location_x'=>$lat,
-                'location_y'=>$long
-            ]);
-        }
-        return  response("We get the data", 200)
-            ->header('Content-Type', 'text/plain');
-    }
-
     public function addNewChild(AddChildrenRequest $data)
 
     {
@@ -167,10 +148,5 @@ class ChildrenController extends Controller
         return $child;
     }
 
-    public function childPointsOfInterest(Request $request){
-        $id=$request->input('id');
-        $points[]=PointsOfInterest::all()->where('id_user',Auth::user()->getAuthIdentifier())->where('id_child',$id);
-        return $points;
-    }
 
 }

@@ -90,13 +90,16 @@
                                         <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li>
+                                            <a href="{{ route('home') }}">Children list</a>
+                                        </li>
+                                        <li>
                                             <a href="{{ route('add-child') }}">Add child</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('add-existing-child') }}">Add existing child</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('monitor-children') }}">Monitor children</a>
+                                            <a href="{{ route('monitor-children') }}">Add interest point</a>
                                         </li>
                                     </ul>
                                 </li>

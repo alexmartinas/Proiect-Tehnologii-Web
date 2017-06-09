@@ -9,6 +9,9 @@ var bounds;
 var marker=[];
 var locCopil;
 var copil= document.getElementsByName("idCopil")[0];
+var idPoint;
+var distanta;
+
 
 function init(){
     map=new google.maps.Map(document.getElementById('mapPoints'),{
@@ -22,6 +25,20 @@ function init(){
     getChildInfo();
 
     getChildPoints();
+}
+
+function deletePoint(id){
+    idPoint=id;
+    $.post("/points-of-interest/deletePoint",
+        {
+            id: idPoint
+        },
+        function(data,status){
+        console.log(idPoint);
+        console.log(data);
+        });
+    var el = document.getElementById(id);
+    $(el).remove();
 }
 
 function zoom() {
@@ -40,7 +57,7 @@ function zoom() {
 
 function getChildPoints() {
 
-    $.get('/monitor-children/points',{
+    $.get('/points-of-interest/getPoints',{
         id:copil.id
     },function (data) {
         $.each(data, function(index, value){

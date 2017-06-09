@@ -10,7 +10,7 @@
                         <option value="{{$child->id}}"> {{$child->name}}</option>
 
                     @endforeach
-                </select>
+                </select>&#160&#160&#160
                 <button onclick="
                           var el = document.getElementsByTagName('select')[0];
                          alert(getSelectValues(el));">Save point

@@ -34,7 +34,7 @@ function getSelectValues(select) {
             return "Please click on the location marker!";
         else {
 
-        $.post("/monitor-children",
+        $.post("/points-of-interest/addPoints",
             {
                 name: nume,
                 lat: latitudine,
@@ -42,9 +42,8 @@ function getSelectValues(select) {
                 children:result
             },
             function(data,status){
-                return "We saved the point";
-
             });
+        return "We saved the point";
     }
 }
 
@@ -106,15 +105,6 @@ function initAutocomplete() {
                 title: place.name,
                 position: place.geometry.location
             }));
-
-            indx=markers.length-1;
-            //set action listener for marker
-            // google.maps.event.addListener(markers[indx], 'click', function () {
-            //     map.setCenter(new google.maps.LatLng(markers[indx].getPosition().lat(),markers[indx].getPosition().lng()));
-            //     map.setZoom(14);
-            //     console.log(markers[indx].getPosition().lat());
-            //     console.log(markers[indx].getPosition().lng());
-            // });
 
             if (place.geometry.viewport) {
                 // Only geocodes have viewport.

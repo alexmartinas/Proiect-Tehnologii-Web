@@ -5,7 +5,7 @@
     <li >
         <a href="{{ route('update') }}">
             <h4>
-                {{Auth::user()->name}}
+                &#160&#160&#160&#160&#160&#160&#160Children list
             </h4>
         </a>
     </li>
