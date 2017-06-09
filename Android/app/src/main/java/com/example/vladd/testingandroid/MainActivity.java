@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.FloatMath;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,7 +43,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private TextView xText, yText, zText;
     private Sensor mySensor;
     private SensorManager SM;
-    private int count;
+    private static int count;
+    private static int timer;
+    private static int relevantTimer;
+    private static int checkType;
+    private static int countCheckType;
+    private static int zType,yType,xType;
 
     //for gps location
     private static final int MY_PERMISSION_REQUEST_CODE = 7171;
@@ -209,7 +215,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             txtCoordinates2.setText(longitude + "");
             POSTLocation();
         } else {
-            txtCoordinates.setText("Couldn't get it. Make sure location is enabled");
+            txtCoordinates.setText("Couldn't get it. Make sure location is enabled - Refresh location after ");
+            txtCoordinates2.setText("");
 
 
         }
@@ -260,24 +267,68 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         yText.setText("Y: " + event.values[1]);
         zText.setText("Z: " + event.values[2]);
 
-        if (event.values[0] > 25) {
-            System.out.println("PROBLEMA LA X" + event.values[0]);
-            count++;
+        float gForce = (float) Math.sqrt( (event.values[0] / 9.8f) * (event.values[0] / 9.8f) + (event.values[1] / 9.8f)
+                * (event.values[1] / 9.8f) + (event.values[2] / 9.8f) * (event.values[2] / 9.8f));
+        System.out.println("GFORCE VALUE:" + gForce);
+        if(gForce > 20 ) POSTNotification("MAJOR ACCIDENT HAS HAPPENED!");
+
+        if (event.values[1] > 25 || event.values[1] < -25) {
+            System.out.println("Y PROBLEM" + event.values[0]);
+            if(relevantTimer>0) { yType++; count++;}
+            else { yType=1; count=1;}
+            relevantTimer=30;
         }
-        if (event.values[1] > 25) {
-            System.out.println("PROBLEMA LA Y" + event.values[1]);
-            count++;
+         if (event.values[2] > 25 || event.values[2] < -25) {
+            System.out.println("Z PROBLEM" + event.values[1]);
+            if(relevantTimer>0) {zType++; count++;}
+            else { zType=1; count=1;}
+            relevantTimer=30;
         }
-        if (event.values[2] > 25) {
-            System.out.println("PROBLEMA LA Z" + event.values[2]);
-            count++;
-        }
-        if (count > 5) {
-            System.out.println("SIGNAL ACCIDENT");
-            POSTNotification();
-            count = 0;
+         if (event.values[0] > 25 || event.values[0] < -25 ) {
+            System.out.println("X PROBLEM" + event.values[2]);
+            if(relevantTimer>0) {xType++; count++;}
+            else {xType=1; count=1;}
+            relevantTimer=30;
         }
 
+
+        if (count > 10 ) {
+
+            if(timer<=0) {
+
+                System.out.println("SIGNAL ACCIDENT");
+                count = 0;
+                timer = 300;
+                checkType = 1;
+            }
+        }
+
+        if(checkType == 1) {
+            checkType=0;
+            int max;
+            char c;
+            System.out.println("CHECKING TYPES" + xType + " " + yType + " " + zType);
+            if(xType>yType) { max=xType; c='x'; }
+            else {max=yType; c='y';}
+            if(zType>max) { max=zType; c='z'; }
+
+            if(gForce > 5) POSTNotification("IMPORTANT!! Severe accident such as a car crash might have taken place!");
+            else if(c=='z') POSTNotification("Warning! Possible fall");
+                 else if(c=='x') POSTNotification("Warning! The child is running");
+                      else if(c=='y') POSTNotification("Accelerometer giving high values - unlikely small accident");
+        }
+
+        System.out.println(timer);
+        timer--;
+        if(timer<-20000) timer=0;
+        relevantTimer--;
+        if(relevantTimer<0) {
+            xType=0;
+            yType=0;
+            zType=0;
+            relevantTimer=0;
+            count=0;
+        }
     }
 
     @Override
@@ -322,7 +373,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         requestQueue.add(stringRequest);
     }
 
-    private void POSTNotification() {
+    private void POSTNotification(final String type) {
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_POST2, new Response.Listener<String>() {
 
@@ -343,7 +394,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             protected Map<String, String> getParams() throws AuthFailureError {
 
                 Map<String, String> params = new HashMap<String, String>();
-                String NOTIF = "BIT BY DOG;";
+                String NOTIF = type;
                 String ID = "ybUEPII8H5iYLhwzw7Xz8Dk7hgRnafsDBDF8fHExCsQ=";
                 params.put("NOTIF", NOTIF);
                 params.put("ID", ID);
