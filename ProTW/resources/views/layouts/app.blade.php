@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/libs/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/libs/bootstrap-theme.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
     <!-- Styles -->
     <style>
 
@@ -132,9 +133,11 @@
 
     <!-- Scripts -->
     <script src="{{ asset('assets/js/app.js') }}"></script>
-    <script src="{{ asset('assets/js/map.js') }}"></script>
-    <script src="{{ asset('assets/js/map2.js') }}"></script>
+    <script src="{{ asset('assets/js/mapChildren.js') }}"></script>
+    <script src="{{ asset('assets/js/mapAddPointsOfInterest.js') }}"></script>
+    <script src="{{ asset('assets/js/mapPointsOfInterest.js') }}"></script>
     <script src="{{ asset('assets/js/sort.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
     <script>
         $('div.alert-success').delay(3000).slideUp(300);
     </script>

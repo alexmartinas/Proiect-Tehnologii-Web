@@ -20,6 +20,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/monitor-children', 'ChildrenController@addPoints');
+Route::get('/monitor-children/points', 'ChildrenController@childPointsOfInterest');
+Route::get('/monitor-children/childInfo', 'ChildrenController@childInfo');
 Route::post('/device/location', 'DeviceController@checkDeviceId2');
 Route::post('/device/id', 'DeviceController@checkDeviceId');
 Route::post('/device/notification', 'DeviceController@notification');

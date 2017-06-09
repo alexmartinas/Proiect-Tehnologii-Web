@@ -14,11 +14,11 @@ use App\Http\Requests\AddChildrenRequest;
 use App\LicenceCodes;
 use App\Monitoring;
 use App\PointsOfInterest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
-use Request;
 class ChildrenController extends Controller
 {
 
@@ -42,9 +42,8 @@ class ChildrenController extends Controller
 
     }
 
-
     public function monitorChildren(){
-        $query="SELECT U.ID AS USER_ID ,C.ID AS CHILD_ID,C.NAME,C.AGE,C.GENDER,C.LOCATION_X,C.LOCATION_Y FROM CHILDREN C, MONITORING M, USERS U WHERE C.ID=M.ID_CHILD AND M.ID_USER=U.ID AND U.ID='";
+        $query="SELECT U.ID ,C.ID ,C.NAME,C.AGE,C.GENDER,C.LOCATION_X,C.LOCATION_Y FROM CHILDREN C, MONITORING M, USERS U WHERE C.ID=M.ID_CHILD AND M.ID_USER=U.ID AND U.ID='";
         $query=$query.Auth::user()->getAuthIdentifier()."'";
         $children=DB::select($query);
         return view('children.monitor-children')->with('children',$children);
@@ -57,6 +56,25 @@ class ChildrenController extends Controller
         $data[]=DB::select($query);
 
         return $data;
+    }
+
+    public function addPoints(Request $request){
+        $nume = $request->input("name");
+        $lat = $request->input("lat");
+        $long = $request->input("lng");
+        $children=$request->input("children");
+        foreach ($children as $child)
+        {
+            PointsOfInterest::create([
+                'id_user' =>Auth::user()->getAuthIdentifier(),
+                'id_child' =>$child,
+                'name' =>$nume,
+                'location_x'=>$lat,
+                'location_y'=>$long
+            ]);
+        }
+        return  response("We get the data", 200)
+            ->header('Content-Type', 'text/plain');
     }
 
     public function addNewChild(AddChildrenRequest $data)
@@ -141,6 +159,18 @@ class ChildrenController extends Controller
         $points=PointsOfInterest::all()->where('id_user',Auth::user()->getAuthIdentifier())->where('id_child',$id);
         $child=Children::find($id);
         return view('children.child')->with('child',$child)->with('points',$points);
+    }
+
+    public function childInfo(Request $request){
+        $id=$request->input('id');
+        $child=Children::find($id);
+        return $child;
+    }
+
+    public function childPointsOfInterest(Request $request){
+        $id=$request->input('id');
+        $points[]=PointsOfInterest::all()->where('id_user',Auth::user()->getAuthIdentifier())->where('id_child',$id);
+        return $points;
     }
 
 }

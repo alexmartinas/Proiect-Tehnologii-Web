@@ -27,7 +27,7 @@
 
     <div class="container">
 
-        <div id="map">
+        <div id="mapChildren">
 
         </div>
 

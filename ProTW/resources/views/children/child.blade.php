@@ -2,16 +2,16 @@
 
 @section('copii')
 
-    <li >
+    <a name="idCopil" id="{{$child->id}}" link="#" onclick="init()" >
         <h3>
             &#160&#160&#160&#160&#160Points of interest
         </h3>
 
-    </li>
+    </a>
 
     @foreach($points as $point)
         <li>
-            <a href="" >
+            <a href="#">
                 <h5>
                     {{ $point->name }}
                 </h5>
@@ -26,7 +26,7 @@
 
     <div class="container">
 
-        <div id="map">
+        <div id="mapPoints">
 
         </div>
 
