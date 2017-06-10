@@ -90,9 +90,6 @@
                                         <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="{{ route('home') }}">Children list</a>
-                                        </li>
-                                        <li>
                                             <a href="{{ route('add-child') }}">Add child</a>
                                         </li>
                                         <li>

@@ -7,11 +7,66 @@
 var map;
 var bounds;
 var marker=[];
+var fences=[];
 var locCopil;
 var copil= document.getElementsByName("idCopil")[0];
 var idPoint;
 var distanta;
 
+
+function geofences(select) {
+    distanta=document.getElementById('distanta').value;
+    idCopil=document.getElementsByName('idCopil')[0].id;
+    result = [];
+    var options = select && select.options;
+    var opt;
+
+    for (var i=0, iLen=options.length; i<iLen; i++) {
+        opt = options[i];
+
+        if (opt.selected) {
+            result.push(opt.value);
+        }
+    }
+    if(result.length==0)
+        return "Please select at least one point";
+    else if(distanta<=0)
+        return "Distance must pe greater then 0!";
+    else {
+
+        $.post("/points-of-interest/setGeofences",
+            {
+                idChild:idCopil,
+                points:result,
+                distance:distanta
+            },
+            function(data,status){
+            });
+        for(i=0;i<fences.length;i++){
+            for(j=0;j<result.length;j++)
+                if(fences[i].get('id')==result[j])
+                    fences[i].setRadius(Number(distanta));
+        }
+        return "We set the geofences";
+    }
+}
+
+function initFences(){
+    for(var i=0;i<marker.length;i++){
+        fences.push( new google.maps.Circle({
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            map: map,
+            center: marker[i].getPosition(),
+            radius: 0,
+            id:marker[i].get('id')
+        }));
+    }
+
+}
 
 function init(){
     map=new google.maps.Map(document.getElementById('mapPoints'),{
@@ -39,6 +94,14 @@ function deletePoint(id){
         });
     var el = document.getElementById(id);
     $(el).remove();
+    for (var index in marker) {
+        if (marker[index].get('id') == idPoint)
+            marker[index].setMap(null);
+        if(fences[index].get('id')==idPoint) {
+            fences[index].setMap(null);
+        }
+
+    }
 }
 
 function zoom() {
@@ -69,11 +132,27 @@ function getChildPoints() {
                 bounds.extend(loc);
                 map.fitBounds(bounds);
                 var name=valoare['name'];
-                createMarker(loc,name);
+                var id=valoare['id'];
+                createMarker(loc,name,id);
             })
         })
         zoom();
+        initFences();
     });
+
+    $.get('/points-of-interest/getGeofences',{
+        id:copil.id
+    },function (data) {
+        $.each(data, function(index, value){
+
+            $.each(value, function(index, valoare){
+                var dist=valoare['distance'];
+                var id=valoare['id_point'];
+                setFence(dist,id);
+            })
+        })
+    });
+
 
 }
 
@@ -98,18 +177,23 @@ function getChildInfo(){
     });
 }
 
-function createMarker(loc,name) {
+function createMarker(loc,name,id) {
     marker.push(new google.maps.Marker({
         position: loc,
         icon: "http://maps.google.com/mapfiles/ms/micons/red.png",
         map: map,
-        title:name
+        title:name,
+        id:id
     }));
+}
+
+function setFence(distanta,id){
+    for(var index in fences )
+        if(fences[index].get('id')==id)
+            fences[index].setRadius(Number(distanta));
 }
 
 $(document).ready(function () {
 
     init();
-
-
 });

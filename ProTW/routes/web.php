@@ -26,9 +26,11 @@ Route::post('/device/id', 'DeviceController@checkDeviceId');
 Route::post('/device/notification', 'DeviceController@notification');
 
 //PointsOfInterest routes
-Route::post('/points-of-interest/addPoints', 'PointsOfInterestController@addPoints');
 Route::get('/points-of-interest/getPoints', 'PointsOfInterestController@childPointsOfInterest');
+Route::get('/points-of-interest/getGeofences', 'PointsOfInterestController@childGeofences');
+Route::post('/points-of-interest/addPoints', 'PointsOfInterestController@addPoints');
 Route::post('/points-of-interest/deletePoint', 'PointsOfInterestController@deletePoint');
+Route::post('/points-of-interest/setGeofences', 'PointsOfInterestController@setGeofences');
 
 Route::get('/monitor-children/childInfo', 'ChildrenController@childInfo');
 Route::post('/add-child', 'ChildrenController@addNewChild')->name('add-child');
