@@ -51,4 +51,9 @@ Route::get('/index', 'HomeController@index')->name('home');
 Route::get('/notifications', 'NotificationsController@index')->name('notifications');
 Route::get('/saveRecord', 'NotificationsController@saveRecord')->name('saveRecord');
 
+Route::get('contact',
+    ['as' => 'contact', 'uses' => 'ContactController@create']);
+Route::post('contact',
+    ['as' => 'contact_store', 'uses' => 'ContactController@store']);
+
 

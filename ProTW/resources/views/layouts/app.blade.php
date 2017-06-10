@@ -49,6 +49,12 @@
                 {{Session::get('flash_message')}}
             </div>
         @endif
+            {{----}}
+        @if(Session::has('message'))
+            <div class="alert alert-info">
+                {{Session::get('message')}}
+            </div>
+        @endif
 
         <nav class="navbar navbar-inverse bg-primary navbar-static-top">
             <div class="container">
@@ -108,7 +114,7 @@
                                         <span class="glyphicon glyphicon-user"></span> My Profile</a>
                                 </li>
                                 <li>
-                                    <a href="#">Contact</a>
+                                    <a href="/contact">Contact</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('logout') }}"
