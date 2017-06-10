@@ -146,6 +146,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
     <script>
         $('div.alert-success').delay(3000).slideUp(300);
+        $('div.alert-info').delay(3000).slideUp(300);
     </script>
 
 
