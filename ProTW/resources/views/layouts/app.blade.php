@@ -31,6 +31,14 @@
             margin: 0;
         }
     </style>
+    <script>
+        window.setInterval(function(){
+            showChildrenOnMap();
+        }, 50000);
+        window.setInterval(function(){
+            monitor();
+        }, 2000);
+    </script>
 
     @yield('tablestyle')
 
@@ -89,9 +97,6 @@
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Children
                                         <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="{{ route('home') }}">Children list</a>
-                                        </li>
                                         <li>
                                             <a href="{{ route('add-child') }}">Add child</a>
                                         </li>

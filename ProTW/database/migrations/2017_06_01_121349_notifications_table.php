@@ -20,6 +20,7 @@ class NotificationsTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('type');
+            $table->string('accident_type');
             $table->double('location_x',20,15);
             $table->double('location_y',20,15);
             $table->timestamp('happened_at');

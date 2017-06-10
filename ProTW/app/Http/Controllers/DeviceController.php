@@ -30,6 +30,9 @@ class DeviceController extends Controller
 
         $id = $request->input("ID");
         $description = $request->input("NOTIF");
+        if($description == "IMPORTANT!! Severe accident such as a car crash might have taken place!") $warningid=1;
+        else if($description == "Warning! Possible fall") $warningid=2;
+        else $warningid=3;
         $child=Children::where('device_id',$id)->first();
 
         if($child==null){
@@ -45,6 +48,7 @@ class DeviceController extends Controller
                 'name' => $child['name'],
                 'description' =>$description,
                 'type' => 'accident',
+                'accidenttype' => $warningid,
                 'location_x' =>$child['location_x'],
                 'location_y' =>$child['location_y'],
                 'happened_at' =>Carbon::now(),

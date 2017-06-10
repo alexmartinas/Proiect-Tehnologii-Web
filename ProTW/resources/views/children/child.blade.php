@@ -41,10 +41,10 @@
 
         @endforeach
     </select>&#160&#160
-    &#160&#160&#160<input type="number" placeholder="Insert area size in meters" >&#160&#160&#160
+    &#160&#160&#160<input id="distanta" type="number"  min="0" placeholder="Insert area size in meters" >&#160&#160&#160
     <button onclick="
                           var el = document.getElementsByTagName('select')[0];
-                         alert(getSelectValues(el));">Set geofence
+                         alert(geofences(el));">Set geofence
     </button>
 
 

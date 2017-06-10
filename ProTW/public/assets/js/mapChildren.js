@@ -5,31 +5,13 @@ var map;
 var bounds;
 var marker={};
 
-var pointOfInterest;
-
-function showMarker(lat,lng,name){
-    console.log(lat);
-    console.log(lng);
-    console.log(name);
-
-    // var pozitie=new google.maps.LatLng(lat,lng);
-    // pointOfInterest=new google.maps.Marker({
-    //     map: map,
-    //     icon: "http://maps.google.com/mapfiles/ms/micons/red.png",
-    //     title: name,
-    //     position: pozitie
-    // });
-    //
-    // map.setCenter(pozitie);
-    // map.setZoom(17);
-}
-
 $(document).ready(function () {
 
     map=new google.maps.Map(document.getElementById('mapChildren'),{
         zoom: 8
     });
     geoLocationInit();
+
     function geoLocationInit() {
 
         if (navigator.geolocation) {
@@ -72,7 +54,7 @@ $(document).ready(function () {
     }
 
     function fail() {
-        alert("It fails");
+        alert("It we can not get your location");
     }
 
     function showChildrenOnMap() {

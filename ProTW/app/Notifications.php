@@ -14,6 +14,7 @@ class Notifications extends Model
         'name',
         'description',
         'type',
+        'accident_type',
         'location_x',
         'location_y',
         'happened_at'
