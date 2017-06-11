@@ -48,6 +48,7 @@ Route::get('/update', 'MyProfileController@updateProfile')->name('update');
 
 Route::get('/index', 'HomeController@index')->name('home');
 
+Route::get('/listnotifications', 'NotificationsController@listNotifications');
 Route::get('/notifications', 'NotificationsController@index')->name('notifications');
 Route::get('/saveRecord', 'NotificationsController@saveRecord')->name('saveRecord');
 

@@ -36,17 +36,6 @@ public class IdDeviceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_id_device);
 
-        buttonId = (Button)findViewById(R.id.buttonID);
-        buttonId.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v){
-
-                Intent toy = new Intent(IdDeviceActivity.this,MainActivity.class);
-                startActivity(toy);
-            }
-        });
-
         edtId = (EditText)findViewById(R.id.editText);
         btnGoi = (Button) findViewById(R.id.setId);
         ResponseView = (TextView)findViewById(R.id.TextResponseView);
@@ -70,8 +59,11 @@ public class IdDeviceActivity extends AppCompatActivity {
             public void onResponse(String response) {
 
                 Toast.makeText(getApplication(), response, Toast.LENGTH_SHORT).show();
-                Intent toy = new Intent(IdDeviceActivity.this,MainActivity.class);
-                startActivity(toy);
+                if(response.equals("You are now being tracked!"))
+                {
+                    Intent toy = new Intent(IdDeviceActivity.this, MainActivity.class);
+                    startActivity(toy);
+                }
 
 
             }
@@ -79,7 +71,7 @@ public class IdDeviceActivity extends AppCompatActivity {
 
             @Override
             public void onErrorResponse(VolleyError error) {
-                System.out.println(error.networkResponse.data);
+                //System.out.println(error.networkResponse.data);
                 Toast.makeText(IdDeviceActivity.this, error + "", Toast.LENGTH_SHORT).show();
             }
         }

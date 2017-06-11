@@ -48,7 +48,7 @@ class DeviceController extends Controller
                 'name' => $child['name'],
                 'description' =>$description,
                 'type' => 'accident',
-                'accidenttype' => $warningid,
+                'accident_type' => $warningid,
                 'location_x' =>$child['location_x'],
                 'location_y' =>$child['location_y'],
                 'happened_at' =>Carbon::now(),
@@ -66,12 +66,12 @@ class DeviceController extends Controller
         $id = $request->input('ID');
         $code=LicenceCodes::where('device_id',$id)->first();
         if($code==null){
-            return response('Wrong device id.'.$id, 200)
+            return response('Wrong device id!', 200)
                 ->header('Content-Type', 'text/plain');
         }
         else
         {
-            return response('Device added'.$id, 200)
+            return response('You are now being tracked!', 200)
                 ->header('Content-Type', 'text/plain');
         }
     }

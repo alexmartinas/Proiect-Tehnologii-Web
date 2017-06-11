@@ -269,7 +269,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         float gForce = (float) Math.sqrt( (event.values[0] / 9.8f) * (event.values[0] / 9.8f) + (event.values[1] / 9.8f)
                 * (event.values[1] / 9.8f) + (event.values[2] / 9.8f) * (event.values[2] / 9.8f));
-        System.out.println("GFORCE VALUE:" + gForce);
+        //System.out.println("GFORCE VALUE:" + gForce);
         if(gForce > 20 ) POSTNotification("MAJOR ACCIDENT HAS HAPPENED!");
 
         if (event.values[1] > 25 || event.values[1] < -25) {
@@ -298,7 +298,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
                 System.out.println("SIGNAL ACCIDENT");
                 count = 0;
-                timer = 300;
+                timer = 10000;
                 checkType = 1;
             }
         }
@@ -318,7 +318,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                       else if(c=='y') POSTNotification("Accelerometer giving high values - unlikely small accident");
         }
 
-        System.out.println(timer);
+       // System.out.println(timer);
         timer--;
         if(timer<-20000) timer=0;
         relevantTimer--;

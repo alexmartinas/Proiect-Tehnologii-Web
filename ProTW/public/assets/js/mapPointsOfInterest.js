@@ -180,7 +180,7 @@ function getChildInfo(){
 function createMarker(loc,name,id) {
     marker.push(new google.maps.Marker({
         position: loc,
-        icon: "http://maps.google.com/mapfiles/ms/micons/red.png",
+        icon: "/images/red.png",
         map: map,
         title:name,
         id:id
