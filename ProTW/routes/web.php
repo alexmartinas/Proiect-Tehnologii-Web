@@ -58,3 +58,5 @@ Route::post('contact',
     ['as' => 'contact_store', 'uses' => 'ContactController@store']);
 
 
+
+

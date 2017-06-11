@@ -12,8 +12,6 @@
 
     </style>
 
-    <script type="text/javascript" src="/public/assets/js/jquery.min.js"></script>
-
     <script type="text/javascript">
 
         var getPHP;
@@ -35,7 +33,7 @@
                             count=0;
                             console.log(value);
                             $('#notificationsTable').find('tbody')
-                                .append($('<tr><td>' + value['name'] +
+                                .prepend($('<tr><td>' + value['name'] +
                                     '</td><td>' + value['type'] +
                                     '</td><td> <img src="http://s3.amazonaws.com/vnn-aws-sites/10592/files/2016/09/3570ff01409ea2fe-new-480x338.jpg" style="width:50px;height:20px;"> </td><td>'
                                     + value['description'] + '</td><td>' + value['happened_at'] + '</td><td>' +
@@ -65,11 +63,14 @@
         },1000);
 
     </script>
-
 @endsection
 
 @section('content')
     <div class="wrapper">
+        <button onclick="myFunction(1)">Accidents</button>
+        <button onclick="myFunction(2)">OutOfRange</button>
+        <button onclick="myFunction(3)">Interactions</button>
+        <button onclick="myFunction(4)">All</button>
 
         <section class="panel panel-primary">
             <div class="panel-heading">
