@@ -149,4 +149,25 @@ class ChildrenController extends Controller
     }
 
 
+    public function deleteChildPOST(Request $request){
+        $id_device = $request->input("device_id");
+        $id_child=DB::table('children')->where('device_id', $id_device)->pluck('id');
+        $child = Monitoring::where('id_child', $id_child)->where('id_user',Auth::id())->delete();
+
+        if($child>0){
+            return  response("You alreade added this point", 200)
+                ->header('Content-Type', 'text/plain');
+        }
+        else return  response("You alreade added this point", 200)
+            ->header('Content-Type', 'text/plain');
+
+    }
+
+    public function deleteChildGET(){
+
+        $message="Ok";
+        return view('children.deletechild')->with('message',$message);
+    }
+
+
 }

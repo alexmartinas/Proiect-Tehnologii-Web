@@ -9,6 +9,23 @@
             width:75%;
             margin: 0 auto;
         }
+        .panel, .panel-heading {
+            border-top-left-radius: 0;
+        }
+        button {
+            margin-left: -4px;
+            border: none;
+            padding: 5px;
+            background: #3174af;
+            color: #fff;
+        }
+        button:first-child {
+            margin-left: 0;
+            border-top-left-radius: 4px;
+        }
+        .wrapper button:nth-child(4) {
+            border-top-right-radius: 4px;
+        }
 
     </style>
 

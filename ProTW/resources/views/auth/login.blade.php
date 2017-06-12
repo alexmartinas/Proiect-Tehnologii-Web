@@ -66,3 +66,30 @@
     </div>
 </div>
 @endsection
+
+<style type="text/css">
+    .panel.panel-default {
+        background-color: rgba(255, 255, 255, 0.7)
+    }
+    @media (min-width:769px) {
+        .panel.panel-default {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            bottom: 0;
+            width: 600px;
+            height: 412px;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 6px;
+        }
+        #app .panel-heading {
+            text-align: center;
+            padding-top: 6px;
+            padding-bottom: 0;
+            border: 1px solid #ccc;
+            font-size: 30px;
+            font-weight: 900;
+        }
+    }
+</style>

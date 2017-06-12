@@ -38,7 +38,8 @@ Route::post('/add-existing-child', 'ChildrenController@addExistingChild')->name(
 Route::get('/children','ChildrenController@listChildren');
 Route::get('/add-child', 'ChildrenController@addChild')->name('add-child');
 Route::get('/add-existing-child','ChildrenController@addEChild')->name('add-existing-child');
-Route::get('/delete-child', 'ChildrenController@deleteChild')->name('delete-child');
+Route::post('/deletechild', 'ChildrenController@deleteChildPOST')->name('deletechild');
+Route::get('/deletechild', 'ChildrenController@deleteChildGET')->name('deletechild');
 Route::get('/monitor-children', 'ChildrenController@monitorChildren')->name('monitor-children');
 Route::get('/children-information', 'ChildrenController@childrenInformation')->name('children-information');
 Route::get('/child/{id}', 'ChildrenController@child');
@@ -50,7 +51,6 @@ Route::get('/index', 'HomeController@index')->name('home');
 
 Route::get('/listnotifications', 'NotificationsController@listNotifications');
 Route::get('/notifications', 'NotificationsController@index')->name('notifications');
-Route::get('/saveRecord', 'NotificationsController@saveRecord')->name('saveRecord');
 
 Route::get('contact',
     ['as' => 'contact', 'uses' => 'ContactController@create']);

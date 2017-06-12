@@ -36,125 +36,128 @@
 
 </head>
 <body>
-    <div id="app">
+<div id="app">
 
-        @if(Session::has('flash_message_add'))
-            <div class="alert alert-success">
-                {{Session::get('flash_message_add')}}
+    @if(Session::has('flash_message_add'))
+        <div class="alert alert-success">
+            {{Session::get('flash_message_add')}}
+        </div>
+    @endif
+    @if(Session::has('flash_message'))
+        <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{Session::get('flash_message')}}
+        </div>
+    @endif
+    {{----}}
+    @if(Session::has('message'))
+        <div class="alert alert-info">
+            {{Session::get('message')}}
+        </div>
+    @endif
+
+    <nav class="navbar navbar-inverse bg-primary navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <!-- Collapsed Hamburger -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Branding Image -->
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Kimo') }}
+                </a>
             </div>
-        @endif
-        @if(Session::has('flash_message'))
-            <div class="alert alert-danger">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                {{Session::get('flash_message')}}
-            </div>
-        @endif
-            {{----}}
-        @if(Session::has('message'))
-            <div class="alert alert-info">
-                {{Session::get('message')}}
-            </div>
-        @endif
 
-        <nav class="navbar navbar-inverse bg-primary navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav">
+                    &nbsp;
+                </ul>
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Kimo') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <ul class=" container clearfix collapse navbar-collapse nav navbar-nav navbar-right" id="myNavbar">
-                                <li >
-                                    <a href="{{ route('home') }}">Home</a>
-                                </li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Children
-                                        <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="{{ route('add-child') }}">Add child</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('add-existing-child') }}">Add existing child</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ route('monitor-children') }}">Add interest point</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="{{ route('notifications') }}">Notifications</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('update') }}">
-                                        <span class="glyphicon glyphicon-user"></span> My Profile</a>
-                                </li>
-                                <li>
-                                    <a href="/contact">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
+                <!-- Right Side Of Navbar -->
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Authentication Links -->
+                    @if (Auth::guest())
+                        <li><a href="{{ route('login') }}">Login</a></li>
+                        <li><a href="{{ route('register') }}">Register</a></li>
+                    @else
+                        <ul class=" container clearfix collapse navbar-collapse nav navbar-nav navbar-right" id="myNavbar">
+                            <li >
+                                <a href="{{ route('home') }}">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Children
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ route('add-child') }}">Add child</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('add-existing-child') }}">Add existing child</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('monitor-children') }}">Add interest point</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('deletechild') }}">Delete monitored child</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="{{ route('notifications') }}">Notifications</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('update') }}">
+                                    <span class="glyphicon glyphicon-user"></span> My Profile</a>
+                            </li>
+                            <li>
+                                <a href="/contact">Contact</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"><span class="glyphicon glyphicon-log-out"></span>
-                                        Logout
-                                    </a>
+                                    Logout
+                                </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            </ul>
-                        @endif
-                    </ul>
-                </div>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        </ul>
+                    @endif
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        @yield('content')
-    </div>
+    @yield('content')
+</div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('assets/js/app.js') }}"></script>
-    <script src="{{ asset('assets/js/mapChildren.js') }}"></script>
-    <script src="{{ asset('assets/js/mapAddPointsOfInterest.js') }}"></script>
-    <script src="{{ asset('assets/js/mapPointsOfInterest.js') }}"></script>
-    <script src="{{ asset('assets/js/sort.js') }}"></script>
-    <script src="{{ asset('assets/js/filter.js') }}"></script>
-    <script type="text/javascript" src="/public/assets/js/jquery.min.js"></script>
+<!-- Scripts -->
+<script src="{{ asset('assets/js/app.js') }}"></script>
+<script src="{{ asset('assets/js/mapChildren.js') }}"></script>
+<script src="{{ asset('assets/js/mapAddPointsOfInterest.js') }}"></script>
+<script src="{{ asset('assets/js/mapPointsOfInterest.js') }}"></script>
+<script src="{{ asset('assets/js/sort.js') }}"></script>
+<script src="{{ asset('assets/js/filter.js') }}"></script>
+<script type="text/javascript" src="/public/assets/js/jquery.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
-    <script>
-        $('div.alert-success').delay(3000).slideUp(300);
-        $('div.alert-info').delay(3000).slideUp(300);
-    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+<script>
+    $('div.alert-success').delay(3000).slideUp(300);
+    $('div.alert-info').delay(3000).slideUp(300);
+</script>
 
 
-    {{--Harta--}}
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL3Z9H-3qKGzVvR2RB2j_U9l95qnPWc2I&libraries=places"
-            async defer></script>
+{{--Harta--}}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL3Z9H-3qKGzVvR2RB2j_U9l95qnPWc2I&libraries=places"
+        async defer></script>
 </body>
 </html>

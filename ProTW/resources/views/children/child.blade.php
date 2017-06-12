@@ -3,11 +3,11 @@
 @section('copii')
 
     <li>
-    <a name="idCopil" id="{{$child->id}}" href="#" onclick="init()" >
-        <h3>
-            &#160&#160&#160&#160Points of interest
-        </h3>
-    </a>
+        <a name="idCopil" id="{{$child->id}}" href="#" onclick="init()" >
+            <h3>
+                &#160&#160&#160&#160Points of interest
+            </h3>
+        </a>
     </li>
     @foreach($points as $point)
         <li id="{{$point->id}}" style="visibility: visible" >
@@ -47,20 +47,16 @@
                          alert(geofences(el));">Set geofence
     </button>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @endsection
+
+<style type="text/css">
+    .panel.panel-default {
+        background-color: rgba(255, 255, 255, 0.7)
+    }
+    @media (min-width:769px) {
+        #app #mapAddPoints {
+            width: 100%;
+            height: 586px;
+        }
+    }
+</style>

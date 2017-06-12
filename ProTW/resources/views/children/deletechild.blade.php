@@ -6,9 +6,9 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">         <!--  name, age, gen, nr telefon-->
-                    <div class="panel-heading">Add existing child</div>
+                    <div class="panel-heading">Delete monitoring child</div>
                     <div class="panel-body">
-                        <form class="form-horizontal" role="form" method="POST" action="{{ route('add-existing-child') }}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ route('deletechild') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('device_id') ? ' has-error' : '' }}">
@@ -28,7 +28,7 @@
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Add
+                                        Delete
                                     </button>
                                 </div>
                             </div>
