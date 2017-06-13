@@ -32,12 +32,6 @@
         }
     </style>
 
-    <script>
-        window.setInterval(function(){
-            monitor();
-        }, 5000);
-    </script>
-
     @yield('tablestyle')
 
 </head>

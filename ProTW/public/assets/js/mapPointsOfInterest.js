@@ -230,6 +230,9 @@ function setFence(distanta,id){
 
 $(document).ready(function () {
     init();
+    window.setInterval(function(){
+        monitor();
+    }, 1000);
 
 
 });

@@ -180,7 +180,7 @@ class ChildrenController extends Controller
     public function child($id){
 
         $query="SELECT * FROM POINTS_OF_INTEREST WHERE ID_USER=".Auth::user()->getAuthIdentifier()." AND ID_CHILD=".$id;
-        $query=$query." UNION SELECT * FROM POINTS_OF_INTEREST WHERE NAME IN (SELECT NAME FROM USERS WHERE ID IN (SELECT ID_USER FROM MONITORING WHERE ID_CHILD=".$id."))";
+        $query=$query." UNION SELECT * FROM POINTS_OF_INTEREST WHERE NAME IN (SELECT NAME FROM USERS WHERE ID IN (SELECT ID_USER FROM MONITORING WHERE ID_CHILD=".$id." and id_user!=".Auth::user()->getAuthIdentifier()."))";
         $points=DB::select($query);
         $child=Children::find($id);
         $query="select * from users where id in(select id_user from monitoring where id_child=";

@@ -12,6 +12,10 @@ $(document).ready(function () {
     geoLocationInit();
     watchPosition();
 
+    window.setInterval(function(){
+        showChildrenOnMap();
+    }, 2000);
+
     function geoLocationInit() {
         mapChildren=new google.maps.Map(document.getElementById('mapChildren'),{
             zoom: 8
@@ -53,8 +57,6 @@ $(document).ready(function () {
     function success(position) {
         var latval = position.coords.latitude;
         var lngval = position.coords.longitude;
-        console.log(latval);
-        console.log(lngval);
         $.post("/update/location",
             {
                 location_x:latval,
@@ -73,18 +75,20 @@ $(document).ready(function () {
     }
 
     function showChildrenOnMap() {
+        for(var indx in marker)
+            marker[indx].setMap(null);
 
         $.get('/children',function (data) {
             if(data[0].length!=0)
-            for(i=0;i<data[0].length;i++){
-                var latval = data[0][i].location_x;
-                var lngval = data[0][i].location_y;
-                var loc= new google.maps.LatLng(latval,lngval);
-                boundsMapChildren.extend(loc);
-                mapChildren.fitBounds(boundsMapChildren);
-                var name=data[0][i].name;
-                createMarker(loc,i,name);
-            }
+                for(i=0;i<data[0].length;i++){
+                    var latval = data[0][i].location_x;
+                    var lngval = data[0][i].location_y;
+                    var loc= new google.maps.LatLng(latval,lngval);
+                    boundsMapChildren.extend(loc);
+                    mapChildren.fitBounds(boundsMapChildren);
+                    var name=data[0][i].name;
+                    createMarker(loc,i,name);
+                }
             else{
                 mapChildren.setCenter(userMarker.getPosition());
                 mapChildren.setZoom(7);
