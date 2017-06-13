@@ -1,19 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Vladd
- * Date: 03.06.2017
- * Time: 17:01
- */
 
 namespace App\Http\Controllers;
 
-
-use App\User;
+use App\PointsOfInterest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
-
 
 class MyProfileController extends Controller
 {
@@ -21,11 +13,17 @@ class MyProfileController extends Controller
      * Create a new controller instance.
      *
      * @return void
+
      */
-    public function __construct()
+    protected $request;
+
+    public function __construct(\Illuminate\Http\Request $request)
     {
+        $this->request = $request;
         $this->middleware('auth');
+
     }
+
 
     /**
      * Get a validator for an incoming registration request.
@@ -50,7 +48,7 @@ class MyProfileController extends Controller
      */
     protected function update()
     {
-        $data=Request::all();
+        $data=$this->request->all();
         $user = Auth::user();
 
         $user->name = $data['name'];
@@ -66,8 +64,29 @@ class MyProfileController extends Controller
         return Redirect::to('/index');
     }
 
+    public function updateLocation(Request $request){
+        $lat=$request->input('location_x');
+        $lng=$request->input('location_y');
+        $user=Auth::user();
+        $user['location_x']=$lat;
+        $user['location_y']=$lng;
+        $point=PointsOfInterest::all()->where('name',$user['name'])->first();
+
+        if($point!=null)
+        {
+            $point['location_x']=$lat;
+            $point['location_y']=$lng;
+            $point->save();
+        }
+
+        $user->save();
+
+        return  response("Location updated", 200)
+            ->header('Content-Type', 'text/plain');
+    }
+
     public function updateProfile(){
 
-       return view('update');
+        return view('update');
     }
 }

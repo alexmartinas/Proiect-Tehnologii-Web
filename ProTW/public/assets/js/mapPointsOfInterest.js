@@ -8,11 +8,46 @@ var map;
 var bounds;
 var marker=[];
 var fences=[];
+var inout=[];
 var locCopil;
 var copil= document.getElementsByName("idCopil")[0];
 var idPoint;
 var distanta;
 
+
+function monitor(){
+    var poz,latcopil,lngcopil;
+    $.get('/monitor-children/childInfo',{
+        id:copil.id
+    },function (data) {
+        latcopil = data['location_x'];
+        lngcopil = data['location_y'];
+    });
+
+    for(var indx in marker){
+        var latpct=marker[indx].getPosition().lat();
+        var lngpct=marker[indx].getPosition().lng();
+        if(fences[indx].get('radius')!=0) {
+            if ((latpct - latcopil) * (latpct - latcopil) + (lngpct - lngcopil) * (lngpct - lngcopil) <= fences[indx].getRadius() * fences[indx].getRadius())
+                poz = 1;
+            else
+                poz = 0;
+            if (poz != inout[indx]) {
+                $.post("/points-of-interest/notification",
+                    {
+                        idPoint: marker[indx].get('id'),
+                        idChild: copil.id,
+                        poz: poz
+                    },
+                    function (data, status) {
+                        console.log(data);
+                        return alert(data);
+                    });
+                inout[indx] = poz;
+            }
+        }
+    }
+}
 
 function geofences(select) {
     distanta=document.getElementById('distanta').value;
@@ -47,6 +82,7 @@ function geofences(select) {
                 if(fences[i].get('id')==result[j])
                     fences[i].setRadius(Number(distanta));
         }
+        console.log(fences);
         return "We set the geofences";
     }
 }
@@ -89,8 +125,8 @@ function deletePoint(id){
             id: idPoint
         },
         function(data,status){
-        console.log(idPoint);
-        console.log(data);
+            console.log(idPoint);
+            console.log(data);
         });
     var el = document.getElementById(id);
     $(el).remove();
@@ -133,9 +169,10 @@ function getChildPoints() {
                 map.fitBounds(bounds);
                 var name=valoare['name'];
                 var id=valoare['id'];
+                inout.push(valoare['in_out']);
                 createMarker(loc,name,id);
-            })
-        })
+            });
+        });
         zoom();
         initFences();
     });
@@ -144,16 +181,16 @@ function getChildPoints() {
         id:copil.id
     },function (data) {
         $.each(data, function(index, value){
-
             $.each(value, function(index, valoare){
                 var dist=valoare['distance'];
                 var id=valoare['id_point'];
                 setFence(dist,id);
-            })
-        })
+            });
+        });
     });
 
-
+    console.log(marker);
+    console.log(fences);
 }
 
 function getChildInfo(){
@@ -180,7 +217,7 @@ function getChildInfo(){
 function createMarker(loc,name,id) {
     marker.push(new google.maps.Marker({
         position: loc,
-        icon: "/images/red.png",
+        icon: "http://maps.google.com/mapfiles/ms/micons/red.png",
         map: map,
         title:name,
         id:id
@@ -189,11 +226,18 @@ function createMarker(loc,name,id) {
 
 function setFence(distanta,id){
     for(var index in fences )
-        if(fences[index].get('id')==id)
+        if(fences[index].get('id')==id){
             fences[index].setRadius(Number(distanta));
+        }
+    console.log(fences);
 }
 
 $(document).ready(function () {
-
     init();
+
+    console.log(marker);
+    console.log(fences);
+
+    monitor();
+
 });

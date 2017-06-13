@@ -9,11 +9,22 @@
             </h3>
         </a>
     </li>
+
     @foreach($points as $point)
+        <?php $i=1; ?>
+        @foreach($tutori as $tutore)
+            @if($tutore->name==$point->name)
+                <?php $i=0; ?>
+            @endif
+        @endforeach
         <li id="{{$point->id}}" style="visibility: visible" >
             <a href="#" title="{{$point->name}}" >
-                <h5 >&#160<span class="glyphicon glyphicon-remove-circle" onclick="deletePoint({{$point->id}})"></span>
-                    &#160&#160&#160 {{ $point->name }}
+                <h5 >
+                    @if($i==1)
+                        <span class="glyphicon glyphicon-remove-circle" onclick="deletePoint({{$point->id}})"></span>
+                        &#160&#160&#160
+                    @endif
+                    {{ $point->name }}
                 </h5>
             </a>
         </li>
@@ -48,15 +59,3 @@
     </button>
 
 @endsection
-
-<style type="text/css">
-    .panel.panel-default {
-        background-color: rgba(255, 255, 255, 0.7)
-    }
-    @media (min-width:769px) {
-        #app #mapAddPoints {
-            width: 100%;
-            height: 586px;
-        }
-    }
-</style>

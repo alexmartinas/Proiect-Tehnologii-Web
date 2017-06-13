@@ -2,22 +2,13 @@
  * Created by alex on 08.06.2017.
  */
 
-// This example adds a search box to a map, using the Google Place Autocomplete
-// feature. People can enter geographical searches. The search box will return a
-// pick list containing a mix of places and predicted search terms.
-
-// This example requires the Places library. Include the libraries=places
-// parameter when you first load the API. For example:
-// <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-//get selected values
 var result = [];
 var latitudine;
 var longitudine;
 var nume;
 
 function getSelectValues(select) {
-     result = [];
+    result = [];
     var options = select && select.options;
     var opt;
 
@@ -31,8 +22,8 @@ function getSelectValues(select) {
     if(result.length==0)
         return "Please select at least one children";
     else if(nume==null)
-            return "Please click on the location marker!";
-        else {
+        return "Please click on the location marker!";
+    else {
 
         $.post("/points-of-interest/addPoints",
             {

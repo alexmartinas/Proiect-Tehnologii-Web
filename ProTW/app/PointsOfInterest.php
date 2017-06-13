@@ -13,6 +13,7 @@ class PointsOfInterest extends Model
         'id_user',
         'name',
         'location_x',
-        'location_y'
+        'location_y',
+        'in_out'
     ];
 }

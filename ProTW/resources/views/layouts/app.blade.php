@@ -147,7 +147,7 @@
 <script src="{{ asset('assets/js/mapPointsOfInterest.js') }}"></script>
 <script src="{{ asset('assets/js/sort.js') }}"></script>
 <script src="{{ asset('assets/js/filter.js') }}"></script>
-<script type="text/javascript" src="/public/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="{{ asset('assets/js/jquery.min.js') }}"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 <script>

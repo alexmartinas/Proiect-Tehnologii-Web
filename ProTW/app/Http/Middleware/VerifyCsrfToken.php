@@ -15,7 +15,8 @@ class VerifyCsrfToken extends BaseVerifier
     protected $except = [
         '/points-of-interest/*',
         '/monitor-children/*',
-        '/device/*',
-        '/device/notification'
+        '/device',
+        '/device/notification',
+        '/update/location'
     ];
 }

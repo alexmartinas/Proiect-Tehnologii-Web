@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 
 use App\Children;
+use App\GeofenceModel;
 use App\Http\Requests\AddChildrenRequest;
 use App\LicenceCodes;
 use App\Monitoring;
@@ -23,9 +24,13 @@ class ChildrenController extends Controller
 {
 
 
-    public function __construct()
+    protected $request;
+
+    public function __construct(\Illuminate\Http\Request $request)
     {
+        $this->request = $request;
         $this->middleware('auth');
+
     }
 
     protected $redirectTo = '/index';
@@ -70,38 +75,56 @@ class ChildrenController extends Controller
             return view('children.add-child')->with('message',$message);
         }
         else
-                if($result['used']==1)
-                 {
-                       $message="Child already monitored by someone else.Please use the other form";
-                       return view('children.add-child')->with('message',$message);
-                 }
-             else {
-            Children::create([
-                'name' => $data['name'],
-                'age' => $data['age'],
-                'gender' => $data['gender'],
-                'device_id' => $data['device_id'],
-                'location_x' =>35,
-                'location_y' =>24,
-            ]);
+            if($result['used']==1)
+            {
+                $message="Child already monitored by someone else.Please use the other form";
+                return view('children.add-child')->with('message',$message);
+            }
+            else {
+                Children::create([
+                    'name' => $data['name'],
+                    'age' => $data['age'],
+                    'gender' => $data['gender'],
+                    'device_id' => $data['device_id'],
+                    'location_x' =>35,
+                    'location_y' =>24,
+                ]);
 
-            $result['used']=1;
-            $result->save();
+                $result['used']=1;
+                $result->save();
+                $user=Auth::user();
 
-            $child=Children::where('device_id',$data['device_id'])->first();
+                $child=Children::where('device_id',$data['device_id'])->first();
                 Monitoring::create([
                     'id_user' => Auth::user()->getAuthIdentifier(),
                     'id_child' =>$child['id'],
                 ]);
-                 \Session::flash('flash_message_add',"Child added to your monitoring list");
-                 return Redirect::to('/index');
-        }
+
+                PointsOfInterest::create([
+                    'id_user' => $user['id'],
+                    'id_child' => $child['id'],
+                    'name' => $user['name'],
+                    'location_x' => $user['location_x'],
+                    'location_y' => $user['location_y'],
+                    'in_out'=>1
+                ]);
+                $point=PointsOfInterest::where('location_x', $user['location_x'])->where('location_y', $user['location_y'])->where('id_child',$child['id'])->first();
+                GeofenceModel::create([
+                    'id_user' => $user['id'],
+                    'id_child' => $child['id'],
+                    'distance' => 0,
+                    'id_point' =>$point['id']
+                ]);
+
+                \Session::flash('flash_message_add',"Child added to your monitoring list");
+                return Redirect::to('/index');
+            }
 
     }
 
     public function addExistingChild()
     {
-        $data=Request::all();
+        $data=$this->request->all();
         $child=Children::where('device_id',$data['device_id'])->first();
         $result=LicenceCodes::where('device_id',$data['device_id'])->first();
         if ($result==null)
@@ -120,10 +143,29 @@ class ChildrenController extends Controller
                 }
                 else
                 {
+                    $user=Auth::user();
+
                     Monitoring::create([
-                        'id_user' => Auth::user()->id,
+                        'id_user' => $user['id'],
                         'id_child' => $child['id'],
                     ]);
+
+                    PointsOfInterest::create([
+                        'id_user' => $user['id'],
+                        'id_child' => $child['id'],
+                        'name' => $user['name'],
+                        'location_x' => $user['location_x'],
+                        'location_y' => $user['location_y'],
+                        'in_out'=>1
+                    ]);
+                    $point=PointsOfInterest::where('location_x', $user['location_x'])->where('location_y', $user['location_y'])->where('id_child',$child['id'])->first();
+                    GeofenceModel::create([
+                        'id_user' => $user['id'],
+                        'id_child' => $child['id'],
+                        'distance' => 0,
+                        'id_point' =>$point['id']
+                    ]);
+
                     \Session::flash('flash_message_add',"Child added to your monitoring list");
 
                     return Redirect::to('/index');
@@ -137,9 +179,14 @@ class ChildrenController extends Controller
 
     public function child($id){
 
-        $points=PointsOfInterest::all()->where('id_user',Auth::user()->getAuthIdentifier())->where('id_child',$id);
+        $query="SELECT * FROM POINTS_OF_INTEREST WHERE ID_USER=".Auth::user()->getAuthIdentifier()." AND ID_CHILD=".$id;
+        $query=$query." UNION SELECT * FROM POINTS_OF_INTEREST WHERE NAME IN (SELECT NAME FROM USERS WHERE ID IN (SELECT ID_USER FROM MONITORING WHERE ID_CHILD=".$id."))";
+        $points=DB::select($query);
         $child=Children::find($id);
-        return view('children.child')->with('child',$child)->with('points',$points);
+        $query="select * from users where id in(select id_user from monitoring where id_child=";
+        $query=$query.$child['id'].")";
+        $tutori=DB::select($query);
+        return view('children.child')->with('child',$child)->with('points',$points)->with('tutori',$tutori);
     }
 
     public function childInfo(Request $request){
@@ -148,18 +195,14 @@ class ChildrenController extends Controller
         return $child;
     }
 
-
     public function deleteChildPOST(Request $request){
         $id_device = $request->input("device_id");
         $id_child=DB::table('children')->where('device_id', $id_device)->pluck('id');
-        $child = Monitoring::where('id_child', $id_child)->where('id_user',Auth::id())->delete();
+        Monitoring::where('id_child', $id_child)->where('id_user',Auth::id())->delete();
+        PointsOfInterest::where('id_child', $id_child)->where('id_user',Auth::id())->delete();
+        GeofenceModel::where('id_child', $id_child)->where('id_user',Auth::id())->delete();
 
-        if($child>0){
-            return  response("You alreade added this point", 200)
-                ->header('Content-Type', 'text/plain');
-        }
-        else return  response("You alreade added this point", 200)
-            ->header('Content-Type', 'text/plain');
+        return Redirect::to('/index');
 
     }
 

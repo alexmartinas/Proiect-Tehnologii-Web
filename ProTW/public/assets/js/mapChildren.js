@@ -1,39 +1,41 @@
 /**
  * Created by alex on 01.06.2017.
  */
-var map;
-var bounds;
+var mapChildren;
+var boundsMapChildren;
 var marker={};
-
-var pointOfInterest;
-
-function showMarker(lat,lng,name){
-    console.log(lat);
-    console.log(lng);
-    console.log(name);
-
-    // var pozitie=new google.maps.LatLng(lat,lng);
-    // pointOfInterest=new google.maps.Marker({
-    //     map: map,
-    //     icon: "http://maps.google.com/mapfiles/ms/micons/red.png",
-    //     title: name,
-    //     position: pozitie
-    // });
-    //
-    // map.setCenter(pozitie);
-    // map.setZoom(17);
-}
-
+var userMarker;
+var myLatLng;
 $(document).ready(function () {
 
-    map=new google.maps.Map(document.getElementById('mapChildren'),{
-        zoom: 8
-    });
+
     geoLocationInit();
+    watchPosition();
+
     function geoLocationInit() {
+        mapChildren=new google.maps.Map(document.getElementById('mapChildren'),{
+            zoom: 8
+        });
+
+        myLatLng = new google.maps.LatLng(46, 26);
+
+        userMarker = new google.maps.Marker({
+            position: myLatLng,
+            icon: "http://maps.google.com/mapfiles/ms/micons/man.png",
+            map: mapChildren,
+            title: 'Your position'
+        });
+        boundsMapChildren = new google.maps.LatLngBounds();
+        boundsMapChildren.extend(myLatLng);
+        mapChildren.fitBounds(boundsMapChildren);
+        mapChildren.set('zoom',14);
+        showChildrenOnMap();
+    }
+
+    function watchPosition() {
 
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(success, fail);
+            navigator.geolocation.watchPosition(success, fail);
         } else {
             alert("Browser not supported");
         }
@@ -43,7 +45,7 @@ $(document).ready(function () {
         marker[i] = new google.maps.Marker({
             position: loc,
             icon: "../images/kid.png",
-            map: map,
+            map: mapChildren,
             title:name
         });
     }
@@ -51,41 +53,41 @@ $(document).ready(function () {
     function success(position) {
         var latval = position.coords.latitude;
         var lngval = position.coords.longitude;
+        console.log(latval);
+        console.log(lngval);
+        $.post("/update/location",
+            {
+                location_x:latval,
+                location_y:lngval
+            },
+            function(data,status){
+                console.log(data);
+            });
 
-        var myLatLng = new google.maps.LatLng(latval, lngval);
-
-        var userMarker = new google.maps.Marker({
-            position: myLatLng,
-            icon: "http://maps.google.com/mapfiles/ms/micons/man.png",
-            map: map,
-            title: 'Your position'
-        });
-
-        bounds = new google.maps.LatLngBounds();
-        bounds.extend(myLatLng);
-        map.fitBounds(bounds);
-        map.set('zoom',14);
-        showChildrenOnMap();
-        window.setInterval(function(){
-            showChildrenOnMap();
-        }, 50000);
+        myLatLng = new google.maps.LatLng(latval, lngval);
+        userMarker.setPosition(myLatLng);
     }
 
     function fail() {
-        alert("It fails");
+        alert("It we can not get your location");
     }
 
     function showChildrenOnMap() {
 
         $.get('/children',function (data) {
+            if(data[0].length!=0)
             for(i=0;i<data[0].length;i++){
                 var latval = data[0][i].location_x;
                 var lngval = data[0][i].location_y;
                 var loc= new google.maps.LatLng(latval,lngval);
-                bounds.extend(loc);
-                map.fitBounds(bounds);
+                boundsMapChildren.extend(loc);
+                mapChildren.fitBounds(boundsMapChildren);
                 var name=data[0][i].name;
                 createMarker(loc,i,name);
+            }
+            else{
+                mapChildren.setCenter(userMarker.getPosition());
+                mapChildren.setZoom(7);
             }
 
         });

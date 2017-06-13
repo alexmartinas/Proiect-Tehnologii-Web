@@ -38,14 +38,16 @@ class PointsOfInterestController extends Controller
                     'id_child' => $child,
                     'name' => $nume,
                     'location_x' => $lat,
-                    'location_y' => $long
+                    'location_y' => $long,
+                    'in_out'=>1
+
                 ]);
                 $point=PointsOfInterest::where('location_x',$lat)->where('location_y',$long)->where('id_child',$child)->first();
                 GeofenceModel::create([
                     'id_user' => Auth::user()->getAuthIdentifier(),
                     'id_child' => $child,
                     'distance' => 0,
-                    'id_point' =>$point['id']
+                    'id_point' =>$point['id'],
                 ]);
             }
             else return  response("You alreade added this point", 200)

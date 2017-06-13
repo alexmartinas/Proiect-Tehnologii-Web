@@ -31,6 +31,7 @@ Route::get('/points-of-interest/getGeofences', 'PointsOfInterestController@child
 Route::post('/points-of-interest/addPoints', 'PointsOfInterestController@addPoints');
 Route::post('/points-of-interest/deletePoint', 'PointsOfInterestController@deletePoint');
 Route::post('/points-of-interest/setGeofences', 'PointsOfInterestController@setGeofences');
+Route::post('/points-of-interest/notification', 'NotificationsController@notification');
 
 Route::get('/monitor-children/childInfo', 'ChildrenController@childInfo');
 Route::post('/add-child', 'ChildrenController@addNewChild')->name('add-child');
@@ -46,6 +47,7 @@ Route::get('/child/{id}', 'ChildrenController@child');
 
 Route::post('/update', 'MyProfileController@update')->name('update');
 Route::get('/update', 'MyProfileController@updateProfile')->name('update');
+Route::post('/update/location', 'MyProfileController@updateLocation');
 
 Route::get('/index', 'HomeController@index')->name('home');
 
