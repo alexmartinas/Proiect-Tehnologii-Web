@@ -16,37 +16,38 @@ var distanta;
 
 
 function monitor(){
-    var poz,latcopil,lngcopil;
+    var poz;
+    var latcopil;
+    var lngcopil;
     $.get('/monitor-children/childInfo',{
         id:copil.id
     },function (data) {
         latcopil = data['location_x'];
         lngcopil = data['location_y'];
-    });
 
-    for(var indx in marker){
-        var latpct=marker[indx].getPosition().lat();
-        var lngpct=marker[indx].getPosition().lng();
-        if(fences[indx].get('radius')!=0) {
-            if ((latpct - latcopil) * (latpct - latcopil) + (lngpct - lngcopil) * (lngpct - lngcopil) <= fences[indx].getRadius() * fences[indx].getRadius())
-                poz = 1;
-            else
-                poz = 0;
-            if (poz != inout[indx]) {
-                $.post("/points-of-interest/notification",
-                    {
-                        idPoint: marker[indx].get('id'),
-                        idChild: copil.id,
-                        poz: poz
-                    },
-                    function (data, status) {
-                        console.log(data);
-                        return alert(data);
-                    });
-                inout[indx] = poz;
+        for(var indx in marker){
+            var pozCopil=new google.maps.LatLng(latcopil,lngcopil);
+                if(google.maps.geometry.spherical.computeDistanceBetween(pozCopil,marker[indx].getPosition())<=fences[indx].get('radius'))
+                    poz = 1;
+                else
+                    poz = 0;
+                if (poz != inout[indx]) {
+                    inout[indx] = poz;
+                    console.log(inout);
+                    $.post("/points-of-interest/notification",
+                        {
+                            idPoint: marker[indx].get('id'),
+                            idChild: copil.id,
+                            poz: poz
+                        },
+                        function (data, status) {
+                            return alert(data);
+                        });
             }
         }
-    }
+
+    });
+
 }
 
 function geofences(select) {
@@ -82,7 +83,6 @@ function geofences(select) {
                 if(fences[i].get('id')==result[j])
                     fences[i].setRadius(Number(distanta));
         }
-        console.log(fences);
         return "We set the geofences";
     }
 }
@@ -188,9 +188,6 @@ function getChildPoints() {
             });
         });
     });
-
-    console.log(marker);
-    console.log(fences);
 }
 
 function getChildInfo(){
@@ -229,15 +226,10 @@ function setFence(distanta,id){
         if(fences[index].get('id')==id){
             fences[index].setRadius(Number(distanta));
         }
-    console.log(fences);
 }
 
 $(document).ready(function () {
     init();
 
-    console.log(marker);
-    console.log(fences);
-
-    monitor();
 
 });

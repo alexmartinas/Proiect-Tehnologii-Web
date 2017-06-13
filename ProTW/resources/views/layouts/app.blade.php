@@ -32,6 +32,12 @@
         }
     </style>
 
+    <script>
+        window.setInterval(function(){
+            monitor();
+        }, 5000);
+    </script>
+
     @yield('tablestyle')
 
 </head>
@@ -157,7 +163,7 @@
 
 
 {{--Harta--}}
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL3Z9H-3qKGzVvR2RB2j_U9l95qnPWc2I&libraries=places"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL3Z9H-3qKGzVvR2RB2j_U9l95qnPWc2I&libraries=places,geometry"
         async defer></script>
 </body>
 </html>
