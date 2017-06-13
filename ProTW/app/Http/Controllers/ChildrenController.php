@@ -159,7 +159,8 @@ class ChildrenController extends Controller
                         'location_y' => $user['location_y'],
                         'in_out'=>1
                     ]);
-                    $point=PointsOfInterest::where('location_x', $user['location_x'])->where('location_y', $user['location_y'])->where('id_child',$child['id'])->first();
+                    $point=PointsOfInterest::where('location_x', $user['location_x'])->where('location_y', $user['location_y'])
+                                            ->where('id_child',$child['id'])->where('id_user',$user['id'])->first();
                     GeofenceModel::create([
                         'id_user' => $user['id'],
                         'id_child' => $child['id'],
@@ -181,7 +182,7 @@ class ChildrenController extends Controller
     public function child($id){
 
         $query="SELECT * FROM POINTS_OF_INTEREST WHERE ID_USER=".Auth::user()->getAuthIdentifier()." AND ID_CHILD=".$id;
-        $query=$query." UNION SELECT * FROM POINTS_OF_INTEREST WHERE NAME IN (SELECT NAME FROM USERS WHERE ID IN (SELECT ID_USER FROM MONITORING WHERE ID_CHILD=".$id." and id_user!=".Auth::user()->getAuthIdentifier()."))";
+        $query=$query." UNION SELECT * FROM POINTS_OF_INTEREST WHERE id_child=".$id." and NAME IN (SELECT NAME FROM USERS WHERE ID IN (SELECT ID_USER FROM MONITORING WHERE ID_CHILD=".$id." and id_user!=".Auth::user()->getAuthIdentifier()."))";
         $points=DB::select($query);
         $child=Children::find($id);
         $query="select * from users where id in(select id_user from monitoring where id_child=";

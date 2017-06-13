@@ -61,7 +61,7 @@ class PointsOfInterestController extends Controller
     public function childPointsOfInterest(Request $request){
         $id=$request->input('id');
         $query="SELECT * FROM POINTS_OF_INTEREST WHERE ID_USER=".Auth::user()->getAuthIdentifier()." AND ID_CHILD=".$id;
-        $query=$query." UNION SELECT * FROM POINTS_OF_INTEREST WHERE NAME IN (SELECT NAME FROM USERS WHERE ID IN (SELECT ID_USER FROM MONITORING WHERE ID_CHILD=".$id." and id_user!=".Auth::user()->getAuthIdentifier()."))";
+        $query=$query." UNION SELECT * FROM POINTS_OF_INTEREST WHERE id_child=".$id." and NAME IN (SELECT NAME FROM USERS WHERE ID IN (SELECT ID_USER FROM MONITORING WHERE ID_CHILD=".$id." and id_user!=".Auth::user()->getAuthIdentifier()."))";
         $points=DB::select($query);
         return $points;
     }
@@ -70,7 +70,7 @@ class PointsOfInterestController extends Controller
         $id=$request->input('id');
         $query="select * from geofences where id_point in";
         $query=$query." (SELECT id FROM POINTS_OF_INTEREST WHERE ID_USER=".Auth::user()->getAuthIdentifier()." AND ID_CHILD=".$id;
-        $query=$query." UNION SELECT id FROM POINTS_OF_INTEREST WHERE NAME IN (SELECT NAME FROM USERS WHERE ID IN (SELECT ID_USER FROM MONITORING WHERE ID_CHILD=".$id." and id_user!=".Auth::user()->getAuthIdentifier().")))";
+        $query=$query." UNION SELECT id FROM POINTS_OF_INTEREST WHERE id_child=".$id." and NAME IN (SELECT NAME FROM USERS WHERE ID IN (SELECT ID_USER FROM MONITORING WHERE ID_CHILD=".$id." and id_user!=".Auth::user()->getAuthIdentifier().")))";
         $points=DB::select($query);
         return $points;
     }
