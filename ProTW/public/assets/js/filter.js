@@ -2,9 +2,10 @@ function myFunction(n) {
     // Declare variables e de la n sigur
     var input, filter, table, tr, td, i;
     if( n === 1 ) filter = "ACCIDENT";
-    if( n === 2 ) filter = "OUTOFRANGE";
+    if( n === 2 ) filter = "OUT OF RANGE";
     if( n === 3 ) filter = "INTERACTION";
     if( n === 4 ) filter = "";
+    if( n === 5 ) filter = "BACK IN RANGE";
     table = document.getElementById("notificationsTable");
     tr = table.getElementsByTagName("tr");
 

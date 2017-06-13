@@ -44,7 +44,7 @@ class DeviceController extends Controller
             $user=Monitoring::where('id_child',$child['id'])->first();
             Notifications::create([
                 'id_child' => $child['id'],
-                'id_user' => $user['id'],
+                'id_user' => $user['id_user'],
                 'name' => $child['name'],
                 'description' =>$description,
                 'type' => 'accident',
