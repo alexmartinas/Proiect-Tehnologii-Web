@@ -21,6 +21,8 @@ class NotificationsController extends Controller
 
         $pages=DB::table('notifications')->where('id_user',Auth::id())->paginate(10);
         $x = Carbon::now();
+        $update = 1;
+        DB::table('notifications')->where('id_user',Auth::id())->update(['dynamic_added' => 1]);
         return view('notifications.notifications', compact('pages'),compact('x'));
     }
 
@@ -34,9 +36,9 @@ class NotificationsController extends Controller
 
     public function listByAccident(){
         $data=DB::table('notifications')
-        ->where('id_user', Auth::user()->getAuthIdentifier())
-        ->where('type', 'accident')
-        ->get();
+            ->where('id_user', Auth::user()->getAuthIdentifier())
+            ->where('type', 'accident')
+            ->get();
         return $data;
     }
 
@@ -54,5 +56,11 @@ class NotificationsController extends Controller
             ->where('type', 'accident')
             ->get();
         return $data;
+    }
+
+    public function setDynamic(){
+
+        DB::table('notifications')->where('id_user',Auth::id())->update(['dynamic_added' => 1]);
+
     }
 }

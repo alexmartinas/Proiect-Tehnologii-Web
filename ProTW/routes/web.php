@@ -53,6 +53,8 @@ Route::get('/index', 'HomeController@index')->name('home');
 
 Route::get('/listnotifications', 'NotificationsController@listNotifications');
 Route::get('/notifications', 'NotificationsController@index')->name('notifications');
+Route::get('/setDynamic', 'NotificationsController@setDynamic');
+
 
 Route::get('contact',
     ['as' => 'contact', 'uses' => 'ContactController@create']);

@@ -17,6 +17,7 @@ class Notifications extends Model
         'accident_type',
         'location_x',
         'location_y',
-        'happened_at'
+        'happened_at',
+        'dynamic_added'
     ];
 }

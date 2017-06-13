@@ -52,6 +52,7 @@ class DeviceController extends Controller
                 'location_x' =>$child['location_x'],
                 'location_y' =>$child['location_y'],
                 'happened_at' =>Carbon::now(),
+                'dynamic_added' => 0
             ]);
 
             \Session::flash('flash_message',$description);
