@@ -29,11 +29,24 @@ $(document).ready(function () {
             map: mapChildren,
             title: 'Your position'
         });
-        boundsMapChildren = new google.maps.LatLngBounds();
-        boundsMapChildren.extend(myLatLng);
-        mapChildren.fitBounds(boundsMapChildren);
-        mapChildren.set('zoom',14);
+
+        mapChildren.setCenter(userMarker.getPosition());
+        mapChildren.setZoom(7);
         showChildrenOnMap();
+    }
+
+    function zoom() {
+        for(var i=0;i<marker.length;i++) {
+            (function(){
+                marker[i].addListener( 'click', listener.bind( null, i));
+            }())
+        }
+
+        function listener(index) {
+            map.setCenter(new google.maps.LatLng(marker[index]['position'].lat(), marker[index]['position'].lng()));
+            map.setZoom(17);
+        }
+
     }
 
     function watchPosition() {
@@ -80,21 +93,20 @@ $(document).ready(function () {
 
         $.get('/children',function (data) {
             if(data[0].length!=0)
-                for(i=0;i<data[0].length;i++){
-                    var latval = data[0][i].location_x;
-                    var lngval = data[0][i].location_y;
-                    var loc= new google.maps.LatLng(latval,lngval);
-                    boundsMapChildren.extend(loc);
-                    mapChildren.fitBounds(boundsMapChildren);
-                    var name=data[0][i].name;
-                    createMarker(loc,i,name);
-                }
+            for(i=0;i<data[0].length;i++){
+                var latval = data[0][i].location_x;
+                var lngval = data[0][i].location_y;
+                var loc= new google.maps.LatLng(latval,lngval);
+                var name=data[0][i].name;
+                createMarker(loc,i,name);
+            }
             else{
                 mapChildren.setCenter(userMarker.getPosition());
                 mapChildren.setZoom(7);
             }
 
         });
+        zoom();
 
     }
 

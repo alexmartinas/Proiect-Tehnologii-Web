@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Children;
-use App\Interactions;
 use App\Notifications;
 use App\PointsOfInterest;
 use Carbon\Carbon;
@@ -22,7 +21,7 @@ class NotificationsController extends Controller
     public function index()
     {
 
-        $pages=DB::table('notifications')->where('id_user',Auth::id())->orderBy('happened_at', 'DESC')->paginate(10);
+        $pages=DB::table('notifications')->where('id_user',Auth::id())->paginate(10);
         $x = Carbon::now();
         $update = 1;
         DB::table('notifications')->where('id_user',Auth::id())->update(['dynamic_added' => 1]);
@@ -97,103 +96,4 @@ class NotificationsController extends Controller
         DB::table('notifications')->where('id_user',Auth::id())->update(['dynamic_added' => 1]);
 
     }
-
-    public function compare($lat1, $lat2, $lat3, $lat4){
-
-        $x = $lat1 - $lat3;
-        if($x < 0 ) $x=$x*(-1);
-
-        $y = $lat2 - $lat4;
-        if($y < 0 ) $y=$y*(-1);
-
-        $x=$x*100;
-        $y=$y*100;
-
-        if($x < 1 && $y < 1 ) return 1;
-        return 0;
-    }
-
-    public function addChildrenNotification(){
-
-        $data1=DB::table('children')->get();
-        $data2=DB::table('children')->get();
-        $data3=$data2;
-        foreach( $data1 as $child1) {
-            $data2 = $data3;
-            foreach( $data2 as $child2) {
-
-                if($this->compare($child1->location_x,$child1->location_y,$child2->location_x,$child2->location_y) == 1 && $child1->id != $child2->id){
-
-                    $int1 = DB::table('interactions')->where('id_child',$child1->id)->get();
-                    $OK = 1;
-                    foreach( $int1 as $inn) {
-
-                        if($inn->id_contact == $child2->id) $OK=0;
-                    }
-
-                    if($OK == 1 ){
-
-                        Interactions::create([
-                            'id_child' => $child1->id,
-                            'id_contact' => $child2->id,
-                            'location_x' => $child1->location_x,
-                            'location_y' =>$child1->location_y,
-                            'happened_at' => Carbon::now()
-                        ]);
-
-                        Interactions::create([
-                            'id_child' => $child2->id,
-                            'id_contact' => $child1->id,
-                            'location_x' => $child2->location_x,
-                            'location_y' =>$child2->location_y,
-                            'happened_at' => Carbon::now()
-                        ]);
-
-                        $user = DB::table('monitoring')->where('id_child',$child1->id)->get();
-
-                        foreach( $user as $tutore) {
-
-                            Notifications::create([
-                                'id_child' => $child1->id,
-                                'id_user' => $tutore->id_user,
-                                'name' => $child1->name,
-                                'description' => $child1->name.' has interacted with '.$child2->name,
-                                'type' => 'interaction',
-                                'accident_type' => 4,
-                                'location_x' => $child1->location_x,
-                                'location_y' => $child1->location_y,
-                                'happened_at' => Carbon::now(),
-                                'dynamic_added' => 0
-                            ]);
-
-                        }
-                        $user = DB::table('monitoring')->where('id_child',$child2->id)->get();
-
-                        foreach( $user as $tutore) {
-
-                            Notifications::create([
-                                'id_child' => $child2->id,
-                                'id_user' => $tutore->id_user,
-                                'name' => $child2->name,
-                                'description' => $child2->name.' has interacted with '.$child1->name,
-                                'type' => 'interaction',
-                                'accident_type' => 4,
-                                'location_x' => $child2->location_x,
-                                'location_y' => $child2->location_y,
-                                'happened_at' => Carbon::now(),
-                                'dynamic_added' => 0
-                            ]);
-
-                        }
-
-                    }
-
-                }
-            }
-        }
-
-        echo "Gets here I guess";
-    }
-
-
 }

@@ -14,6 +14,7 @@ use App\GeofenceModel;
 use App\Http\Requests\AddChildrenRequest;
 use App\LicenceCodes;
 use App\Monitoring;
+use App\Notifications;
 use App\PointsOfInterest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -201,9 +202,8 @@ class ChildrenController extends Controller
         Monitoring::where('id_child', $id_child)->where('id_user',Auth::id())->delete();
         PointsOfInterest::where('id_child', $id_child)->where('id_user',Auth::id())->delete();
         GeofenceModel::where('id_child', $id_child)->where('id_user',Auth::id())->delete();
-
+        Notifications::where('id_child',$id_child)->where('id_user',Auth::id())->delete();
         return Redirect::to('/index');
-
     }
 
     public function deleteChildGET(){

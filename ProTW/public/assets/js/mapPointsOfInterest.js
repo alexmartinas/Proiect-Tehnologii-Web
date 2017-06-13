@@ -41,7 +41,6 @@ function monitor(){
                             poz: poz
                         },
                         function (data, status) {
-                            return alert(data);
                         });
             }
         }
@@ -160,32 +159,30 @@ function getChildPoints() {
         id:copil.id
     },function (data) {
         $.each(data, function(index, value){
-
-            $.each(value, function(index, valoare){
-                var latval = valoare['location_x'];
-                var lngval = valoare['location_y'];
+            console.log(value);
+            var latval = value['location_x'];
+                var lngval = value['location_y'];
                 var loc= new google.maps.LatLng(latval,lngval);
                 bounds.extend(loc);
                 map.fitBounds(bounds);
-                var name=valoare['name'];
-                var id=valoare['id'];
-                inout.push(valoare['in_out']);
+                var name=value['name'];
+                var id=value['id'];
+                inout.push(value['in_out']);
                 createMarker(loc,name,id);
-            });
         });
         zoom();
         initFences();
     });
 
+
     $.get('/points-of-interest/getGeofences',{
         id:copil.id
     },function (data) {
         $.each(data, function(index, value){
-            $.each(value, function(index, valoare){
-                var dist=valoare['distance'];
-                var id=valoare['id_point'];
+            console.log(value);
+                var dist=value['distance'];
+                var id=value['id_point'];
                 setFence(dist,id);
-            });
         });
     });
 }
@@ -230,6 +227,8 @@ function setFence(distanta,id){
 
 $(document).ready(function () {
     init();
+    console.log(fences);
+    console.log(marker);
     window.setInterval(function(){
         monitor();
     }, 1000);

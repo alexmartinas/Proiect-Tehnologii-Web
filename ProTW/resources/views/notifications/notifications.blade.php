@@ -36,7 +36,6 @@
         getPHP = {!!  json_encode($x) !!};
         time = getPHP.date;
         window.setInterval(function LoadData() {
-            $.get("/notificationInteraction");
             $.get("/listnotifications",
                 function (data) {
                     $.each(data, function(index, value){
@@ -51,8 +50,8 @@
                                         ' <img src={{asset('images/googleicon.png') }} style="width:20px;height:20px;"> </td>'));
                             }
                         }
+                        $.get("/setDynamic");
                     })
-                    $.get("/setDynamic");
                 });
         },3000);
 
@@ -62,9 +61,8 @@
 @section('content')
     <div class="wrapper">
         <button onclick="myFunction(1)">Accidents</button>
-        <button onclick="myFunction(2)">Out Of Range</button>
+        <button onclick="myFunction(2)">OutOfRange</button>
         <button onclick="myFunction(3)">Interactions</button>
-        <button onclick="myFunction(5)">Back In Range</button>
         <button onclick="myFunction(4)">All</button>
 
         <section class="panel panel-primary">
